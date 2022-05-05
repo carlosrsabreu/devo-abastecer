@@ -13,7 +13,7 @@ jobs:
       - name: Checks out the repository
         uses: actions/checkout@v2
         with:
-          token: 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
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python
         uses: actions/setup-python@v3.1.2
       - name: Install project requirements
