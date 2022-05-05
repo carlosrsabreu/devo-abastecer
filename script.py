@@ -15,12 +15,37 @@ spanWithGasInfo = S.find('span', {'id':'dnn_ctr9883_View_D1_dlstInformacaoOne_Co
 
 # Get the text without html tags
 gasInfo = spanWithGasInfo.get_text('\n', strip=True)
+arr_info = gasInfo.split('\n')
+#print(arr_info)
 
-print(gasInfo)
+dict_prices = {}
+
+for i in range(len(arr_info)):
+  if i % 2 == 0:
+    # Get the price
+    if arr_info[i].endswith('€'):
+      dict_prices[arr_info[i-1]] = arr_info[i]
+  else:
+    dict_prices[arr_info[i]] = []
+
+print(dict_prices['Gasóleo Rodoviário'])
+
+# print(gasInfo)
 
 # TODO: Define gas price class and parse it to check if prices increased or decreased
-class GasPrice:
-  def __init__(self, name, price):
-    self.name = name
-    self.price = price
- 
+# class GasPrice:
+#   def __init__(self, name, price):
+#     self.name = name
+#     self.price = price
+# """
+# {
+#   thisWeek: {
+#     gasoleo  gasPrice {
+
+#     }
+#   },
+# nextWeek:{ }
+# }
+
+# twitterMessage = 
+# """ 
