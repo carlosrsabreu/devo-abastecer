@@ -15,7 +15,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3.1.2
       - name: Install project requirements
-        run: pip install requirements.txt
+        run: pip install -r requirements.txt
       - name: Export data to file
         run: python script.py > gas_info.json
       - name: Commit gas information
