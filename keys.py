@@ -1,6 +1,6 @@
-NEW_DATE_KEY = '.......'
-START_DATE_KEY = 'Start date'
 END_DATE_KEY = 'End date'
 GAS_KEY = 'Gas'
 GAS_NAME_KEY = 'Name'
 GAS_PRICE_KEY = 'Price'
+NEW_DATE_KEY = '.......'
+START_DATE_KEY = 'Start date'
