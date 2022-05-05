@@ -16,6 +16,8 @@ spanWithGasInfo = S.find('span', {'id':'dnn_ctr9883_View_D1_dlstInformacaoOne_Co
 # Get the text without html tags
 gasInfo = spanWithGasInfo.get_text('\n', strip=True)
 
+print(gasInfo)
+
 # TODO: Define gas price class and parse it to check if prices increased or decreased
 class GasPrice:
   def __init__(self, name, price):
