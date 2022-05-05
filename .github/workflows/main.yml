@@ -1,20 +1,24 @@
 name: Extract data from DRTT
-  on:
-    schedule:
-        - cron: "0 */6 * * *" #runs every 6 hours
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checks out the repository
-          uses: actions/checkout@v2
-        - name: Setup Python
-          uses: actions/setup-python@v3.1.2
-        - name: Export data to file
-          run: python script.py > gas_info.json
-        - name: Commit gas information
-            run: |
-              git config --global user.name 'Dntfreitas'
-              git config --global user.email 'Dntfreitas@users.noreply.github.com'
-              git commit -m "Updated information"
-              git push
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checks out the repository
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v3.1.2
+      - name: Export data to file
+        run: python script.py > gas_info.json
+      - name: Commit gas information
+          run: |
+            git config --global user.name 'Dntfreitas'
+            git config --global user.email 'Dntfreitas@users.noreply.github.com'
+            git commit -m "Updated information"
+            git push
