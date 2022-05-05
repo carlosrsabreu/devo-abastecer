@@ -12,22 +12,15 @@ jobs:
     steps:
       - name: Checks out the repository
         uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-          fetch-depth: 0
       - name: Setup Python
         uses: actions/setup-python@v3.1.2
       - name: Install project requirements
         run: pip install -r requirements.txt
       - name: Export data to file
         run: python script.py > gas_info.json
-      - name: Commit files
+      - name: Commit gas information
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Add changes" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          git config --global user.name 'Dntfreitas'
+          git config --global user.email 'Dntfreitas@users.noreply.github.com'
+          git add gas_info.json
+          git commit -m "Updated information"
