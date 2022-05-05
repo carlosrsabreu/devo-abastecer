@@ -22,5 +22,5 @@ jobs:
           git config --global user.name 'Dntfreitas'
           git config --global user.email 'dntfreitas123@gmail.com'
           git add gas_info.json
-          git diff-index --quiet HEAD || git commit -m "Updated information"
+          git diff-index --quiet HEAD || git commit -m "Update gas information"
           git push
