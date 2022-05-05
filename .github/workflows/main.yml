@@ -1,20 +1,20 @@
-name: py 
-
+name: Extract data from DRTT
   on:
     schedule:
-      - cron: "0 */6 * * *" #runs every 6 hours
+        - cron: "0 */6 * * *" #runs every 6 hours
   jobs:
     build:
       runs-on: ubuntu-latest
-  
       steps:
-        - name: checkout repo content
-          uses: actions/checkout@v2 # checkout the repository content to github runner.
-        - name: setup python
-          uses: actions/setup-python@v2
-          with:
-            python-version: 3.9
-        - name: execute py script # run the run.py to get the latest data
-          run: |
-            python script.py
-        - name: export index
+        - name: Checks out the repository
+          uses: actions/checkout@v2
+        - name: Setup Python
+          uses: actions/setup-python@v3.1.2
+        - name: Export data to file
+          run: python script.py > gas_info.json
+        - name: Commit gas information
+            run: |
+              git config --global user.name 'Dntfreitas'
+              git config --global user.email 'Dntfreitas@users.noreply.github.com'
+              git commit -m "Updated information"
+              git push
