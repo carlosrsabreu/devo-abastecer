@@ -21,7 +21,7 @@ jobs:
       - name: Commit gas information
         run: |
           git config --global user.name 'Dntfreitas'
-          git config --global user.email 'diogo.nt.freitas@gmail.com'
+          git config --global user.email 'dntfreitas123@gmail.com'
           git add gas_info.json
           git commit -m "Updated information"
           git push
