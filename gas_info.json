@@ -1,7 +1,7 @@
 {
  "0": {
-  "Start date": "25-04-2022",
-  "End date": "01-05-2022",
+  "Start date": "2022-04-25",
+  "End date": "2022-05-01",
   "Gas": [
    {
     "Name": "Gasolina IO95",
@@ -18,8 +18,8 @@
   ]
  },
  "1": {
-  "Start date": "02-05-2022",
-  "End date": "08-05-2022",
+  "Start date": "2022-05-02",
+  "End date": "2022-05-08",
   "Gas": [
    {
     "Name": "Gasolina IO95",
