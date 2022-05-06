@@ -2,6 +2,12 @@ name: Extract data from DRTT
 on:
   schedule:
     - cron: '0 */6 * * *'
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
 permissions: write-all
 jobs:
   build:
