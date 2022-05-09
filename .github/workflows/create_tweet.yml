@@ -25,3 +25,10 @@ jobs:
         run: python tweet.py
       - name: Save last gas prices
         run: python add_history.py
+      - name: Commit gas history information
+        run: |
+          git config --global user.name 'Dntfreitas'
+          git config --global user.email 'dntfreitas123@gmail.com'
+          git add gas_info_history.json
+          git diff-index --quiet HEAD || git commit -m "update gas history information"
+          git push
