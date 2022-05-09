@@ -24,4 +24,4 @@ jobs:
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: python tweet.py
       - name: Save last gas prices
-        run: python add_history.py > gas_info_history.json
+        run: python add_history.py
