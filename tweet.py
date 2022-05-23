@@ -48,9 +48,9 @@ def main():
       tweet_gas_prices += f"{i[GAS_NAME_KEY]}   {gas_prices_message(i[GAS_PRICE_KEY][0], i[GAS_PRICE_KEY][1])}\n"
 
     tweet_message = '— Devo abastecer? ⛽️ \n\n'
-    tweet_start_dates = f"            {data_gas_info[THIS_WEEK][START_DATE_KEY]}  |  {data_gas_info[NEXT_WEEK][START_DATE_KEY]}\n"
-    tweet_interval_dates = f"                         a         |            a\n"
-    tweet_end_dates = f"            {data_gas_info[THIS_WEEK][END_DATE_KEY]}  |  {data_gas_info[NEXT_WEEK][END_DATE_KEY]}\n\n"
+    tweet_start_dates = f"         {data_gas_info[THIS_WEEK][START_DATE_KEY]}  |  {data_gas_info[NEXT_WEEK][START_DATE_KEY]}\n"
+    tweet_interval_dates = f"                      a         |            a\n"
+    tweet_end_dates = f"         {data_gas_info[THIS_WEEK][END_DATE_KEY]}  |  {data_gas_info[NEXT_WEEK][END_DATE_KEY]}\n\n"
 
     tweet = f"{tweet_message}{tweet_start_dates}{tweet_interval_dates}{tweet_end_dates}{tweet_gas_prices}"
     client.create_tweet(text=tweet)
