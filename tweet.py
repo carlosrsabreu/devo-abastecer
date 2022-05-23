@@ -27,12 +27,12 @@ def main():
 
     for i in data_gas_info[NEXT_WEEK][GAS_KEY]:
       if (i[GAS_NAME_KEY] == 'Gasolina IO95'):
-        gasoline_95[GAS_PRICE_KEY].append(i[GAS_PRICE_KEY])
+        gasoline_95[GAS_PRICE_KEY].append(round(i[GAS_PRICE_KEY], 3))
       if (i[GAS_NAME_KEY] == 'Gasóleo Rodoviário'):
-        diesel[GAS_PRICE_KEY].append(i[GAS_PRICE_KEY])
+        diesel[GAS_PRICE_KEY].append(round(i[GAS_PRICE_KEY], 3))
 
     for i in gasoline_95[GAS_PRICE_KEY]:
-      gasoline_98[GAS_PRICE_KEY].append(i + DIFFERENCE_95_98_PRICE)
+      gasoline_98[GAS_PRICE_KEY].append(round(i + DIFFERENCE_95_98_PRICE, 3))
 
     def gas_prices_message(price_this_week, price_next_week):
       if (price_this_week < price_next_week):
