@@ -13,7 +13,7 @@ jobs:
       - name: Checks out the repository
         uses: actions/checkout@v2
         with:
-          ref: 'diogo-dev'
+          ref: diogo-dev
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python
         uses: actions/setup-python@v3.1.2
@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Export data to file
         run: python script.py > gas_info.json
-      - name: Commit gas inforamtion
+      - name: Commit gas information
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: diogo-dev
