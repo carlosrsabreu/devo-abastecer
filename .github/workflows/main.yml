@@ -22,5 +22,6 @@ jobs:
         run: python script.py > gas_info.json
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          branch: diogo-dev
           file_pattern: gas_info.json
           commit_message: Update gas information
