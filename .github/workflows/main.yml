@@ -20,10 +20,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Export data to file
         run: python script.py > gas_info.json
-      - name: Commit gas information
-        run: |
-          git config --global user.name 'Dntfreitas'
-          git config --global user.email 'dntfreitas123@gmail.com'
-          git add gas_info.json
-          git diff-index --quiet HEAD || git commit -m "Update gas information"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: gas_info.json
+          commit_message: Update gas information
