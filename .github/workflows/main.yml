@@ -25,3 +25,6 @@ jobs:
           branch: diogo-dev
           file_pattern: gas_info.json
           commit_message: Update gas information
+      - name: "Run if changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "Changes!"
