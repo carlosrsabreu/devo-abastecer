@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Checks out the repository
         uses: actions/checkout@v2
-          with:
-            ref: 'diogo-dev'
-            token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          ref: 'diogo-dev'
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python
         uses: actions/setup-python@v3.1.2
       - name: Install project requirements
@@ -23,10 +23,10 @@ jobs:
         run: python script.py > gas_info.json
       - name: Commit gas inforamtion
         uses: stefanzweifel/git-auto-commit-action@v4
-          with:
-            branch: diogo-dev
-            file_pattern: gas_info.json
-            commit_message: Update gas information
+        with:
+          branch: diogo-dev
+          file_pattern: gas_info.json
+          commit_message: Update gas information
       - name: "Run if changes have been detected"
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
         run: echo "Changes!"
