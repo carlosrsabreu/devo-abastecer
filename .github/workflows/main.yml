@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Checks out the repository
         uses: actions/checkout@v2
-        with:
-          ref: 'diogo-dev'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            ref: 'diogo-dev'
+            token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python
         uses: actions/setup-python@v3.1.2
       - name: Install project requirements
