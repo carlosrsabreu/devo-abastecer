@@ -1,23 +1,5 @@
 {
  "0": {
-  "Start date": "2022-05-23",
-  "End date": "2022-05-29",
-  "Gas": [
-   {
-    "Name": "Gasolina IO95",
-    "Price": 1.864
-   },
-   {
-    "Name": "Gasóleo Rodoviário",
-    "Price": 1.696
-   },
-   {
-    "Name": "Gasóleo Colorido e Marcado",
-    "Price": 1.318
-   }
-  ]
- },
- "1": {
   "Start date": "2022-05-30",
   "End date": "2022-06-05",
   "Gas": [
@@ -32,6 +14,24 @@
    {
     "Name": "Gasóleo Colorido e Marcado",
     "Price": 1.289
+   }
+  ]
+ },
+ "1": {
+  "Start date": "2022-06-06",
+  "End date": "2022-06-12",
+  "Gas": [
+   {
+    "Name": "Gasolina IO95",
+    "Price": 1.964
+   },
+   {
+    "Name": "Gasóleo Rodoviário",
+    "Price": 1.69
+   },
+   {
+    "Name": "Gasóleo Colorido e Marcado",
+    "Price": 1.311
    }
   ]
  }
