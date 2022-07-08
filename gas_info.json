@@ -16,5 +16,23 @@
     "Price": 1.569
    }
   ]
+ },
+ "1": {
+  "Start date": "2022-07-11",
+  "End date": "2022-07-17",
+  "Gas": [
+   {
+    "Name": "Gasolina IO95",
+    "Price": 1.994
+   },
+   {
+    "Name": "Gasóleo Rodoviário",
+    "Price": 1.858
+   },
+   {
+    "Name": "Gasóleo Colorido e Marcado",
+    "Price": 1.503
+   }
+  ]
  }
 }
