@@ -19,7 +19,12 @@ jobs:
       - name: Install project requirements
         run: pip install -r requirements.txt
       - name: Export data to file
-        run: python script.py > gas_info.json
+        env:
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+        run: python script.py
       - name: Commit gas information
         run: |
           git config --global user.name 'Dntfreitas'
