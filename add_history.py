@@ -5,7 +5,7 @@ from constants import CURRENT_GAS_HISTORY_JSON_FILE, CURRENT_WEEK, START_DATE_KE
 
 def add_history(dict_prices):
     # JSON
-    with open(CURRENT_GAS_HISTORY_JSON_FILE, 'r+') as f:
+    with open(CURRENT_GAS_HISTORY_JSON_FILE, 'r') as f:
         curret_data = json.load(f)
     with open(CURRENT_GAS_HISTORY_JSON_FILE, 'w') as f:
         curret_data[dict_prices[CURRENT_WEEK][START_DATE_KEY]] = dict_prices[CURRENT_WEEK]
