@@ -30,5 +30,7 @@ jobs:
           git config --global user.name 'Dntfreitas'
           git config --global user.email 'dntfreitas123@gmail.com'
           git add gas_info.json
+          git add history/gas_info_history.csv
+          git add history/gas_info_history.json
           git diff-index --quiet HEAD || git commit -m "Update gas information"
           git push
