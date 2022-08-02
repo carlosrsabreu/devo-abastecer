@@ -25,7 +25,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: python script.py
-      - name: Commit gas information
+      - name: Commit gas information with history
         run: |
           git config --global user.name 'Dntfreitas'
           git config --global user.email 'dntfreitas123@gmail.com'
