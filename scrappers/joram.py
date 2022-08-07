@@ -11,6 +11,9 @@ from PyPDF2 import PdfFileReader
 
 PDF_GAS_PRICE_REGEX = r'(?<=€ )([\d,]+)(?= por litro)'
 
+# TODO: Only for example. Make this url dynamic with current year and year
+JORAM_URL = 'https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202022/IISerie-138-2022-07-22Supl.pdf'
+
 
 def get_pdf_content_lines(pdf_raw_data):
     with BytesIO(pdf_raw_data) as f:
@@ -20,8 +23,12 @@ def get_pdf_content_lines(pdf_raw_data):
                 yield line
 
 
-def read_pdf_prices():
-    response = requests.get('https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202022/IISerie-138-2022-07-22Supl.pdf')
+def read_pdf_prices(url):
+    """
+    Reads a pdf line by line and verify if contains a gas price.
+    The prices are always in the same order just need to make a match.
+    """
+    response = requests.get(url)
     prices = ()
     for line in get_pdf_content_lines(response.content):
         matches = re.search(PDF_GAS_PRICE_REGEX, line)
@@ -31,6 +38,4 @@ def read_pdf_prices():
     print(prices)
 
 
-read_pdf_prices()
-
-print(print())
+read_pdf_prices(JORAM_URL)
