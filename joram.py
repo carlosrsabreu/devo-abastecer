@@ -29,11 +29,16 @@ def read_pdf_prices(url):
     Reads a pdf line by line and verify if contains a gas price.
     The prices are always in the same order just need to make a match.
     """
+    discovered_prices = 0
     response = requests.get(url)
     for line in get_pdf_content_lines(response.content):
         matches = re.search(PDF_GAS_PRICE_REGEX, line)
         if matches:
+            discovered_prices += 1
             yield matches.group()
+
+        if discovered_prices == 3:
+            break
 
 
 def get_gas_prices(url):
