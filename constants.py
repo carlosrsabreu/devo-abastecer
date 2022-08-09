@@ -26,3 +26,10 @@ COLORED_DIESEL = 'Gasóleo Colorido e Marcado'
 DIESEL_TW = 'Gasóleo         '
 GASOLINE_95_TW = 'Gasolina 95  '
 GASOLINE_98_TW = 'Gasolina 98  '
+
+#PDF_GAS_PRICE_REGEX = r'(?<=€ )([\d,]+)(?= por litro)'
+PDF_GAS_PRICE_REGEX = r'(%s|%s|%s)(?:[\.€\w ]+)(\d{1},\d{3})' % (
+    'Gasolina super sem chumbo IO 95',
+    'Gasóleo rodoviário',
+    'Gasóleo colorido e marcado'
+)
