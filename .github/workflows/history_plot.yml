@@ -1,4 +1,4 @@
-name: Extract data from DRTT
+name: Publish history plot
 on:
   schedule:
     - cron: "0 0 1 * *"
