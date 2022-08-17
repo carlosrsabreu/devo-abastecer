@@ -1,3 +1,3 @@
 # History
 
-!(img/plot.png)
+![History plot](img/plot.png)
