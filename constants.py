@@ -36,8 +36,6 @@ PDF_GAS_PRICE_REGEX = r'(%s|%s|%s)(?:[\.€\w ]+)(\d{1},\d{3})' % (
 )
 
 # Hisotry plot
-HISTORY_PLOT_START_DATE = 'start_date'
-HISTORY_PLOT_END_DATE = 'start_date'
 HISTORY_PLOT_LABEL_GASOLINA_IO95 = 'Gasolina IO95'
 HISTORY_PLOT_LABEL_GASOLINA_IO98 = 'Gasolina IO98'
 HISTORY_PLOT_LABEL_GASOLEO_RODOVIARIO = 'Gasoleo Rodoviario'
@@ -45,6 +43,8 @@ HISTORY_PLOT_Y_LABEL = 'Preço (€)'
 HISTORY_PLOT_X_LABEL = 'Data'
 
 # CSV columns
+COLUMN_START_DATE = 'start_date'
+COLUMN_END_DATE = 'start_date'
 COLUMN_GASOLINA_IO95 = 'gasolina_IO95'
 COLUMN_GASOLINA_IO98 = 'gasolina_IO98'
 COLUMN_GASOLEO_RODOVIARIO = 'gasoleo_rodoviario'
