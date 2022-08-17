@@ -7,12 +7,12 @@ from bs4 import BeautifulSoup
 from add_history import add_history
 from constants import CURRENT_GAS_INFO_FILE, START_DATE_KEY, ENDPOINT, SPAN_ID, NEW_DATE_KEY, END_DATE_KEY, GAS_KEY, PREVIOUS_WEEK, CURRENT_WEEK, GASOLINE_98, GASOLINE_95, DIFFERENCE_95_98_PRICE
 
-# Get current data there is an update
 from post_tweet import make_tweet
 
+# Get current data there is an update
 with open(CURRENT_GAS_INFO_FILE) as f:
     curret_data = json.load(f)
-    last_start_date_saved = curret_data[PREVIOUS_WEEK][START_DATE_KEY]
+    last_start_date_saved = curret_data[CURRENT_WEEK][START_DATE_KEY]
 
 # Assumes that we need to update the file
 update = True
