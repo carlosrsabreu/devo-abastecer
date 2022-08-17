@@ -1,12 +1,7 @@
 name: Extract data from DRTT
 on:
   schedule:
-    - cron: "0 */6 * * *"
-    - cron: "*/30 * * * 5,6,0,1"
-  push:
-    branches:
-      - feat/plot
-permissions: write-all
+    - cron: "0 0 1 * *"
 jobs:
   build:
     runs-on: ubuntu-latest
