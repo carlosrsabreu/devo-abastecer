@@ -23,6 +23,29 @@ def gas_prices_message(price_current, price_previous):
         return f'{price_current}€   =   {price_previous}€'
 
 
+def create_api(client):
+    auth = tweepy.OAuthHandler(
+            client.consumer_key,
+            client.consumer_secret,
+    )
+    auth.set_access_token(
+            client.access_token,
+            client.access_token_secret,
+    )
+    return tweepy.API(auth)
+
+
+def post_image(tweet, image_path):
+    # Get Twitter client
+    client = create_client_twitter()
+    # Create Twitter API
+    api = create_api(client)
+    # Upload image
+    image = api.media_upload(image_path)
+    # Post tweet
+    return api.update_status(status=tweet, media_ids=[image.media_id])
+
+
 def make_tweet(dict_prices):
     # Get Twitter client
     client = create_client_twitter()

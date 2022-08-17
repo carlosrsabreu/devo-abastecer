@@ -34,6 +34,7 @@ PDF_GAS_PRICE_REGEX = r'(%s|%s|%s)(?:[\.€\w ]+)(\d{1},\d{3})' % (
     'Gasóleo rodoviário',
     'Gasóleo colorido e marcado'
 )
+
 # Hisotry plot
 HISTORY_PLOT_START_DATE = 'start_date'
 HISTORY_PLOT_END_DATE = 'start_date'
@@ -47,3 +48,6 @@ HISTORY_PLOT_X_LABEL = 'Data'
 COLUMN_GASOLINA_IO95 = 'gasolina_IO95'
 COLUMN_GASOLINA_IO98 = 'gasolina_IO98'
 COLUMN_GASOLEO_RODOVIARIO = 'gasoleo_rodoviario'
+
+# Tweets
+TWEET_HISTORY = 'Variação dos preços dos combustíveis na Madeira, de {start_date} a {end_date}.'
