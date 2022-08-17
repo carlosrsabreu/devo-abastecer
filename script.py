@@ -5,8 +5,8 @@ import requests as req
 from bs4 import BeautifulSoup
 
 from add_history import add_history
-from constants import CURRENT_GAS_INFO_FILE, START_DATE_KEY, ENDPOINT, SPAN_ID, NEW_DATE_KEY, END_DATE_KEY, GAS_KEY, PREVIOUS_WEEK, CURRENT_WEEK, GASOLINE_98, GASOLINE_95, DIFFERENCE_95_98_PRICE
-
+from constants import CURRENT_GAS_INFO_FILE, START_DATE_KEY, ENDPOINT, SPAN_ID, NEW_DATE_KEY, END_DATE_KEY, GAS_KEY, PREVIOUS_WEEK, CURRENT_WEEK, GASOLINE_98, GASOLINE_95, DIFFERENCE_95_98_PRICE, CURRENT_GAS_HISTORY_CSV_FILE, CURRENT_GAS_HISTORY_PLOT
+from history.generate_plot import generate_plot_history
 from post_tweet import make_tweet
 
 # Get current data there is an update
@@ -69,6 +69,8 @@ if update:
     make_tweet(dict_prices)
     # Add history
     add_history(dict_prices)
+    # Generate history plot
+    generate_plot_history(CURRENT_GAS_HISTORY_CSV_FILE, CURRENT_GAS_HISTORY_PLOT)
     # Writing JSON file
     content = json.dumps(dict_prices, indent=1, ensure_ascii=False)
     with open(CURRENT_GAS_INFO_FILE, 'w') as f:
