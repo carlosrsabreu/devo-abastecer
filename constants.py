@@ -35,7 +35,7 @@ PDF_GAS_PRICE_REGEX = r'(%s|%s|%s)(?:[\.€\w ]+)(\d{1},\d{3})' % (
     'Gasóleo colorido e marcado'
 )
 
-# Hisotry plot
+# History plot
 HISTORY_PLOT_LABEL_GASOLINA_IO95 = 'Gasolina IO95'
 HISTORY_PLOT_LABEL_GASOLINA_IO98 = 'Gasolina IO98'
 HISTORY_PLOT_LABEL_GASOLEO_RODOVIARIO = 'Gasoleo Rodoviario'
