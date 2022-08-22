@@ -11,8 +11,8 @@ from post_tweet import make_tweet
 
 # Get current data to check if there is an update
 with open(CURRENT_GAS_INFO_FILE) as f:
-    curret_data = json.load(f)
-    last_start_date_saved = curret_data[PREVIOUS_WEEK][START_DATE_KEY]
+    current_data = json.load(f)
+    last_start_date_saved = current_data[PREVIOUS_WEEK][START_DATE_KEY]
 
 # Assumes that we need to update the file
 update = True

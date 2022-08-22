@@ -6,10 +6,10 @@ from constants import CURRENT_GAS_HISTORY_JSON_FILE, CURRENT_WEEK, START_DATE_KE
 def add_history(dict_prices):
     # JSON
     with open(CURRENT_GAS_HISTORY_JSON_FILE, 'r') as f:
-        curret_data = json.load(f)
+        current_data = json.load(f)
     with open(CURRENT_GAS_HISTORY_JSON_FILE, 'w') as f:
-        curret_data[dict_prices[CURRENT_WEEK][START_DATE_KEY]] = dict_prices[CURRENT_WEEK]
-        content = json.dumps(curret_data, indent=1, ensure_ascii=False)
+        current_data[dict_prices[CURRENT_WEEK][START_DATE_KEY]] = dict_prices[CURRENT_WEEK]
+        content = json.dumps(current_data, indent=1, ensure_ascii=False)
         f.write(content)
     # CSV
     with open(CURRENT_GAS_HISTORY_CSV_FILE, 'a') as f:
