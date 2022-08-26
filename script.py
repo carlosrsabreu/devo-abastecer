@@ -27,11 +27,11 @@ span_with_gas_info = s.find('span', {'id': SPAN_ID})
 gas_info = span_with_gas_info.get_text('\n', strip=True).split('\n')
 
 # Obtain the date positons in the request
-date_positions = []
-i = 0
+date_positions = [0]
+i = 1
 while i < len(gas_info):
-    if i == 0 or gas_info[i].startswith(NEW_DATE_KEY):
-        date_positions.append(i)
+    if gas_info[i].startswith(NEW_DATE_KEY):
+        date_positions.append(i+1)
     i += 1
 
 # Parse the last available date
