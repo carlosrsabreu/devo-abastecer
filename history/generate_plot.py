@@ -10,17 +10,14 @@ locale.setlocale(locale.LC_ALL, 'pt_PT.UTF-8')
 
 
 def generate_plot_history(history_file, plot_location):
-    # Read history
-    history = pd.read_csv(history_file)
 
-    # Convert start dates and end dates to datatime
+    history = pd.read_csv(history_file)
     history[COLUMN_START_DATE] = pd.to_datetime(history[COLUMN_START_DATE])
 
     # Select the last 6 months of data
     history.set_index(COLUMN_START_DATE, inplace=True)
     history = history.last('6M').copy()
 
-    # Plot
     plt.figure()
     ax = history.plot(y=[COLUMN_GASOLINA_IO95, COLUMN_GASOLINA_IO98, COLUMN_GASOLEO_RODOVIARIO],
                       label=[HISTORY_PLOT_LABEL_GASOLINA_IO95, HISTORY_PLOT_LABEL_GASOLINA_IO98, HISTORY_PLOT_LABEL_GASOLEO_RODOVIARIO], ylabel=HISTORY_PLOT_Y_LABEL, xlabel=HISTORY_PLOT_X_LABEL)
