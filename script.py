@@ -11,11 +11,9 @@ from post_tweet import make_tweet
 
 # Get current data to check if there is an update
 with open(CURRENT_GAS_INFO_FILE) as f:
-    current_data = json.load(f)
-    last_start_date_saved = current_data[PREVIOUS_WEEK][START_DATE_KEY]
-
-# Assumes that we need to update the file
-update = True
+    curret_data = json.load(f)
+    current_start_date_saved = curret_data[CURRENT_WEEK][START_DATE_KEY]
+    current_end_date_saved = curret_data[CURRENT_WEEK][END_DATE_KEY]
 
 # Requesting for the website
 web = req.get(ENDPOINT)
@@ -29,41 +27,39 @@ span_with_gas_info = s.find('span', {'id': SPAN_ID})
 # Get the text without html tags
 gas_info = span_with_gas_info.get_text('\n', strip=True).split('\n')
 
-# Parse the data
-dict_prices = {}
-last_key = PREVIOUS_WEEK
-i = 0
-while i < len(gas_info) - 1:
-    # Get date
-    add_date = i == 0 or gas_info[i].startswith(NEW_DATE_KEY)
+# Obtain the date positons in the request
+date_positions = [0]
+i = 1
+while i < len(gas_info):
     if gas_info[i].startswith(NEW_DATE_KEY):
-        i += 1
-        last_key = CURRENT_WEEK
-    if add_date:
-        try:
-            start_date, end_date = gas_info[i].replace('.', '-').split('\xa0a ')
-        except Exception:
-            start_date, end_date = gas_info[i].replace('.', '-').split(' a ')
-        # Parse date
-        start_date = datetime.datetime.strptime(start_date, '%d-%m-%Y').strftime('%Y-%m-%d')
-        # Check if we already have this data
-        if start_date == last_start_date_saved:
-            update = False
-            break
-        end_date = datetime.datetime.strptime(end_date, '%d-%m-%Y').strftime('%Y-%m-%d')
-        dict_prices[last_key] = {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}
-        i += 1
-    # Gas information
-    else:
+        date_positions.append(i + 1)
+    i += 1
+
+# Parse the last available date
+i = date_positions[-1]
+try:
+    start_date, end_date = gas_info[i].replace('.', '-').split('\xa0a ')
+except Exception:
+    start_date, end_date = gas_info[i].replace('.', '-').split(' a ')
+start_date = datetime.datetime.strptime(start_date, '%d-%m-%Y').strftime('%Y-%m-%d')
+end_date = datetime.datetime.strptime(end_date, '%d-%m-%Y').strftime('%Y-%m-%d')
+
+# Check if we already have this date
+update = start_date != current_start_date_saved and end_date != current_end_date_saved
+
+# If we don't have the date, update
+if update:
+    # Prepare the dictionaire
+    dict_prices = {PREVIOUS_WEEK: curret_data[CURRENT_WEEK]}
+    dict_prices[CURRENT_WEEK] = {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}
+    # Parse the data
+    i += 1
+    while i < len(gas_info) - 1:
         gas = gas_info[i]
         price = float(gas_info[i + 1][:-1].replace(',', '.'))
-        dict_prices[last_key][GAS_KEY][gas] = price
+        dict_prices[CURRENT_WEEK][GAS_KEY][gas] = price
         i += 2
-
-# If necessary, update the JSON file, save history and save make tweet
-if update:
     # Add Gasoline 98 price
-    dict_prices[PREVIOUS_WEEK][GAS_KEY][GASOLINE_98] = round(dict_prices[PREVIOUS_WEEK][GAS_KEY][GASOLINE_95] + DIFFERENCE_95_98_PRICE, 3)
     dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_98] = round(dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_95] + DIFFERENCE_95_98_PRICE, 3)
     # Make tweet
     make_tweet(dict_prices)
