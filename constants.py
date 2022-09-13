@@ -44,7 +44,7 @@ HISTORY_PLOT_X_LABEL = 'Data'
 
 # CSV columns
 COLUMN_START_DATE = 'start_date'
-COLUMN_END_DATE = 'start_date'
+COLUMN_END_DATE = 'end_date'
 COLUMN_GASOLINA_IO95 = 'gasolina_IO95'
 COLUMN_GASOLINA_IO98 = 'gasolina_IO98'
 COLUMN_GASOLEO_RODOVIARIO = 'gasoleo_rodoviario'
