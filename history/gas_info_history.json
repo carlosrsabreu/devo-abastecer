@@ -198,5 +198,15 @@
    "Gasóleo Colorido e Marcado": 1.101,
    "Gasolina IO98": 1.66
   }
+ },
+ "2022-12-26": {
+  "Start date": "2022-12-26",
+  "End date": "2023-01-01",
+  "Gas": {
+   "Gasolina IO95": 1.499,
+   "Gasóleo Rodoviário": 1.472,
+   "Gasóleo Colorido e Marcado": 1.142,
+   "Gasolina IO98": 1.649
+  }
  }
 }
