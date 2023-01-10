@@ -55,7 +55,14 @@ if update:
     i += 1
     while i < len(gas_info) - 1:
         gas = gas_info[i]
-        price = float(gas_info[i + 1][:-1].replace(',', '.'))
+        price = None
+        # skip to next line in case fuelPrice is not a float
+        while price is None:
+            try:
+                price = float(gas_info[i + 1][:-1].replace(",", "."))
+            except ValueError:
+                i += 1 
+
         dict_prices[CURRENT_WEEK][GAS_KEY][gas] = price
         i += 2
     # Add Gasoline 98 price
