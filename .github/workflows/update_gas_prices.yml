@@ -1,4 +1,4 @@
-name: Extract data from DRTT
+name: ⛽️ Update Gas Prices from DRETT
 on:
   schedule:
     - cron: "0 */6 * * *"
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checks out the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python
@@ -33,6 +33,5 @@ jobs:
           git add gas_info.json
           git add history/gas_info_history.csv
           git add history/gas_info_history.json
-          git add history/img/plot.png
           git diff-index --quiet HEAD || git commit -m "Update gas information"
           git push
