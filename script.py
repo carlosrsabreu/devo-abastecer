@@ -5,8 +5,7 @@ import requests as req
 from bs4 import BeautifulSoup
 
 from add_history import add_history
-from constants import CURRENT_GAS_INFO_FILE, START_DATE_KEY, ENDPOINT, SPAN_ID, NEW_DATE_KEY, END_DATE_KEY, GAS_KEY, PREVIOUS_WEEK, CURRENT_WEEK, GASOLINE_98, GASOLINE_95, DIFFERENCE_95_98_PRICE, CURRENT_GAS_HISTORY_CSV_FILE, CURRENT_GAS_HISTORY_PLOT
-from history.generate_plot import generate_plot_history
+from constants import CURRENT_GAS_INFO_FILE, START_DATE_KEY, ENDPOINT, SPAN_ID, NEW_DATE_KEY, END_DATE_KEY, GAS_KEY, PREVIOUS_WEEK, CURRENT_WEEK, GASOLINE_98, GASOLINE_95, DIFFERENCE_95_98_PRICE
 from post_tweet import make_tweet
 
 # Get current data to check if there is an update
@@ -50,8 +49,7 @@ update = start_date != current_start_date_saved and end_date != current_end_date
 # If we don't have the date, update
 if update:
     # Prepare the dictionaire
-    dict_prices = {PREVIOUS_WEEK: curret_data[CURRENT_WEEK]}
-    dict_prices[CURRENT_WEEK] = {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}
+    dict_prices = {PREVIOUS_WEEK: curret_data[CURRENT_WEEK], CURRENT_WEEK: {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}}
     # Parse the data
     i += 1
     while i < len(gas_info) - 1:
@@ -65,8 +63,6 @@ if update:
     make_tweet(dict_prices)
     # Add history
     add_history(dict_prices)
-    # Generate history plot
-    generate_plot_history(CURRENT_GAS_HISTORY_CSV_FILE, CURRENT_GAS_HISTORY_PLOT)
     # Writing JSON file
     content = json.dumps(dict_prices, indent=1, ensure_ascii=False)
     with open(CURRENT_GAS_INFO_FILE, 'w') as f:

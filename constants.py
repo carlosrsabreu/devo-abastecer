@@ -17,7 +17,6 @@ SPAN_ID = 'dnn_ctr9883_View_D1_dlstInformacaoOne_Conteudo_0'
 CURRENT_GAS_INFO_FILE = 'gas_info.json'
 CURRENT_GAS_HISTORY_JSON_FILE = 'history/gas_info_history.json'
 CURRENT_GAS_HISTORY_CSV_FILE = 'history/gas_info_history.csv'
-CURRENT_GAS_HISTORY_PLOT = 'history/img/plot.png'
 # Gas
 DIESEL = 'Gasóleo Rodoviário'
 GASOLINE_95 = 'Gasolina IO95'
@@ -28,11 +27,11 @@ DIESEL_TW = 'Gasóleo         '
 GASOLINE_95_TW = 'Gasolina 95  '
 GASOLINE_98_TW = 'Gasolina 98  '
 
-#PDF_GAS_PRICE_REGEX = r'(?<=€ )([\d,]+)(?= por litro)'
+# PDF_GAS_PRICE_REGEX = r'(?<=€ )([\d,]+)(?= por litro)'
 PDF_GAS_PRICE_REGEX = r'(%s|%s|%s)(?:[\.€\w ]+)(\d{1},\d{3})' % (
-    'Gasolina super sem chumbo IO 95',
-    'Gasóleo rodoviário',
-    'Gasóleo colorido e marcado'
+        'Gasolina super sem chumbo IO 95',
+        'Gasóleo rodoviário',
+        'Gasóleo colorido e marcado'
 )
 
 # History plot
