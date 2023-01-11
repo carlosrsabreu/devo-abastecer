@@ -1,6 +1,7 @@
 # ⛽️ Devo Abastecer (_beta_)
 
-[![Extract data from DRTT](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/main.yml)
+[![⛽️ Update Gas Prices from DRETT](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/update_gas_prices.yml/badge.svg?branch=main)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/update_gas_prices.yml)
+[![📈 Publish History Plot](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/post_plot_history.yml/badge.svg?branch=main)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/post_plot_history.yml)
 
 🇵🇹 Informação acessível com os preços dos combustíveis na Madeira, publicada semanalmente no Twitter recorrendo a um bot.<br> 🇬🇧 Up-to-date fuel prices in Madeira, conveniently updated weekly on Twitter via our automated bot.
 
