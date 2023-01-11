@@ -33,5 +33,6 @@ jobs:
           git add gas_info.json
           git add history/gas_info_history.csv
           git add history/gas_info_history.json
+          git add history/img/plot.png
           git diff-index --quiet HEAD || git commit -m "Update gas information"
           git push

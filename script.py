@@ -31,7 +31,7 @@ date_positions = [0]
 i = 1
 while i < len(gas_info):
     if gas_info[i].startswith(NEW_DATE_KEY):
-        date_positions.append(i+1)
+        date_positions.append(i + 1)
     i += 1
 
 # Parse the last available date
@@ -49,8 +49,7 @@ update = start_date != current_start_date_saved and end_date != current_end_date
 # If we don't have the date, update
 if update:
     # Prepare the dictionaire
-    dict_prices = {PREVIOUS_WEEK: curret_data[CURRENT_WEEK]}
-    dict_prices[CURRENT_WEEK] = {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}
+    dict_prices = {PREVIOUS_WEEK: curret_data[CURRENT_WEEK], CURRENT_WEEK: {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}}
     # Parse the data
     i += 1
     while i < len(gas_info) - 1:

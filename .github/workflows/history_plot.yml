@@ -1,0 +1,23 @@
+name: Publish history plot
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checks out the repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Python
+        uses: actions/setup-python@v3.1.2
+      - name: Install project requirements
+        run: pip install -r requirements.txt
+      - name: Post history plot
+        env:
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+        run: python script_post_plot_history.py
