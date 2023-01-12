@@ -1,4 +1,4 @@
-name: Publish history plot
+name: 📈 Publish History Plot
 on:
   schedule:
     - cron: "0 0 1 * *"
@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checks out the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python

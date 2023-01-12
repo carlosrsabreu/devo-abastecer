@@ -10,9 +10,9 @@ from post_tweet import make_tweet
 
 # Get current data to check if there is an update
 with open(CURRENT_GAS_INFO_FILE) as f:
-    curret_data = json.load(f)
-    current_start_date_saved = curret_data[CURRENT_WEEK][START_DATE_KEY]
-    current_end_date_saved = curret_data[CURRENT_WEEK][END_DATE_KEY]
+    current_data = json.load(f)
+    current_start_date_saved = current_data[CURRENT_WEEK][START_DATE_KEY]
+    current_end_date_saved = current_data[CURRENT_WEEK][END_DATE_KEY]
 
 # Requesting for the website
 web = req.get(ENDPOINT)
@@ -49,7 +49,7 @@ update = start_date != current_start_date_saved and end_date != current_end_date
 # If we don't have the date, update
 if update:
     # Prepare the dictionaire
-    dict_prices = {PREVIOUS_WEEK: curret_data[CURRENT_WEEK], CURRENT_WEEK: {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}}
+    dict_prices = {PREVIOUS_WEEK: current_data[CURRENT_WEEK], CURRENT_WEEK: {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: {}}}
     # Parse the data
     i += 1
     while i < len(gas_info) - 1:
