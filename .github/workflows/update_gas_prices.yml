@@ -27,7 +27,7 @@ jobs:
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: ping -c 5 joram.madeira.gov.pt
+        run: ping -c 5 joram.madeira.gov.pt && ping -c 5 www.madeira.gov.pt && wget https://www.madeira.gov.pt/drett
       - name: Commit gas information with history
         run: |
           git config --global user.name 'Dntfreitas'
