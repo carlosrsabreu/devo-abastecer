@@ -18,7 +18,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
       - name: Install project requirements
-        run: pip install -r requirements.txt
+        run: pip3 install -r requirements.txt
       - name: Export data to file, add history and publish on Twitter
         env:
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
