@@ -27,7 +27,7 @@ jobs:
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: python3 script.py
+        run: ping -c 5 joram.madeira.gov.pt
       - name: Commit gas information with history
         run: |
           git config --global user.name 'Dntfreitas'
