@@ -9,25 +9,23 @@ on:
 permissions: write-all
 jobs:
   build:
-    runs-on: harry-self-hosted-runner
+    runs-on: ubuntu-latest
     steps:
       - name: Checks out the repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python
-        uses: actions/setup-python@v4
-      - name: Install dependencies
-        run: apt-get install -y python3 python3-pip
+        uses: actions/setup-python@v3.1.2
       - name: Install project requirements
-        run: pip3 install -r requirements.txt
+        run: pip install -r requirements.txt
       - name: Export data to file, add history and publish on Twitter
         env:
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: ping -c 5 joram.madeira.gov.pt && ping -c 5 www.madeira.gov.pt && wget https://www.madeira.gov.pt/drett
+        run: python script.py
       - name: Commit gas information with history
         run: |
           git config --global user.name 'Dntfreitas'
