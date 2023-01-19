@@ -9,7 +9,7 @@ on:
 permissions: write-all
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: harry-self-hosted-runner
     steps:
       - name: Checks out the repository
         uses: actions/checkout@v3
