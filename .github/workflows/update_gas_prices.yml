@@ -16,7 +16,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Python
-        uses: actions/setup-python@v3.1.2
+        uses: actions/setup-python@v3.10.8
       - name: Install project requirements
         run: pip install -r requirements.txt
       - name: Export data to file, add history and publish on Twitter
