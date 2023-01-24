@@ -1,0 +1,46 @@
+name: 💅 Format Codebase
+
+on:
+  push:
+    branches:
+      - main
+      
+permissions: write-all
+
+jobs:
+  format-codebase:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📀 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 💄 Run Prettier
+        uses: creyD/prettier_action@v4.2
+        with:
+          prettier_options: --write **/*.{json,md}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 💋 Check files using the Black Formatter
+        uses: rickstaa/action-black@v1
+        id: action_black
+        with:
+          black_args: "."
+
+      - name: 🪢 Create Pull Request
+        if: ${{ steps.action_black.outputs.is_formatted == 'true' }}
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Format codebase with psf/black"
+          author: HarryVasanth <hello@harryvasanth.com>
+          committer: HarryVasanth <hello@harryvasanth.com>
+          commit-message: "chore(code): format with `psf/black`"
+          body: |
+            There appear to be some python formatting errors in ${{ github.sha }}. This pull request
+            uses the [`psf/black`](https://github.com/psf/black) formatter to fix these issues.
+          base: ${{ github.head_ref }}
+          branch: chore/actions-format-codebase
