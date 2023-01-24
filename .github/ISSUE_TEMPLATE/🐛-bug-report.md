@@ -8,17 +8,19 @@ assignees: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+> <sub>A clear and concise description of what the bug is.</sub>
 
 **Expected behaviour**
-A clear and concise description of what you expected to happen.
+> <sub>A clear and concise description of what you expected to happen.</sub>
 
 **To Reproduce**
-Steps to reproduce the behaviour:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+> <sub>Steps to reproduce the behaviour:</sub>
+<sub>
+>1. Go to '...'
+>2. Click on '....'
+>3. Scroll down to '....'
+>4. See error
+</sub>
 
 **Additional context**
-Add any other context about the problem here.
+> <sub>Add any other context about the problem here.</sub>
