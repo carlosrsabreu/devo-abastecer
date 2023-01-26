@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-      
+  pull_request:
+
 permissions: write-all
 
 jobs:
@@ -21,26 +22,23 @@ jobs:
         uses: creyD/prettier_action@v4.2
         with:
           prettier_options: --write **/*.{json,md}
+          commit_message: "chore(codebase): format with prettier"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 💋 Check files using the Black Formatter
-        uses: rickstaa/action-black@v1
-        id: action_black
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
         with:
-          black_args: "."
+          python-version: "3.10"
 
-      - name: 🪢 Create Pull Request
-        if: ${{ steps.action_black.outputs.is_formatted == 'true' }}
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "Format codebase with psf/black"
-          author: HarryVasanth <hello@harryvasanth.com>
-          committer: HarryVasanth <hello@harryvasanth.com>
-          commit-message: "chore(code): format with `psf/black`"
-          body: |
-            There appear to be some python formatting errors in ${{ github.sha }}. This pull request
-            uses the [`psf/black`](https://github.com/psf/black) formatter to fix these issues.
-          base: ${{ github.head_ref }}
-          branch: chore/actions-format-codebase
+      - name: 🖤 Format code with black
+        run: |
+          git config --global user.email "hello@harryvasanth.com"
+          git config --global user.name "HarryVasanth"
+          pip install black
+          black . --verbose
+          git add .
+
+      - name: 📎 Push changes
+        run: |
+          git diff-index --quiet HEAD || git commit -m "chore(codebase): format with black" && git push || echo "No changes" && exit
