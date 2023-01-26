@@ -1,24 +1,46 @@
-#!/bin/python
 import re
 from io import BytesIO
 import requests
-from PyPDF2 import PdfFileReader
+from bs4 import BeautifulSoup
+import datetime
+from PyPDF2 import PdfReader
 from constants import GASOLINE_95, DIESEL, COLORED_DIESEL, PDF_GAS_PRICE_REGEX
 
-# TODO: Get url with current year
-#       Get all pdf's with the current date
-#       Search for gas prices
-#       Script will run only on friday every 1h to check for new documents
+# Get the current year
+current_year = str(datetime.datetime.now().year)
 
+# JORAM URL for current year's PDFs
+url = f"https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{current_year}/"
 
-# TODO: Only for example. Make this url dynamic with current year and date
-JORAM_URL = 'https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202022/IISerie-138-2022-07-22Supl.pdf'
+response = requests.get(url)
+html = response.text
+soup = BeautifulSoup(html, "html.parser")
+links = soup.find_all("a")
+
+pdf_links = [link for link in links if link["href"].endswith(".pdf")]
+sorted_pdf_links = sorted(
+    pdf_links,
+    key=lambda link: datetime.datetime.strptime(
+        re.search(r"\d{4}-\d{2}-\d{2}", link["href"]).group(), "%Y-%m-%d"
+    ),
+)
+newest_pdf_link = sorted_pdf_links[-1]
+newest_pdf_filename = newest_pdf_link["href"].split("/")[-1]
+
+# FIXME (DEBUG) Print se the filename to scrape the content
+print(newest_pdf_filename)
+# FIXME (DEBUG): Working link to Joram PDF
+debug_pdf_joram = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202022/IISerie-138-2022-07-22Supl.pdf"
+
+# Get the latest PDF from the JORAM website
+newest_pdf_joram = f"https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{current_year}/{newest_pdf_filename}"
+
 
 def get_pdf_content_lines(pdf_raw_data):
     with BytesIO(pdf_raw_data) as f:
-        pdf_reader = PdfFileReader(f)
+        pdf_reader = PdfReader(f)
         for page in pdf_reader.pages:
-            for line in page.extractText().splitlines():
+            for line in page.extract_text().splitlines():
                 yield line
 
 
@@ -38,5 +60,7 @@ def read_pdf_prices(url):
             yield matches.groups()
 
 
-if __name__ == '__main__':
-    print(dict(read_pdf_prices(JORAM_URL)))
+if __name__ == "__main__":
+    print(dict(read_pdf_prices(newest_pdf_joram)))
+    # FIXME (DEBUG): Print the hardcoded link
+    print(dict(read_pdf_prices(debug_pdf_joram)))
