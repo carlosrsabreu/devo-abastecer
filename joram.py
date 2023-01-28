@@ -12,7 +12,8 @@ from constants import GASOLINE_95, DIESEL, COLORED_DIESEL, PDF_GAS_PRICE_REGEX
 
 
 # TODO: Only for example. Make this url dynamic with current year and date
-JORAM_URL = 'https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202022/IISerie-138-2022-07-22Supl.pdf'
+JORAM_URL = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202022/IISerie-138-2022-07-22Supl.pdf"
+
 
 def get_pdf_content_lines(pdf_raw_data):
     with BytesIO(pdf_raw_data) as f:
@@ -38,5 +39,5 @@ def read_pdf_prices(url):
             yield matches.groups()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(dict(read_pdf_prices(JORAM_URL)))

@@ -6,32 +6,39 @@ on:
   push:
     branches:
       - main
+
 permissions: write-all
+
 jobs:
-  build:
+  update-gase-prices:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checks out the repository
+      - name: 📀 Checks Repository
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Setup Python
+
+      - name: 🐍 Setup Python
         uses: actions/setup-python@v3.1.2
-      - name: Install project requirements
+
+      - name: 📦 Install project requirements
         run: pip install -r requirements.txt
-      - name: Export data to file, add history and publish on Twitter
+
+      - name: 🛢️ Export data to file, add history and publish on Twitter
         env:
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: python script.py
-      - name: Commit gas information with history
+
+      - name: 📎 Commit gas information with history
         run: |
           git config --global user.name 'Dntfreitas'
           git config --global user.email 'dntfreitas123@gmail.com'
           git add gas_info.json
           git add history/gas_info_history.csv
           git add history/gas_info_history.json
-          git diff-index --quiet HEAD || git commit -m "Update gas information"
+          git diff-index --quiet HEAD || git commit -m "(⛽️): updated on `date +'%Y-%m-%d %H:%M:%S'`"
           git push

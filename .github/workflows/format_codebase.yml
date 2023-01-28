@@ -1,0 +1,43 @@
+name: 💅 Format Codebase
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  format-codebase:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📀 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 💄 Run Prettier
+        uses: creyD/prettier_action@v4.2
+        with:
+          prettier_options: --write **/*.{json,md}
+          commit_message: "chore(codebase): format with prettier"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: 🖤 Format code with black
+        run: |
+          git config --global user.email "hello@harryvasanth.com"
+          git config --global user.name "HarryVasanth"
+          pip install black
+          black . --verbose
+          git add .
+
+      - name: 📎 Push changes
+        run: |
+          git diff-index --quiet HEAD || git commit -m "chore(codebase): format with black" && git push || echo "No changes" && exit
