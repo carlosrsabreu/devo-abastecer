@@ -16,8 +16,7 @@ assignees: ""
 
 **To Reproduce**
 
-> <sub>Steps to reproduce the behaviour:</sub>
-> <sub>
+> <sub>Steps to reproduce the behaviour:</sub> > <sub>
 >
 > 1.  Go to '...'
 > 2.  Click on '....'
