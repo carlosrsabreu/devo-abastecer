@@ -2,9 +2,7 @@ name: 📈 Publish History Plot
 on:
   schedule:
     - cron: "0 0 1 * *"
-  push:
-      branches:
-        - main
+    
 jobs:
   post-plot-history:
     runs-on: ubuntu-latest
