@@ -18,6 +18,9 @@ jobs:
 
       - name: 📦 Install project requirements
         run: pip install -r requirements.txt
+      
+      - name: 🔠 Add all locale support
+        run: export LC_ALL=C
 
       - name: 📈 Post history plot
         env:
