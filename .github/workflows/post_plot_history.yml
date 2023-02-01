@@ -20,12 +20,12 @@ jobs:
         
       - name: 🔠 Add all locale support
         run: |
-            apt-get update
-            apt-get install -y locales-all
-            locale-gen pt_PT.UTF-8
-            locale-gen pt_PT
-            update-locale
-            export LC_ALL=C
+            sudo apt-get update
+            sudo apt-get install -y locales-all
+            sudo locale-gen pt_PT.UTF-8
+            sudo locale-gen pt_PT
+            sudo update-locale
+            sudo export LC_ALL=C
 
       - name: 📦 Install project requirements
         run: pip install -r requirements.txt
