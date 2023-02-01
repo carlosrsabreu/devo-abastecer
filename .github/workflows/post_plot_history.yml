@@ -25,7 +25,7 @@ jobs:
             sudo locale-gen pt_PT.UTF-8
             sudo locale-gen pt_PT
             sudo update-locale
-            sudo export LC_ALL=C
+            export LC_ALL=C
 
       - name: 📦 Install project requirements
         run: pip install -r requirements.txt
