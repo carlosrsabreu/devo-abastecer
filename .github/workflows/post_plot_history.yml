@@ -17,12 +17,18 @@ jobs:
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v3.1.2
+        
+      - name: 🔠 Add all locale support
+        run: |
+            apt-get update
+            apt-get install -y locales-all
+            locale-gen pt_PT.UTF-8
+            locale-gen pt_PT
+            update-locale
+            export LC_ALL=C
 
       - name: 📦 Install project requirements
         run: pip install -r requirements.txt
-      
-      - name: 🔠 Add all locale support
-        run: export LC_ALL=C
 
       - name: 📈 Post history plot
         env:
