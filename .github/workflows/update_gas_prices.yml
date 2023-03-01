@@ -37,6 +37,7 @@ jobs:
         run: |
           git config --global user.name 'Dntfreitas'
           git config --global user.email 'dntfreitas123@gmail.com'
+          git fetch && git pull --ff-only
           git add gas_info.json
           git add history/gas_info_history.csv
           git add history/gas_info_history.json
