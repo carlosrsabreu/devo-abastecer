@@ -315,5 +315,16 @@
    "27.02.2023 a 05.03.2023": 1.605,
    "Gasolina IO98": 1.754
   }
+ },
+ "2023-03-13": {
+  "Start date": "2023-03-13",
+  "End date": "2023-03-19",
+  "Gas": {
+   "Gasolina IO95": 1.61,
+   "Gasóleo Rodoviário": 1.393,
+   "Gasóleo Colorido e Marcado": 1.052,
+   "06.03.2023 a 12.03.2023": 1.604,
+   "Gasolina IO98": 1.76
+  }
  }
 }
