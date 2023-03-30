@@ -52,3 +52,7 @@ COLUMN_GASOLEO_RODOVIARIO = "gasoleo_rodoviario"
 TWEET_HISTORY = (
     "Variação dos preços dos combustíveis na Madeira, de {start_date} a {end_date}."
 )
+
+# JORAM link
+JORAM_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}"
+JORAM_PDF_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}/{file}"

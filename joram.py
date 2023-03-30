@@ -4,14 +4,13 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 from PyPDF2 import PdfReader
-from constants import GASOLINE_95, DIESEL, COLORED_DIESEL, PDF_GAS_PRICE_REGEX
+from constants import PDF_GAS_PRICE_REGEX, JORAM_LINK, JORAM_PDF_LINK
 
-# Get the current year
-current_year = str(datetime.datetime.now().year)
+# Get the current date
+current_date = datetime.datetime.now()
 
 # JORAM URL for current year's PDFs
-joram_url = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20"
-joram_current_year_url = joram_url + current_year + "/"
+joram_current_year_url = JORAM_LINK.format(date=current_date)
 
 # Get the HTML response for the URL
 response = requests.get(joram_current_year_url)
@@ -60,7 +59,7 @@ if __name__ == "__main__":
     while len(sorted_pdf_links) > 0:
         newest_pdf_link = sorted_pdf_links.pop()
         newest_pdf_filename = newest_pdf_link["href"].split("/")[-1]
-        newest_pdf_joram = joram_url + current_year + "/" + newest_pdf_filename
+        newest_pdf_joram = JORAM_PDF_LINK.format(date=current_date, file=newest_pdf_filename)
         gas_prices = dict(read_pdf_prices(newest_pdf_joram))
         if gas_prices:
             break
