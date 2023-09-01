@@ -19,7 +19,8 @@ from constants import (
     GASOLINE_95,
     DIFFERENCE_95_98_PRICE,
 )
-from post_tweet import make_tweet
+# Make tweet (DISABLED)
+# from post_tweet import make_tweet
 
 # Get current data to check if there is an update
 with open(CURRENT_GAS_INFO_FILE) as f:
@@ -84,8 +85,10 @@ if update:
     dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_98] = round(
         dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_95] + DIFFERENCE_95_98_PRICE, 3
     )
-    # Make tweet
-    make_tweet(dict_prices)
+    #
+    # Make tweet (DISABLED)
+    # make_tweet(dict_prices)
+    #
     # Add history
     add_history(dict_prices)
     # Writing JSON file
