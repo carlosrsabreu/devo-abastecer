@@ -3,16 +3,12 @@ END_DATE_KEY = "End date"
 GAS_KEY = "Gas"
 GAS_NAME_KEY = "Name"
 GAS_PRICE_KEY = "Price"
-NEW_DATE_KEY = "......."
+# NEW_DATE_KEY = "......."
 START_DATE_KEY = "Start date"
 CURRENT_WEEK = "current"
 PREVIOUS_WEEK = "previous"
 # Constants
 DIFFERENCE_95_98_PRICE = 0.15
-# Endpoint
-ENDPOINT = "https://www.madeira.gov.pt/drett"
-# Span
-SPAN_ID = "dnn_ctr9883_View_D1_dlstInformacaoOne_Conteudo_0"
 # Files
 CURRENT_GAS_INFO_FILE = "gas_info.json"
 CURRENT_GAS_HISTORY_JSON_FILE = "history/gas_info_history.json"

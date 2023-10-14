@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import datetime
 from PyPDF2 import PdfReader
 from constants import PDF_GAS_PRICE_REGEX, JORAM_LINK, JORAM_PDF_LINK
+from functions import replace_gas_keys_names
 
 # Get the current date
 current_date = datetime.datetime.now()
@@ -54,6 +55,20 @@ def read_pdf_prices(joram_current_year_url):
             discovered_prices += 1
             yield match.groups()
 
+# Retrieve gas prices
+def retrieve_gas_prices():
+    # Loop through the sorted PDF links and find the gas prices
+    while len(sorted_pdf_links) > 0:
+        newest_pdf_link = sorted_pdf_links.pop()
+        newest_pdf_filename = newest_pdf_link["href"].split("/")[-1]
+        newest_pdf_joram = JORAM_PDF_LINK.format(
+            date=current_date, file=newest_pdf_filename
+        )
+        gas_prices = dict(read_pdf_prices(newest_pdf_joram))
+        if gas_prices:
+            break
+    gas_prices = replace_gas_keys_names(gas_prices)       
+    return gas_prices
 
 if __name__ == "__main__":
     # Loop through the sorted PDF links and find the gas prices
@@ -66,6 +81,7 @@ if __name__ == "__main__":
         gas_prices = dict(read_pdf_prices(newest_pdf_joram))
         if gas_prices:
             break
+    
     print(gas_prices)
     print(newest_pdf_filename)
     print(newest_pdf_joram)
