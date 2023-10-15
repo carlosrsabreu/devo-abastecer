@@ -342,31 +342,271 @@
   "2023-04-03": {
     "Start date": "2023-04-03",
     "End date": "2023-04-09",
-    "Gas": {
+    "Fuel": {
       "Gasolina IO95": 1.6,
-      "Gasóleo Rodoviário": 1.375,
-      "Gasóleo Colorido e Marcado": 1.03,
-      "Gasolina IO98": 1.75
+      "Gasóleo Rodoviário": 1.367,
+      "Gasóleo Colorido e Marcado": 1.022,
+      "Gasolina I98": 1.75
     }
   },
   "2023-04-10": {
     "Start date": "2023-04-10",
     "End date": "2023-04-16",
-    "Gas": {
+    "Fuel": {
       "Gasolina IO95": 1.625,
-      "Gasóleo Rodoviário": 1.367,
-      "Gasóleo Colorido e Marcado": 1.022,
-      "Gasolina IO98": 1.775
+      "Gasóleo Rodoviário": 1.354,
+      "Gasóleo Colorido e Marcado": 1.011,
+      "Gasolina I98": 1.775
+    }
+  },
+  "2023-04-17": {
+    "Start date": "2023-04-17",
+    "End date": "2023-04-23",
+    "Fuel": {
+      "Gasolina IO95": 1.639,
+      "Gasóleo Rodoviário": 1.358,
+      "Gasóleo Colorido e Marcado": 1.014,
+      "Gasolina I98": 1.789
+    }
+  },
+  "2023-04-24": {
+    "Start date": "2023-04-24",
+    "End date": "2023-04-30",
+    "Fuel": {
+      "Gasolina IO95": 1.646,
+      "Gasóleo Rodoviário": 1.338,
+      "Gasóleo Colorido e Marcado": 0.996,
+      "Gasolina I98": 1.796
+    }
+  },
+  "2023-05-01": {
+    "Start date": "2023-05-01",
+    "End date": "2023-05-07",
+    "Fuel": {
+      "Gasolina IO95": 1.606,
+      "Gasóleo Rodoviário": 1.338,
+      "Gasóleo Colorido e Marcado": 0.996,
+      "Gasolina I98": 1.756
+    }
+  },
+  "2023-05-08": {
+    "Start date": "2023-05-08",
+    "End date": "2023-05-14",
+    "Fuel": {
+      "Gasolina IO95": 1.606,
+      "Gasóleo Rodoviário": 1.338,
+      "Gasóleo Colorido e Marcado": 0.996,
+      "Gasolina I98": 1.756
+    }
+  },
+  "2023-05-15": {
+    "Start date": "2023-05-15",
+    "End date": "2023-05-21",
+    "Fuel": {
+      "Gasolina IO95": 1.569,
+      "Gasóleo Rodoviário": 1.298,
+      "Gasóleo Colorido e Marcado": 0.957,
+      "Gasolina I98": 1.719
+    }
+  },
+  "2023-05-22": {
+    "Start date": "2023-05-22",
+    "End date": "2023-05-28",
+    "Fuel": {
+      "Gasolina IO95": 1.592,
+      "Gasóleo Rodoviário": 1.318,
+      "Gasóleo Colorido e Marcado": 0.975,
+      "Gasolina I98": 1.742
+    }
+  },
+  "2023-05-29": {
+    "Start date": "2023-05-29",
+    "End date": "2023-06-04",
+    "Fuel": {
+      "Gasolina IO95": 1.609,
+      "Gasóleo Rodoviário": 1.332,
+      "Gasóleo Colorido e Marcado": 0.988,
+      "Gasolina I98": 1.759
+    }
+  },
+  "2023-06-05": {
+    "Start date": "2023-06-05",
+    "End date": "2023-06-11",
+    "Fuel": {
+      "Gasolina IO95": 1.633,
+      "Gasóleo Rodoviário": 1.337,
+      "Gasóleo Colorido e Marcado": 0.992,
+      "Gasolina I98": 1.783
+    }
+  },
+  "2023-06-12": {
+    "Start date": "2023-06-12",
+    "End date": "2023-06-18",
+    "Fuel": {
+      "Gasolina IO95": 1.603,
+      "Gasóleo Rodoviário": 1.312,
+      "Gasóleo Colorido e Marcado": 0.968,
+      "Gasolina I98": 1.753
+    }
+  },
+  "2023-06-19": {
+    "Start date": "2023-06-19",
+    "End date": "2023-06-25",
+    "Fuel": {
+      "Gasolina IO95": 1.641,
+      "Gasóleo Rodoviário": 1.353,
+      "Gasóleo Colorido e Marcado": 1.005,
+      "Gasolina I98": 1.791
+    }
+  },
+  "2023-06-26": {
+    "Start date": "2023-06-26",
+    "End date": "2023-07-02",
+    "Fuel": {
+      "Gasolina IO95": 1.624,
+      "Gasóleo Rodoviário": 1.355,
+      "Gasóleo Colorido e Marcado": 1.007,
+      "Gasolina I98": 1.774
+    }
+  },
+  "2023-07-03": {
+    "Start date": "2023-07-03",
+    "End date": "2023-07-09",
+    "Fuel": {
+      "Gasolina IO95": 1.611,
+      "Gasóleo Rodoviário": 1.372,
+      "Gasóleo Colorido e Marcado": 1.023,
+      "Gasolina I98": 1.761
+    }
+  },
+  "2023-07-10": {
+    "Start date": "2023-07-10",
+    "End date": "2023-07-16",
+    "Fuel": {
+      "Gasolina IO95": 1.573,
+      "Gasóleo Rodoviário": 1.34,
+      "Gasóleo Colorido e Marcado": 0.99,
+      "Gasolina I98": 1.723
+    }
+  },
+  "2023-07-17": {
+    "Start date": "2023-07-17",
+    "End date": "2023-07-23",
+    "Fuel": {
+      "Gasolina IO95": 1.6,
+      "Gasóleo Rodoviário": 1.368,
+      "Gasóleo Colorido e Marcado": 1.019,
+      "Gasolina I98": 1.75
+    }
+  },
+  "2023-07-24": {
+    "Start date": "2023-07-24",
+    "End date": "2023-07-30",
+    "Fuel": {
+      "Gasolina IO95": 1.616,
+      "Gasóleo Rodoviário": 1.384,
+      "Gasóleo Colorido e Marcado": 1.033,
+      "Gasolina I98": 1.766
+    }
+  },
+  "2023-07-31": {
+    "Start date": "2023-07-31",
+    "End date": "2023-08-06",
+    "Fuel": {
+      "Gasolina IO95": 1.638,
+      "Gasóleo Rodoviário": 1.388,
+      "Gasóleo Colorido e Marcado": 1.037,
+      "Gasolina I98": 1.788
+    }
+  },
+  "2023-08-07": {
+    "Start date": "2023-08-07",
+    "End date": "2023-08-13",
+    "Fuel": {
+      "Gasolina IO95": 1.705,
+      "Gasóleo Rodoviário": 1.45,
+      "Gasóleo Colorido e Marcado": 1.094,
+      "Gasolina I98": 1.855
+    }
+  },
+  "2023-08-14": {
+    "Start date": "2023-08-14",
+    "End date": "2023-08-20",
+    "Fuel": {
+      "Gasolina IO95": 1.719,
+      "Gasóleo Rodoviário": 1.511,
+      "Gasóleo Colorido e Marcado": 1.15,
+      "Gasolina I98": 1.869
+    }
+  },
+  "2023-08-21": {
+    "Start date": "2023-08-21",
+    "End date": "2023-08-27",
+    "Fuel": {
+      "Gasolina IO95": 1.719,
+      "Gasóleo Rodoviário": 1.511,
+      "Gasóleo Colorido e Marcado": 1.15,
+      "Gasolina I98": 1.869
+    }
+  },
+  "2023-08-28": {
+    "Start date": "2023-08-28",
+    "End date": "2023-09-03",
+    "Fuel": {
+      "Gasolina IO95": 1.719,
+      "Gasóleo Rodoviário": 1.511,
+      "Gasóleo Colorido e Marcado": 1.15,
+      "Gasolina I98": 1.869
+    }
+  },
+  "2023-09-04": {
+    "Start date": "2023-09-04",
+    "End date": "2023-09-10",
+    "Fuel": {
+      "Gasolina IO95": 1.719,
+      "Gasóleo Rodoviário": 1.511,
+      "Gasóleo Colorido e Marcado": 1.15,
+      "Gasolina I98": 1.869
+    }
+  },
+  "2023-09-11": {
+    "Start date": "2023-09-11",
+    "End date": "2023-09-17",
+    "Fuel": {
+      "Gasolina IO95": 1.719,
+      "Gasóleo Rodoviário": 1.507,
+      "Gasóleo Colorido e Marcado": 1.146,
+      "Gasolina I98": 1.869
+    }
+  },
+  "2023-09-18": {
+    "Start date": "2023-09-18",
+    "End date": "2023-09-24",
+    "Fuel": {
+      "Gasolina IO95": 1.707,
+      "Gasóleo Rodoviário": 1.507,
+      "Gasóleo Colorido e Marcado": 1.146,
+      "Gasolina I98": 1.857
+    }
+  },
+  "2023-09-25": {
+    "Start date": "2023-09-25",
+    "End date": "2023-10-01",
+    "Fuel": {
+      "Gasolina IO95": 1.705,
+      "Gasóleo Rodoviário": 1.507,
+      "Gasóleo Colorido e Marcado": 1.189,
+      "Gasolina I98": 1.855
     }
   },
   "2023-10-09": {
     "Start date": "2023-10-09",
     "End date": "2023-10-15",
-    "Gas": {
-      "Gasolina IO95": 1.667,
-      "Gasóleo Rodoviário": 1.478,
-      "Gasóleo Colorido e Marcado": 1.16,
-      "Gasolina IO98": 1.817
+    "Fuel": {
+      "Gasolina IO95": 1.711,
+      "Gasóleo Rodoviário": 1.509,
+      "Gasóleo Colorido e Marcado": 1.191,
+      "Gasolina I98": 1.861
     }
   }
 }
