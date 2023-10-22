@@ -13,6 +13,7 @@ from constants import (
     GASOLINE_95,
     DIFFERENCE_95_98_PRICE,
 )
+
 from post_tweet import make_tweet
 from joram import retrieve_gas_prices
 from functions import retrieve_week_by_date
