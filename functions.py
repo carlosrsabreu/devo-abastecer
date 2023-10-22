@@ -14,6 +14,3 @@ def replace_gas_keys_names(gas_prices):
     gas_prices[DIESEL] = gas_prices.pop('Gasóleo rodoviário') 
     gas_prices[COLORED_DIESEL] = gas_prices.pop('Gasóleo colorido e marcado') 
     return gas_prices 
-
-if __name__ == "__main__":
-  print(retrieve_week_by_date(datetime.date.today()))
