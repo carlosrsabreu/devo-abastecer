@@ -47,7 +47,7 @@ if update:
         # skip to next line in case fuelPrice is not a float
         while price is None:
             try:
-                price = f"{float(value.replace(',', '.')):.3f}"
+                price = float(value.replace(",", "."))
             except ValueError:
                 continue
 
