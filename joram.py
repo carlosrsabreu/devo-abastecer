@@ -55,8 +55,17 @@ def read_pdf_prices(joram_current_year_url):
             discovered_prices += 1
             yield match.groups()
 
+# Retrieve pdf creation date
+def retrieve_pdf_creation_date(pdf_url):
+    response = requests.get(pdf_url)
+    with BytesIO(response.content) as f:
+        pdf_reader = PdfReader(f)
+        # print(str(pdf_reader.metadata.creation_date))
+        return pdf_reader.metadata.creation_date
+
+
 # Retrieve gas prices
-def retrieve_gas_prices():
+def retrieve_newest_pdf_gas_info():
     # Loop through the sorted PDF links and find the gas prices
     while len(sorted_pdf_links) > 0:
         newest_pdf_link = sorted_pdf_links.pop()
@@ -68,4 +77,4 @@ def retrieve_gas_prices():
         if gas_prices:
             break
     gas_prices = replace_gas_keys_names(gas_prices)       
-    return gas_prices
+    return dict(gas_info=gas_prices, creation_date=retrieve_pdf_creation_date(newest_pdf_joram))

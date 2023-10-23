@@ -1,4 +1,3 @@
-import datetime
 import json
 
 from add_history import add_history
@@ -15,8 +14,8 @@ from constants import (
 )
 
 from post_tweet import make_tweet
-from joram import retrieve_gas_prices
-from functions import retrieve_week_by_date
+from joram import retrieve_newest_pdf_gas_info
+from functions import retrieve_week_by_date, return_next_week_by_date
 
 # Get current data to check if there is an update
 with open(CURRENT_GAS_INFO_FILE) as f:
@@ -24,12 +23,14 @@ with open(CURRENT_GAS_INFO_FILE) as f:
     current_start_date_saved = current_data[CURRENT_WEEK][START_DATE_KEY]
     current_end_date_saved = current_data[CURRENT_WEEK][END_DATE_KEY]
 
-# Retrieve gas prices
-gas_info = retrieve_gas_prices()
+# Retrieve gas prices and creation date
+pdf_info = retrieve_newest_pdf_gas_info()
+gas_info = pdf_info["gas_info"]
+creation_date = pdf_info["creation_date"]
 
-# Retrive week
-# TODO: The best scenario here is to retrive the date from the PDF (13 de outubro de 2023 -> 2023-10-13)
-start_date, end_date = retrieve_week_by_date(datetime.date.today())
+# Retrieve week by creation date of the PDF
+start_date, end_date = retrieve_week_by_date(return_next_week_by_date(creation_date))
+
 
 # Check if we already have this date
 update = start_date != current_start_date_saved and end_date != current_end_date_saved
