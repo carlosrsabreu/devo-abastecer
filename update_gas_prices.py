@@ -40,7 +40,11 @@ if update:
     # Prepare the dictionaire
     dict_prices = {
         PREVIOUS_WEEK: current_data[CURRENT_WEEK],
-        CURRENT_WEEK: {START_DATE_KEY: start_date, END_DATE_KEY: end_date, GAS_KEY: gas_info},
+        CURRENT_WEEK: {
+            START_DATE_KEY: start_date,
+            END_DATE_KEY: end_date,
+            GAS_KEY: gas_info,
+        },
     }
 
     # Parse the data
@@ -59,7 +63,7 @@ if update:
     dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_98] = round(
         dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_95] + DIFFERENCE_95_98_PRICE, 3
     )
-    
+
     # Make tweet
     make_tweet(dict_prices)
     # Add history
