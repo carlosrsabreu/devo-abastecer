@@ -1,4 +1,5 @@
 import datetime
+import re
 
 from constants import COLORED_DIESEL, DIESEL, GASOLINE_95
 
@@ -21,7 +22,23 @@ def return_next_week_by_date(date):
 
 # Replace gas keys names. This function can be optimized
 def replace_gas_keys_names(gas_prices):
-    gas_prices[GASOLINE_95] = gas_prices.pop("Gasolina super sem chumbo IO 95")
-    gas_prices[DIESEL] = gas_prices.pop("Gasóleo rodoviário")
-    gas_prices[COLORED_DIESEL] = gas_prices.pop("Gasóleo colorido e marcado")
+    # Define a mapping of keys to their corresponding regular expression patterns
+    key_patterns = {
+        GASOLINE_95: re.compile(r"Gasolina\s*super\s*sem\s*chumbo\s*IO\s*95"),
+        DIESEL: re.compile(r"Gasóleo\s*rodoviário"),
+        COLORED_DIESEL: re.compile(r"Gasóleo\s*colorido\s*e\s*marcado"),
+    }
+
+    for target_key, pattern in key_patterns.items():
+        # Find the matching key using the regular expression
+        matching_key = next(
+            (key for key in gas_prices.keys() if pattern.match(key)), None
+        )
+
+        if matching_key:
+            # If a matching key is found, replace it
+            gas_prices[target_key] = gas_prices.pop(matching_key)
+        else:
+            print(f"Error: {target_key} key not found in the dictionary.")
+
     return gas_prices
