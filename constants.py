@@ -21,11 +21,8 @@ GASOLINE_95_TW = "Gasolina 95  "
 GASOLINE_98_TW = "Gasolina 98  "
 
 # PDF_GAS_PRICE_REGEX = r'(?<=€ )([\d,]+)(?= por litro)'
-PDF_GAS_PRICE_REGEX = r"(%s|%s|%s)(?:[\.€\w ]+)(\d{1},\d{3})" % (
-    "Gasolina super sem chumbo IO 95",
-    "Gasóleo rodoviário",
-    "Gasóleo colorido e marcado",
-)
+PDF_GAS_PRICE_REGEX = r"(Gasolina\s*super\s*sem\s*chumbo\s*IO\s*95|Gasóleo\s*rodoviário|Gasóleo\s*colorido\s*e\s*marcado)(?:[\.€\w ]+)(\d{1},\d{3})"
+
 
 # History plot
 HISTORY_PLOT_LABEL_GASOLINA_IO95 = "Gasolina IO95"
@@ -46,6 +43,10 @@ TWEET_HISTORY = (
     "Variação dos preços dos combustíveis na Madeira, de {start_date} a {end_date}."
 )
 
+# JORAM link 2023 - For Debugging
+JORAM_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202023"
+JORAM_PDF_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202023/{file}"
+
 # JORAM link
-JORAM_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}"
-JORAM_PDF_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}/{file}"
+#JORAM_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}"
+#JORAM_PDF_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}/{file}"
