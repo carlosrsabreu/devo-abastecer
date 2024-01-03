@@ -25,8 +25,11 @@ with open(CURRENT_GAS_INFO_FILE) as f:
 
 # Retrieve gas prices and creation date
 pdf_info = retrieve_newest_pdf_gas_info()
+print("🐞Debug: pdf_info =", pdf_info, "\n")
 gas_info = pdf_info["gas_info"]
+print("🐞Debug: gas_info =", gas_info, "\n")
 creation_date = pdf_info["creation_date"]
+print("🐞Debug: creation_date =", creation_date, "\n")
 
 # Retrieve week by creation date of the PDF
 start_date, end_date = retrieve_week_by_date(return_next_week_by_date(creation_date))
