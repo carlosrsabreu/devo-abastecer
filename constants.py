@@ -48,5 +48,5 @@ JORAM_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202023"
 JORAM_PDF_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202023/{file}"
 
 # JORAM link
-#JORAM_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}"
-#JORAM_PDF_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}/{file}"
+# JORAM_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}"
+# JORAM_PDF_LINK = "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%20{date:%Y}/{file}"
