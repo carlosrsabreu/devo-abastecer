@@ -6,31 +6,31 @@
 
 🇵🇹 Informação acessível com os preços dos combustíveis na Madeira, publicada semanalmente no Twitter recorrendo a um bot.<br> 🇬🇧 Up-to-date fuel prices in Madeira, conveniently updated weekly on Twitter via our automated bot.
 
-## Functionality overview
+## Functionality Overview
 
-### Sequence summary
+This project automates the process of updating and publishing fuel prices in Madeira. The sequence summary below provides an overview of the main functionalities and interactions between components:
 
 ```mermaid
 sequenceDiagram
-    participant 🐍 update_gas_prices
-    participant 🐍 post_tweet
-    participant 🐍 add_history
-    participant 🌐 drett
 
-    🐍 update_gas_prices ->> 🌐 drett:GET (HTML content)
-    🌐 drett -->> 🐍 update_gas_prices: beautifulSoup object
-    🐍 update_gas_prices -->> 🐍 update_gas_prices: extract 📄 from beautifulSoup object
-    🐍 update_gas_prices ->> 🐍 update_gas_prices: 💾 gas_info.json
-    🐍 update_gas_prices -->> 🐍 update_gas_prices: compare (current date : previous date)
-    🐍 update_gas_prices -->> 🐍 update_gas_prices: post a tweet
-    🐍 update_gas_prices ->> 🐍 post_tweet: 📄 make_tweet
-    🐍 post_tweet -->> 🐍 post_tweet: compare(current price : previous price)
-    🐍 update_gas_prices ->> 🐍 add_history: 📄 add_history
-    🐍 add_history ->> 🐍 add_history: 💾 gas_info_history.json
-    🐍 add_history ->> 🐍 add_history: 💾 gas_info_history.csv
+    participant 🐍 joram.py
+    participant 🐍 update_gas_prices.py
+    participant 🐍 add_history.py
+    participant 🐍 post_tweet.py
+
+    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 🐍 constants.py: import constants
+    🐍 update_gas_prices.py ->> 🐍 joram.py: 🆕 retrieve newest pdf gas info
+    🐍 joram.py -->> 🐍 joram.py: 🌐 joram: get pdf content
+    🐍 joram.py -->> 🐍 update_gas_prices.py: 🏷️ gas prices and creation date
+    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 🐍 functions.py: retrieve week
+    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 🐍 functions.py: replace key names
+    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 📅 add start date, end date
+    🐍 update_gas_prices.py ->> 🐍 update_gas_prices.py: 💾 update gas_info.json
+    🐍 update_gas_prices.py ->> 🐍 add_history.py: 📊 add price to history
+    🐍 add_history.py ->> 🐍 add_history.py: 💾 update gas_info_history.csv
+    🐍 add_history.py ->> 🐍 add_history.py: 💾 update gas_info_history.json
+    🐍 update_gas_prices.py ->> 🐍 post_tweet.py: 📩 make tweet
+    🐍 post_tweet.py -->> 🐍 post_tweet.py: 📨 format tweet message
+    🐍 post_tweet.py -->> 🐍 post_tweet.py: 📮 post tweet
 
 ```
-
-### Summary
-
-The `update_gas_prices.py` parses content of DRETT website, and extracts the gas price data it needs using `beautifulSoup` object. Then it opens the `gas_info.json` containing previous data and compares the dates of new and previous data. If the new date is different it then, updates the `gas_info.json` and post a tweet using `post_tweet.py` which also compares the previous price and represents it within the tweet. Finally it uses `add_history.py` to add the new data to `gas_info_history.{csv,json}`.
