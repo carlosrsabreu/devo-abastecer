@@ -13,15 +13,16 @@ permissions: write-all
 jobs:
   update-gase-prices:
     runs-on: ubuntu-latest
+    name: ⛽️ Update Gas Prices from DRETT
 
     steps:
       - name: 📀 Checks Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Setup Python
-        uses: actions/setup-python@v3.1.2
+        uses: actions/setup-python@v5
 
       - name: 📦 Install project requirements
         run: pip install -r requirements.txt
