@@ -2,5 +2,5 @@ requests~=2.31.0
 tweepy~=4.14.0
 PyPDF2~=3.0.1
 matplotlib~=3.8.3
-pandas~=2.2.1
+pandas~=2.2.2
 beautifulsoup4~=4.12.3
