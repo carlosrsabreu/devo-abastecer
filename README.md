@@ -1,13 +1,11 @@
 # ⛽️ Devo Abastecer (_beta_)
 
-> [!IMPORTANT]
-> [![⛽️ Update Gas Prices from DRETT](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/update_gas_prices.yml/badge.svg?branch=main)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/update_gas_prices.yml)
-> [![📈 Publish History Plot](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/plot_history.yml/badge.svg)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/plot_history.yml)
-> [![💅 Format Codebase](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/format_codebase.yml/badge.svg?branch=main)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/format_codebase.yml)
+> [!IMPORTANT] > [![⛽️ Update Gas Prices from DRETT](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/update_gas_prices.yml/badge.svg?branch=main)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/update_gas_prices.yml) > [![📈 Publish History Plot](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/plot_history.yml/badge.svg)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/plot_history.yml) > [![💅 Format Codebase](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/format_codebase.yml/badge.svg?branch=main)](https://github.com/carlosrsabreu/devo-abastecer/actions/workflows/format_codebase.yml)
 
 🇵🇹 Informação acessível com os preços dos combustíveis na Madeira, publicada semanalmente no Twitter recorrendo a um bot.<br> 🇬🇧 Up-to-date fuel prices in Madeira, conveniently updated weekly on Twitter via our automated bot.
 
 ## Fuel price history
+
 ![Gas History](history/gas_history.png)
 
 ## Functionality Overview
