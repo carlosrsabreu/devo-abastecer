@@ -23,6 +23,7 @@ jobs:
         with:
           prettier_options: --write **/*.{json,md}
           commit_message: "chore(codebase): format with prettier"
+          only_changed: True
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
