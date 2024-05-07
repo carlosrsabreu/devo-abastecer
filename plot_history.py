@@ -1,4 +1,3 @@
-import os
 import locale
 import tempfile
 
@@ -7,8 +6,8 @@ import matplotlib.ticker as mtick
 import pandas as pd
 
 from constants import (
-    TWEET_HISTORY,
     CURRENT_GAS_HISTORY_CSV_FILE,
+    CURRENT_GAS_HISTORY_PLOT_FILE,
     COLUMN_START_DATE,
     COLUMN_GASOLINA_IO95,
     COLUMN_GASOLINA_IO98,
@@ -19,12 +18,11 @@ from constants import (
     HISTORY_PLOT_Y_LABEL,
     HISTORY_PLOT_X_LABEL,
 )
-from post_tweet import post_image
 
 locale.setlocale(locale.LC_ALL, "pt_PT.UTF-8")
 
 
-def generate_plot_history():
+def generate_plot_history(plot_path):
     # Select the last 6 months of data
     history = pd.read_csv(CURRENT_GAS_HISTORY_CSV_FILE)
     history[COLUMN_START_DATE] = pd.to_datetime(history[COLUMN_START_DATE])
@@ -49,20 +47,11 @@ def generate_plot_history():
 
     plot.yaxis.set_major_formatter(mtick.FormatStrFormatter("%.3f"))
 
-    # Save plot to history directory
-    history_dir = os.path.join(os.getcwd(), "history")
-    if not os.path.exists(history_dir):
-        os.makedirs(history_dir)
-
-    plot_path = os.path.join(history_dir, "fuel_history.png")
+    # Save plot
     plt.savefig(plot_path, dpi=300, bbox_inches="tight")
 
-    return start_date, end_date, plot_path
+    return start_date, end_date, plot
 
 
 # Generate history plot
-start_date, end_date, plot_path = generate_plot_history()
-
-print("Fuel history plot saved at:", plot_path)
-print("Start Date:", start_date)
-print("End Date:", end_date)
+start_date, end_date, _ = generate_plot_history(CURRENT_GAS_HISTORY_PLOT_FILE)
