@@ -10,6 +10,7 @@ DIFFERENCE_95_98_PRICE = 0.15
 CURRENT_GAS_INFO_FILE = "gas_info.json"
 CURRENT_GAS_HISTORY_JSON_FILE = "history/gas_info_history.json"
 CURRENT_GAS_HISTORY_CSV_FILE = "history/gas_info_history.csv"
+CURRENT_GAS_HISTORY_PLOT_FILE = "history/gas_history.png"
 # Gas
 DIESEL = "Gasóleo Rodoviário"
 GASOLINE_95 = "Gasolina IO95"
