@@ -1,3 +1,4 @@
+import os
 import locale
 import tempfile
 
@@ -23,7 +24,7 @@ from post_tweet import post_image
 locale.setlocale(locale.LC_ALL, "pt_PT.UTF-8")
 
 
-def generate_plot_history(plot_path):
+def generate_plot_history():
     # Select the last 6 months of data
     history = pd.read_csv(CURRENT_GAS_HISTORY_CSV_FILE)
     history[COLUMN_START_DATE] = pd.to_datetime(history[COLUMN_START_DATE])
@@ -48,16 +49,20 @@ def generate_plot_history(plot_path):
 
     plot.yaxis.set_major_formatter(mtick.FormatStrFormatter("%.3f"))
 
-    # Save plot
+    # Save plot to history directory
+    history_dir = os.path.join(os.getcwd(), "history")
+    if not os.path.exists(history_dir):
+        os.makedirs(history_dir)
+
+    plot_path = os.path.join(history_dir, "fuel_history.png")
     plt.savefig(plot_path, dpi=300, bbox_inches="tight")
 
-    return start_date, end_date, plot
+    return start_date, end_date, plot_path
 
 
 # Generate history plot
-temp_dir = tempfile.TemporaryDirectory()
-plot_path = temp_dir.name + "/plot.png"
-start_date, end_date, plot = generate_plot_history(plot_path)
+start_date, end_date, plot_path = generate_plot_history()
 
-# Post tweet with image
-post_image(TWEET_HISTORY.format(start_date=start_date, end_date=end_date), plot_path)
+print("Fuel history plot saved at:", plot_path)
+print("Start Date:", start_date)
+print("End Date:", end_date)
