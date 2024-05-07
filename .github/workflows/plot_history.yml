@@ -10,12 +10,16 @@ jobs:
 
     steps:
       - name: 📀 Checks Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Setup Python
-        uses: actions/setup-python@v3.1.2
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
         
       - name: 🔠 Add all locale support
         run: |
@@ -29,10 +33,16 @@ jobs:
       - name: 📦 Install project requirements
         run: pip install -r requirements.txt
 
-      - name: 📈 Post history plot
+      - name: 📈 Generate History plot
         env:
           CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
           CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: python post_plot_history.py
+        run: python plot_history.py
+
+      - name: 📎 Commit gas information with history
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
