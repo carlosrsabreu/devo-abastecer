@@ -23,11 +23,12 @@ locale.setlocale(locale.LC_ALL, "pt_PT.UTF-8")
 
 
 def generate_plot_history(plot_path):
-    # Select the last 6 months of data
     history = pd.read_csv(CURRENT_GAS_HISTORY_CSV_FILE)
     history[COLUMN_START_DATE] = pd.to_datetime(history[COLUMN_START_DATE])
     history.set_index(COLUMN_START_DATE, inplace=True)
-    history = history.last("6M").copy()
+    
+    # Select the last 6 months of data
+    # history = history.last("6M").copy()
 
     # Get start and end dates
     start_date, end_date = history.index.min(), history.index.max()
