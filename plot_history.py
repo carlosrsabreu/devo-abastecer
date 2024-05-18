@@ -26,7 +26,7 @@ def generate_plot_history(plot_path):
     history = pd.read_csv(CURRENT_GAS_HISTORY_CSV_FILE)
     history[COLUMN_START_DATE] = pd.to_datetime(history[COLUMN_START_DATE])
     history.set_index(COLUMN_START_DATE, inplace=True)
-    
+
     # Select the last 6 months of data
     # history = history.last("6M").copy()
 
