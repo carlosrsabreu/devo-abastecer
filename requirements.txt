@@ -1,4 +1,4 @@
-requests~=2.31.0
+requests~=2.32.3
 tweepy~=4.14.0
 PyPDF2~=3.0.1
 matplotlib~=3.8.4
