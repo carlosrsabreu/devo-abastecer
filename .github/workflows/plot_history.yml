@@ -9,7 +9,8 @@ permissions: write-all
 jobs:
   post-plot-history:
     runs-on: ubuntu-latest
-
+    name: 📈 Publish History Plot
+    
     steps:
       - name: 📀 Checks Repository
         uses: actions/checkout@v4
