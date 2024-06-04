@@ -35,7 +35,7 @@ mock_current_gas_info = {
 # Mock data for the PDF information
 mock_pdf_info = {
     "gas_info": {
-        "Gasolina IO95": "1,630",
+        "Gasolina IO95": "1,634",  # Update to match the expected value in the test
         "Gasóleo Rodoviário": "1,323",
         "Gasóleo Colorido e Marcado": "1,005",
     },
@@ -94,6 +94,6 @@ def test_update_gas_prices(mock_json_file, mock_pdf_info_retrieval):
     )
 
     assert update == True
-    assert gas_info["Gasolina IO95"] == "1,630"
+    assert gas_info["Gasolina IO95"] == "1,634"  # Updated to match mock data
     assert gas_info["Gasóleo Rodoviário"] == "1,323"
     assert gas_info["Gasóleo Colorido e Marcado"] == "1,005"
