@@ -66,7 +66,7 @@ def mock_pdf_info_retrieval(monkeypatch):
     )
 
 
-def test_update_gas_pricess(mock_json_file, mock_pdf_info_retrieval):
+def test_update_gas_prices(mock_json_file, mock_pdf_info_retrieval):
     from update_gas_prices import (
         CURRENT_GAS_INFO_FILE,
         CURRENT_WEEK,
