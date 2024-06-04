@@ -1,36 +1,34 @@
 import unittest
-import sys
-import os
-from datetime import datetime, timedelta
-
-# Add the path to the source files
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-import functions
+from functions import (
+    retrieve_week_by_date,
+    return_next_week_by_date,
+    replace_gas_keys_names,
+)
 
 
 class TestFunctions(unittest.TestCase):
-    def test_replace_gas_keys_names(self):
-        gas_prices = {
-            "Gasolina super sem chumbo IO 95": "1.641",
-            "Gasóleo rodoviário": "1.336",
-            "Gasóleo colorido e marcado": "1.017",
-        }
-        result = functions.replace_gas_keys_names(gas_prices)
-        self.assertIn("Gasolina IO95", result)
-        self.assertIn("Gasóleo Rodoviário", result)
-        self.assertIn("Gasóleo Colorido e Marcado", result)
 
     def test_retrieve_week_by_date(self):
-        date = datetime(2024, 5, 20)
-        result = functions.retrieve_week_by_date(date)
-        self.assertEqual(result[0], "2024-05-20")
-        self.assertEqual(result[1], "2024-05-26")
+        date = datetime.datetime(2024, 5, 20)
+        start, end = retrieve_week_by_date(date)
+        self.assertEqual(start, "2024-05-20")
+        self.assertEqual(end, "2024-05-26")
 
     def test_return_next_week_by_date(self):
-        date = datetime(2024, 5, 20)
-        result = functions.return_next_week_by_date(date)
-        self.assertEqual(result.strftime("%Y-%m-%d"), "2024-05-27")
+        date = datetime.datetime(2024, 5, 20)
+        next_week = return_next_week_by_date(date)
+        self.assertEqual(next_week, datetime.datetime(2024, 5, 27))
+
+    def test_replace_gas_keys_names(self):
+        gas_prices = {
+            "Gasolina super sem chumbo IO 95": "1,641",
+            "Gasóleo rodoviário": "1,336",
+            "Gasóleo colorido e marcado": "1,017",
+        }
+        replaced = replace_gas_keys_names(gas_prices)
+        self.assertIn("Gasolina IO95", replaced)
+        self.assertIn("Gasóleo Rodoviário", replaced)
+        self.assertIn("Gasóleo Colorido e Marcado", replaced)
 
 
 if __name__ == "__main__":

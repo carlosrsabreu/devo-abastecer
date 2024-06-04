@@ -1,36 +1,40 @@
 import unittest
-import sys
-import os
-from unittest.mock import patch, MagicMock
-from datetime import datetime
-
-# Add the path to the source files
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-import joram
+from unittest.mock import patch, mock_open, MagicMock
+from joram import (
+    retrieve_newest_pdf_gas_info,
+    read_pdf_prices,
+    retrieve_pdf_creation_date,
+)
 
 
 class TestJoram(unittest.TestCase):
+
     @patch("joram.requests.get")
-    def test_retrieve_newest_pdf_gas_info(self, mock_get):
+    @patch("joram.replace_gas_keys_names")
+    def test_retrieve_newest_pdf_gas_info(self, mock_replace, mock_get):
+        # Mock responses and function return values
         mock_response = MagicMock()
-        mock_response.content = b"%PDF-1.4..."
+        mock_response.content = b"%PDF-1.4 example content"
         mock_get.return_value = mock_response
+        mock_replace.return_value = {"Gasolina IO95": "1,600"}
 
-        with patch("joram.sorted_pdf_links", [{"href": "2024-05-20-some-file.pdf"}]):
-            result = joram.retrieve_newest_pdf_gas_info()
+        # Call the function
+        result = retrieve_newest_pdf_gas_info()
 
+        # Assert the results
         self.assertIn("gas_info", result)
         self.assertIn("creation_date", result)
 
     @patch("joram.requests.get")
-    def test_read_pdf_prices(self, mock_get):
+    def test_retrieve_pdf_creation_date(self, mock_get):
+        # Mock PDF response content and creation date
         mock_response = MagicMock()
-        mock_response.content = b"%PDF-1.4..."
+        mock_response.content = b"%PDF-1.4 example content"
         mock_get.return_value = mock_response
+        result = retrieve_pdf_creation_date("https://example.com/pdf")
 
-        result = list(joram.read_pdf_prices("https://example.com/pdf"))
-        self.assertIsInstance(result, list)
+        # Assert creation date exists
+        self.assertIsNotNone(result)
 
 
 if __name__ == "__main__":
