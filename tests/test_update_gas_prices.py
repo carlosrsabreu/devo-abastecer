@@ -1,18 +1,18 @@
 import unittest
 from unittest.mock import patch, mock_open
 import json
-from update_gas_price import update_gas_price
+from update_gas_prices import update_gas_prices
 
 
 class TestUpdateGasPrice(unittest.TestCase):
 
-    @patch("update_gas_price.retrieve_newest_pdf_gas_info")
+    @patch("update_gas_prices.retrieve_newest_pdf_gas_info")
     @patch(
-        "update_gas_price.open",
+        "update_gas_prices.open",
         new_callable=mock_open,
         read_data='{"current": {"Start date": "2024-05-20", "End date": "2024-05-26"}}',
     )
-    def test_update_gas_price(self, mock_file, mock_retrieve_info):
+    def test_update_gas_prices(self, mock_file, mock_retrieve_info):
         # Mock gas info
         mock_retrieve_info.return_value = {
             "gas_info": {
@@ -25,7 +25,7 @@ class TestUpdateGasPrice(unittest.TestCase):
         }
 
         # Call function
-        update_gas_price()
+        update_gas_prices()
 
         # Assert the file was opened and written
         mock_file.assert_called_with("gas_info.json", "w")
