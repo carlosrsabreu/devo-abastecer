@@ -2,7 +2,7 @@ import pytest
 import json
 import datetime
 from unittest.mock import patch, mock_open
-from update_gas_price import (
+from update_gas_prices import (
     retrieve_newest_pdf_gas_info,
     retrieve_week_by_date,
     return_next_week_by_date,
@@ -62,12 +62,12 @@ def mock_json_file(monkeypatch):
 def mock_pdf_info_retrieval(monkeypatch):
     # Mock retrieve_newest_pdf_gas_info to return mock_pdf_info
     monkeypatch.setattr(
-        "update_gas_price.retrieve_newest_pdf_gas_info", lambda: mock_pdf_info
+        "update_gas_prices.retrieve_newest_pdf_gas_info", lambda: mock_pdf_info
     )
 
 
-def test_update_gas_prices(mock_json_file, mock_pdf_info_retrieval):
-    from update_gas_price import (
+def test_update_gas_pricess(mock_json_file, mock_pdf_info_retrieval):
+    from update_gas_prices import (
         CURRENT_GAS_INFO_FILE,
         CURRENT_WEEK,
         START_DATE_KEY,
