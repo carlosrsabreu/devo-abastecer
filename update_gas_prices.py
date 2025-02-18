@@ -14,6 +14,7 @@ from constants import (
 )
 
 from post_tweet import make_tweet
+from post_facebook import make_facebook_post
 from joram import retrieve_newest_pdf_gas_info
 from functions import retrieve_week_by_date, return_next_week_by_date
 
@@ -69,6 +70,7 @@ if update:
 
     # Make tweet
     make_tweet(dict_prices)
+    make_facebook_post(dict_prices)
     # Add history
     add_history(dict_prices)
     # Writing JSON file
