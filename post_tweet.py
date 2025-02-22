@@ -69,5 +69,7 @@ def make_tweet(dict_prices):
     tweet_message += f"{DIESEL_TW}{gas_prices_message(dict_prices[CURRENT_WEEK][GAS_KEY][DIESEL], dict_prices[PREVIOUS_WEEK][GAS_KEY][DIESEL])}\n"
     tweet_message += f"{GASOLINE_95_TW}{gas_prices_message(dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_95], dict_prices[PREVIOUS_WEEK][GAS_KEY][GASOLINE_95])}\n"
     tweet_message += f"{GASOLINE_98_TW}{gas_prices_message(dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_98], dict_prices[PREVIOUS_WEEK][GAS_KEY][GASOLINE_98])}\n"
+    tweet_message += f"\n\n"
+    tweet_message += f"#Portugal #Madeira ##IlhaDaMadeira  #Funchal #Combustível #Fuel\n"    
     # Post Tweet
     client.create_tweet(text=tweet_message)

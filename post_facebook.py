@@ -87,6 +87,7 @@ def make_facebook_post(dict_prices):
     post_message += f"{DIESEL_TW}{gas_prices_message(dict_prices[CURRENT_WEEK][GAS_KEY][DIESEL], dict_prices[PREVIOUS_WEEK][GAS_KEY][DIESEL])}\n"
     post_message += f"{GASOLINE_95_TW}{gas_prices_message(dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_95], dict_prices[PREVIOUS_WEEK][GAS_KEY][GASOLINE_95])}\n"
     post_message += f"{GASOLINE_98_TW}{gas_prices_message(dict_prices[CURRENT_WEEK][GAS_KEY][GASOLINE_98], dict_prices[PREVIOUS_WEEK][GAS_KEY][GASOLINE_98])}\n"
-
+    post_message += f"\n\n"
+    post_message += f"#Portugal #Madeira ##IlhaDaMadeira  #Funchal #Combustível #Fuel\n"
     # Post the message
     return post_text_to_facebook(post_message)
