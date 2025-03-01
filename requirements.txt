@@ -3,5 +3,5 @@ tweepy~=4.15.0
 PyPDF2~=3.0.1
 matplotlib~=3.10.0
 pandas~=2.2.3
-beautifulsoup4~=4.12.3
+beautifulsoup4~=4.13.3
 atproto
