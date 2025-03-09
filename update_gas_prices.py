@@ -70,7 +70,7 @@ if update:
     )
 
     # Make tweet/posts
-    # make_tweet(dict_prices)
+    make_tweet(dict_prices)
     make_bsky_post(dict_prices)
     make_facebook_post(dict_prices)
     # Add history
