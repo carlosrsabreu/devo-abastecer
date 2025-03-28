@@ -1368,5 +1368,15 @@
    "Gasóleo Colorido e Marcado": 0.981,
    "Gasolina IO98": 1.696
   }
+ },
+ "2025-03-31": {
+  "Start date": "2025-03-31",
+  "End date": "2025-04-06",
+  "Gas": {
+   "Gasolina IO95": 1.561,
+   "Gasóleo Rodoviário": 1.439,
+   "Gasóleo Colorido e Marcado": 0.981,
+   "Gasolina IO98": 1.711
+  }
  }
 }
