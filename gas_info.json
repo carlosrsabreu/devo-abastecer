@@ -1,15 +1,5 @@
 {
  "previous": {
-  "Start date": "2025-05-12",
-  "End date": "2025-05-18",
-  "Gas": {
-   "Gasolina IO95": 1.537,
-   "Gasóleo Rodoviário": 1.389,
-   "Gasóleo Colorido e Marcado": 0.929,
-   "Gasolina IO98": 1.687
-  }
- },
- "current": {
   "Start date": "2025-05-19",
   "End date": "2025-05-25",
   "Gas": {
@@ -17,6 +7,16 @@
    "Gasóleo Rodoviário": 1.381,
    "Gasóleo Colorido e Marcado": 0.921,
    "Gasolina IO98": 1.686
+  }
+ },
+ "current": {
+  "Start date": "2025-05-26",
+  "End date": "2025-06-01",
+  "Gas": {
+   "Gasolina IO95": 1.561,
+   "Gasóleo Rodoviário": 1.409,
+   "Gasóleo Colorido e Marcado": 0.946,
+   "Gasolina IO98": 1.711
   }
  }
 }
