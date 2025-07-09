@@ -1,5 +1,5 @@
 requests~=2.32.4
-tweepy~=4.15.0
+tweepy~=4.16.0
 PyPDF2~=3.0.1
 matplotlib~=3.9.4
 pandas~=2.2.3
