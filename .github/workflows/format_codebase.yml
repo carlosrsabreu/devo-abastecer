@@ -14,34 +14,33 @@ jobs:
 
     steps:
       - name: 📀 Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 💄 Run Prettier
-        uses: creyD/prettier_action@v4.3
-        with:
-          prettier_options: --write **/*.{json,md}
-          commit_message: "chore(codebase): format with prettier"
-          only_changed: True
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: 🐍 Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.13"
+          python-version: "3.14"
           cache: "pip"
           cache-dependency-path: requirements.txt
 
+      - name: 💄 Run Prettier
+        shell: bash
+        run: |
+          npm install -g prettier
+          prettier --write "**/*.{yml,json,md}"
+
       - name: 🖤 Format code with black
+        shell: bash
+        run: |
+          pip install black
+          black . --verbose
+
+      - name: 📎 Config Git & Push Changes
+        shell: bash
         run: |
           git config --global user.email "hello@harryvasanth.com"
           git config --global user.name "HarryVasanth"
-          pip install black
-          black . --verbose
           git add .
-
-      - name: 📎 Push changes
-        run: |
-          git diff-index --quiet HEAD || git commit -m "chore(codebase): format with black" && git push || echo "No changes" && exit
+          git diff-index --quiet HEAD || git commit -m "chore(codebase): fmt & lint" && git push || echo "🚫 No changes" && exit
