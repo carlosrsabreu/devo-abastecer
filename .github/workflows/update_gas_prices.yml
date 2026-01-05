@@ -17,18 +17,19 @@ jobs:
 
     steps:
       - name: 📀 Checks Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.13"
+          python-version: "3.14"
           cache: "pip"
           cache-dependency-path: requirements.txt
 
-      - name: 📦 Install project requirements
+      - name: 📦 Install Python Requirements
+        shell: bash
         run: pip install -r requirements.txt
 
       - name: 🛢️ Export data to file, add history and publish on Twitter
@@ -41,9 +42,10 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+        shell: bash
         run: python update_gas_prices.py
 
-      - name: 📎 Commit gas information with history
+      - name: 📎 Commit Gas Info with History
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
