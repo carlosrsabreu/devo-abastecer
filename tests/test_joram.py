@@ -2,6 +2,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 from joram import get_sorted_pdf_links, read_pdf_prices, retrieve_pdf_creation_date
 
+
 def test_get_sorted_pdf_links():
     mock_html = """
     <html>
@@ -20,6 +21,7 @@ def test_get_sorted_pdf_links():
         assert links[0]["href"] == "http://example.com/2024-05-20.pdf"
         assert links[1]["href"] == "http://example.com/2024-05-21.pdf"
 
+
 @patch("joram.get_pdf_content_lines")
 @patch("requests.get")
 def test_read_pdf_prices(mock_get, mock_get_pdf_lines):
@@ -27,7 +29,7 @@ def test_read_pdf_prices(mock_get, mock_get_pdf_lines):
     mock_get_pdf_lines.return_value = [
         "Gasolina super sem chumbo IO 95... 1,751",
         "Gasóleo rodoviário... 1,521",
-        "Gasóleo colorido e marcado... 1,144"
+        "Gasóleo colorido e marcado... 1,144",
     ]
 
     prices = dict(read_pdf_prices("http://example.com/test.pdf"))
@@ -36,6 +38,7 @@ def test_read_pdf_prices(mock_get, mock_get_pdf_lines):
     assert prices["Gasolina super sem chumbo IO 95"] == "1,751"
     assert prices["Gasóleo rodoviário"] == "1,521"
     assert prices["Gasóleo colorido e marcado"] == "1,144"
+
 
 @patch("joram.PdfReader")
 @patch("requests.get")

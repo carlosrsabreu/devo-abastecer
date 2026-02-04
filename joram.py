@@ -7,6 +7,7 @@ from PyPDF2 import PdfReader
 from constants import PDF_GAS_PRICE_REGEX, JORAM_LINK, JORAM_PDF_LINK
 from functions import replace_gas_keys_names
 
+
 # Generator function to extract line by line text from PDF
 def get_pdf_content_lines(pdf_raw_data):
     with BytesIO(pdf_raw_data) as f:
