@@ -41,7 +41,7 @@ def post_text_to_facebook(message):
         "access_token": ACCESS_TOKEN,
     }
 
-    response = requests.post(url, data=payload)
+    response = requests.post(url, data=payload, timeout=10)
 
     if response.status_code == 200:
         print("Text post published successfully!")
@@ -61,11 +61,12 @@ def post_image_to_facebook(image_path, caption=""):
         "access_token": ACCESS_TOKEN,
     }
 
-    files = {
-        "source": open(image_path, "rb"),
-    }
+    with open(image_path, "rb") as f:
+        files = {
+            "source": f,
+        }
 
-    response = requests.post(url, data=payload, files=files)
+        response = requests.post(url, data=payload, files=files, timeout=10)
 
     if response.status_code == 200:
         print("Image post published successfully!")
