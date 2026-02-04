@@ -1,0 +1,63 @@
+name: 🧪 Unit Tests & Security Scan
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: 🧪 Run Tests
+
+    steps:
+      - name: 📀 Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          cache-dependency-path: requirements.txt
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🧪 Run Unit Tests
+        run: |
+          pytest
+
+  security:
+    runs-on: ubuntu-latest
+    name: 🛡️ Security Scan
+
+    steps:
+      - name: 📀 Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          cache-dependency-path: requirements.txt
+
+      - name: 📦 Install Security Tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install safety bandit
+
+      - name: 🛡️ Check Dependencies (Safety)
+        run: |
+          safety check -r requirements.txt
+
+      - name: 🛡️ Static Analysis (Bandit)
+        run: |
+          bandit -r . -x ./tests
