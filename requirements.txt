@@ -2,7 +2,7 @@ requests~=2.32.5
 tweepy~=4.16.0
 PyPDF2~=3.0.1
 matplotlib~=3.10.8
-pandas~=3.0.0
+pandas~=3.0.1
 beautifulsoup4~=4.14.3
 atproto
 pytest~=9.0.2
