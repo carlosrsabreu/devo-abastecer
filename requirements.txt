@@ -6,4 +6,4 @@ pandas~=3.0.0
 beautifulsoup4~=4.14.3
 atproto
 pytest~=8.3.4
-pytest-mock~=3.14.0
+pytest-mock~=3.15.1
