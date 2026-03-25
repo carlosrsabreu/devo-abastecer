@@ -1,6 +1,8 @@
 import re
 import logging
 import datetime
+import urllib.parse
+import warnings
 from io import BytesIO
 import requests
 from bs4 import BeautifulSoup
@@ -10,6 +12,9 @@ from functions import replace_gas_keys_names
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+# Suppress verbose PDF library warnings
+logging.getLogger("PyPDF2").setLevel(logging.ERROR)
+warnings.filterwarnings("ignore", module="PyPDF2")
 
 
 # Generator function to extract line by line text from PDF
@@ -47,7 +52,10 @@ def get_sorted_pdf_links(joram_url):
         def extract_date(link):
             match = re.search(r"\d{4}-\d{2}-\d{2}", link["href"])
             if match:
-                return datetime.datetime.strptime(match.group(), "%Y-%m-%d")
+                try:
+                    return datetime.datetime.strptime(match.group(), "%Y-%m-%d")
+                except ValueError:
+                    pass
             return datetime.datetime.min
 
         sorted_pdf_links = sorted(pdf_links, key=extract_date)
@@ -61,15 +69,53 @@ def get_sorted_pdf_links(joram_url):
 def read_pdf_prices(pdf_url):
     try:
         discovered_prices = 0
+        # Properly encode URL to handle spaces and special characters
+        # We unquote first to avoid double encoding if the URL is already encoded
+        parts = urllib.parse.urlparse(pdf_url)
+        unquoted_path = urllib.parse.unquote(parts.path)
+        pdf_url = urllib.parse.urlunparse(
+            parts._replace(path=urllib.parse.quote(unquoted_path))
+        )
         response = requests.get(pdf_url, timeout=15)
         response.raise_for_status()
-        for line in get_pdf_content_lines(response.content):
+
+        all_text = ""
+        with BytesIO(response.content) as f:
+            pdf_reader = PdfReader(f)
+            for page in pdf_reader.pages:
+                text = page.extract_text()
+                if text:
+                    all_text += text + "\n"
+
+        # Normalize text to handle split lines (especially for Gasoline 95 in 2008)
+        normalized_text = all_text.replace("\n", " ")
+        # But we still want to try line by line for most cases as it's safer
+        lines = all_text.splitlines()
+
+        for line in lines:
             if discovered_prices == 3:
                 break
-            match = re.search(PDF_GAS_PRICE_REGEX, line)
+            match = re.search(PDF_GAS_PRICE_REGEX, line, re.IGNORECASE)
             if match:
-                discovered_prices += 1
-                yield match.groups()
+                name, price = match.groups()
+                price = price.replace(" ", "")
+                if "," in price and len(price.split(",")[1]) == 3:
+                    discovered_prices += 1
+                    yield name, price
+
+        # If we didn't find 3 prices, try the normalized text (without line breaks)
+        if discovered_prices < 3:
+            # We need to be careful not to re-yield already found prices
+            # But since this is a generator and we've already yielded, we can just look for everything again
+            # and let the caller handle it (or use dict() to deduplicate)
+            all_matches = re.finditer(
+                PDF_GAS_PRICE_REGEX, normalized_text, re.IGNORECASE
+            )
+            for match in all_matches:
+                name, price = match.groups()
+                price = price.replace(" ", "")
+                if "," in price and len(price.split(",")[1]) == 3:
+                    yield name, price
     except Exception as e:
         logging.error(f"Error reading prices from PDF {pdf_url}: {e}")
 
@@ -135,4 +181,6 @@ def retrieve_newest_pdf_gas_info():
             f"Expected 3 gas prices, but found {len(gas_prices)}: {list(gas_prices.keys())}"
         )
 
-    return dict(gas_info=gas_prices, creation_date=creation_date)
+    return dict(
+        gas_info=gas_prices, creation_date=creation_date, pdf_url=newest_pdf_joram
+    )
