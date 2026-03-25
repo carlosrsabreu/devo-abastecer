@@ -46,14 +46,14 @@ def generate_plot_history(plot_path):
     plt.style.use("default")
 
     # Create the figure
-    fig, ax = plt.subplots(figsize=(14, 8), dpi=300, facecolor="#ffffff")
-    ax.set_facecolor("#ffffff")
+    fig, ax = plt.subplots(figsize=(14, 8), dpi=300, facecolor="#161B22")
+    ax.set_facecolor("#161B22")
 
-    # Sophisticated, modern colors
+    # Provided palette: Vibrant Red (Primary), Royal Blue (Secondary), Emerald (Accent)
     colors = {
-        COLUMN_GASOLINA_IO95: "#0984e3",  # Vibrant Blue
-        COLUMN_GASOLINA_IO98: "#d63031",  # Vibrant Red
-        COLUMN_GASOLEO_RODOVIARIO: "#00b894",  # Vibrant Teal/Green
+        COLUMN_GASOLINA_IO95: "#F85149",  # Primary: Vibrant Red
+        COLUMN_GASOLINA_IO98: "#3B82F6",  # Secondary: Royal Blue
+        COLUMN_GASOLEO_RODOVIARIO: "#10B981",  # Accent: Emerald Green
     }
 
     labels = {
@@ -87,68 +87,69 @@ def generate_plot_history(plot_path):
                 y_smooth,
                 label=labels[col],
                 color=colors[col],
-                linewidth=3,
-                alpha=0.8,
+                linewidth=2,
+                alpha=1.0,
                 zorder=3,
             )
 
-            # Add markers at original data points (optional, but good for clarity)
+            # Add markers at original data points (refined and small to keep the look clean)
             ax.scatter(
                 history.index,
                 y,
                 color=colors[col],
-                edgecolor="white",
-                linewidth=1,
-                s=25,
+                edgecolor="#161B22",
+                linewidth=0.5,
+                s=12,  # Refined size
                 zorder=4,
-                alpha=0.9,
+                alpha=0.6,
             )
 
     # Title and Labels
     ax.set_title(
-        "Histórico de Preços de Combustíveis na Madeira",
-        fontsize=24,
+        "HISTÓRICO DE PREÇOS DE COMBUSTÍVEIS (MADEIRA)",
+        fontsize=18,
         fontweight="bold",
-        pad=35,
-        color="#1e272e",
+        pad=30,
+        color="#F0F6FC",
+        alpha=0.9,
     )
-    ax.set_ylabel(HISTORY_PLOT_Y_LABEL, fontsize=14, labelpad=20, color="#485460")
-    ax.set_xlabel(HISTORY_PLOT_X_LABEL, fontsize=14, labelpad=20, color="#485460")
+    ax.set_ylabel(HISTORY_PLOT_Y_LABEL, fontsize=12, labelpad=15, color="#8B949E")
+    ax.set_xlabel(HISTORY_PLOT_X_LABEL, fontsize=12, labelpad=15, color="#8B949E")
 
     # Formatting Y-axis
     ax.yaxis.set_major_formatter(mtick.FormatStrFormatter("%.3f€"))
 
     # Customize ticks and grid
-    ax.tick_params(axis="both", which="major", labelsize=11, colors="#485460", length=0)
-    ax.grid(True, linestyle="-", alpha=0.15, color="#808e9b", zorder=0)
+    ax.tick_params(axis="both", which="major", labelsize=10, colors="#8B949E", length=0)
+    ax.grid(True, linestyle="-", alpha=0.1, color="#484F58", zorder=0)
 
     # Remove top and right spines, and style others
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ax.spines["left"].set_visible(False)
-    ax.spines["bottom"].set_color("#d2dae2")
-    ax.spines["bottom"].set_linewidth(1.5)
+    ax.spines["bottom"].set_color("#30363D")
+    ax.spines["bottom"].set_linewidth(1)
 
     # Legend styling
     legend = ax.legend(
         loc="upper center",
-        bbox_to_anchor=(0.5, -0.15),
+        bbox_to_anchor=(0.5, -0.1),
         ncol=3,
-        fontsize=12,
+        fontsize=10,
         frameon=False,
-        handlelength=2.5,
+        handlelength=1.5,
     )
     for text in legend.get_texts():
-        text.set_color("#1e272e")
+        text.set_color("#F0F6FC")
 
     # Add source info at the bottom right
     plt.text(
         1.0,
-        -0.25,
+        -0.12,
         "Fonte: JORAM | Devo Abastecer",
         transform=ax.transAxes,
-        fontsize=10,
-        color="#808e9b",
+        fontsize=9,
+        color="#8B949E",
         ha="right",
         va="top",
     )
