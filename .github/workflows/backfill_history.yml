@@ -1,0 +1,37 @@
+name: 🏛️ Backfill Gas Price History
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+  backfill-history:
+    runs-on: ubuntu-latest
+    name: 🏛️ Backfill Gas Price History
+
+    steps:
+      - name: 📀 Checks Repository
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements.txt
+
+      - name: 📦 Install Python Requirements
+        shell: bash
+        run: pip install -r requirements.txt
+
+      - name: 📊 Run Backfill Script
+        shell: bash
+        run: python backfill_history.py
+
+      - name: 📎 Commit Updated History
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
