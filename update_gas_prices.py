@@ -11,6 +11,7 @@ from constants import (
     GASOLINE_98,
     GASOLINE_95,
     DIFFERENCE_95_98_PRICE,
+    PDF_URL_KEY,
 )
 
 from post_bsky import make_bsky_post
@@ -42,8 +43,9 @@ def main():
 
     gas_info = pdf_info.get("gas_info")
     creation_date = pdf_info.get("creation_date")
+    pdf_url = pdf_info.get("pdf_url")
 
-    if not gas_info or not creation_date:
+    if not gas_info or not creation_date or not pdf_url:
         logging.error("Incomplete PDF information retrieved.")
         return
 
@@ -74,6 +76,7 @@ def main():
                 START_DATE_KEY: start_date,
                 END_DATE_KEY: end_date,
                 GAS_KEY: {},
+                PDF_URL_KEY: pdf_url,
             },
         }
 
