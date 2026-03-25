@@ -11,6 +11,7 @@ from constants import (
     GASOLINE_95,
     DIESEL,
     GAS_KEY,
+    PDF_URL_KEY,
 )
 
 # Configure logging
@@ -31,6 +32,12 @@ def add_history(dict_prices):
             history_data = json.load(f)
 
         history_data[start_date] = dict_prices[CURRENT_WEEK]
+
+        # Ensure PDF URL is present
+        if PDF_URL_KEY not in history_data[start_date]:
+            history_data[start_date][PDF_URL_KEY] = dict_prices[CURRENT_WEEK].get(
+                PDF_URL_KEY, ""
+            )
 
         with open(CURRENT_GAS_HISTORY_JSON_FILE, "w") as f:
             json.dump(history_data, f, indent=1, ensure_ascii=False)
@@ -59,8 +66,11 @@ def add_history(dict_prices):
                 diesel = gas_data.get(DIESEL, "")
                 colored = gas_data.get(COLORED_DIESEL, "")
                 p98 = gas_data.get(GASOLINE_98, "")
+                url = dict_prices[CURRENT_WEEK].get(PDF_URL_KEY, "")
 
-                f.write(f"{start_date},{end_date},{p95},{diesel},{colored},{p98}\n")
+                f.write(
+                    f"{start_date},{end_date},{p95},{diesel},{colored},{p98},{url}\n"
+                )
             logging.info(f"Added entry for {start_date} to CSV history.")
         else:
             logging.info(f"Entry for {start_date} already exists in CSV history.")
