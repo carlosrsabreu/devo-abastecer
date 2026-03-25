@@ -12,29 +12,36 @@
 
 ## Functionality Overview
 
-This project automates the process of updating and publishing fuel prices in Madeira. The sequence summary below provides an overview of the main functionalities and interactions between components:
+This project automates the end-to-end lifecycle of fuel price monitoring in Madeira. The system is designed for reliability, using GitHub Actions as a serverless orchestrator to handle extraction, archival, and multi-channel publication.
+
+### Workflow
 
 ```mermaid
 sequenceDiagram
+    autonumber
+    participant 🤖 GitHub Action
+    participant 🐍 Orchestrator (update_gas_prices.py)
+    participant 📄 JORAM (PDF Archive)
+    participant 🗄️ Database (CSV/JSON)
+    participant 📢 Social Media (X/BSky/FB)
+    participant 📈 Visualization (plot_history.py)
 
-    participant 🐍 joram.py
-    participant 🐍 update_gas_prices.py
-    participant 🐍 add_history.py
-    participant 🐍 post_tweet.py
+    Note over 🤖 GitHub Action: 📅 Weekly update trigger
+    🤖 GitHub Action ->> 🐍 Orchestrator (update_gas_prices.py): 🚀 Start update process
+    🐍 Orchestrator (update_gas_prices.py) ->> 📄 JORAM (PDF Archive): 🔍 Extract latest fuel prices
+    📄 JORAM (PDF Archive) -->> 🐍 Orchestrator (update_gas_prices.py): 🏷️ New price data
 
-    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 🐍 constants.py: import constants
-    🐍 update_gas_prices.py ->> 🐍 joram.py: 🆕 retrieve newest pdf gas info
-    🐍 joram.py -->> 🐍 joram.py: 🌐 joram: get pdf content
-    🐍 joram.py -->> 🐍 update_gas_prices.py: 🏷️ gas prices and creation date
-    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 🐍 functions.py: retrieve week
-    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 🐍 functions.py: replace key names
-    🐍 update_gas_prices.py -->> 🐍 update_gas_prices.py: 📅 add start date, end date
-    🐍 update_gas_prices.py ->> 🐍 update_gas_prices.py: 💾 update gas_info.json
-    🐍 update_gas_prices.py ->> 🐍 add_history.py: 📊 add price to history
-    🐍 add_history.py ->> 🐍 add_history.py: 💾 update gas_info_history.csv
-    🐍 add_history.py ->> 🐍 add_history.py: 💾 update gas_info_history.json
-    🐍 update_gas_prices.py ->> 🐍 post_tweet.py: 📩 make tweet
-    🐍 post_tweet.py -->> 🐍 post_tweet.py: 📨 format tweet message
-    🐍 post_tweet.py -->> 🐍 post_tweet.py: 📮 post tweet
+    alt 🆕 New Prices Found
+        🐍 Orchestrator (update_gas_prices.py) ->> 🗄️ Database (CSV/JSON): 🏛️ Archive record (add_history.py)
+        🐍 Orchestrator (update_gas_prices.py) ->> 📢 Social Media (X/BSky/FB): 📬 Post to platforms
+        🐍 Orchestrator (update_gas_prices.py) ->> 🤖 GitHub Action: 💾 Commit updated history files
+    else 💤 Data already exists
+        🐍 Orchestrator (update_gas_prices.py) -->> 🤖 GitHub Action: 🔚 End workflow
+    end
 
+    Note over 🤖 GitHub Action: 📈 Monthly visualization trigger
+    🤖 GitHub Action ->> 📈 Visualization (plot_history.py): 🎨 Generate trend chart
+    📈 Visualization (plot_history.py) ->> 🗄️ Database (CSV/JSON): 📖 Read historical data
+    📈 Visualization (plot_history.py) ->> 📈 Visualization (plot_history.py): 🖼️ Render gas_history.png
+    📈 Visualization (plot_history.py) ->> 🤖 GitHub Action: 📎 Commit updated plot
 ```
