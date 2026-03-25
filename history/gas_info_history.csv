@@ -1,188 +1,872 @@
-start_date,end_date,gasolina_IO95,gasoleo_rodoviario,gasoleo_colorido_marcado,gasolina_IO98
-2022-07-25,2022-07-31,1.889,1.789,1.425,2.039
-2022-08-01,2022-08-07,1.841,1.748,1.379,1.991
-2022-08-08,2022-08-14,1.835,1.721,1.354,1.985
-2022-08-15,2022-08-21,1.751,1.638,1.278,1.901
-2022-08-22,2022-08-28,1.734,1.621,1.262,1.884
-2022-08-29,2022-09-04,1.724,1.663,1.301,1.874
-2022-09-05,2022-09-11,1.728,1.756,1.386,1.878
-2022-09-12,2022-09-18,1.666,1.72,1.353,1.816
-2022-09-19,2022-09-25,1.65,1.714,1.348,1.8
-2022-10-03,2022-10-09,1.635,1.629,1.27,1.785
-2022-10-10,2022-10-16,1.643,1.643,1.283,1.793
-2022-10-17,2022-10-23,1.766,1.746,1.377,1.916
-2022-10-31,2022-11-06,1.765,1.825,1.466,1.915
-2022-11-07,2022-11-13,1.747,1.813,1.455,1.897
-2022-11-14,2022-11-20,1.767,1.789,1.433,1.917
-2022-11-21,2022-11-27,1.729,1.708,1.358,1.879
-2022-11-28,2022-12-04,1.648,1.613,1.271,1.798
-2022-12-05,2022-12-11,1.593,1.556,1.219,1.743
-2022-12-12,2022-12-18,1.568,1.507,1.174,1.718
-2022-12-19,2022-12-25,1.51,1.428,1.101,1.66
-2022-12-26,2023-01-01,1.499,1.472,1.142,1.649
-2023-01-02,2023-01-08,1.517,1.471,1.141,1.667
-2023-01-09,2023-01-15,1.572,1.482,1.151,1.722
-2023-01-16,2023-01-22,1.564,1.482,1.151,1.714
-2023-01-23,2023-01-29,1.575,1.454,1.119,1.725
-2023-01-30,2023-02-05,1.608,1.466,1.13,1.758
-2023-02-06,2023-02-12,1.642,1.488,1.151,1.792
-2023-02-13,2023-02-19,1.62,1.504,1.166,1.77
-2023-02-20,2023-02-26,1.599,1.401,1.059,1.749
-2023-02-27,2023-03-05,1.605,1.401,1.059,1.755
-2023-03-06,2023-03-12,1.604,1.407,1.065,1.754
-2023-03-13,2023-03-19,1.61,1.393,1.052,1.76
-2023-03-20,2023-03-26,1.615,1.419,1.076,1.765
-2023-03-27,2023-04-02,1.59,1.405,1.063,1.74
-2023-04-03,2023-04-09,1.6,1.367,1.022,1.750
-2023-04-10,2023-04-16,1.625,1.354,1.011,1.775
-2023-04-17,2023-04-23,1.639,1.358,1.014,1.789
-2023-04-24,2023-04-30,1.646,1.338,0.996,1.796
-2023-05-01,2023-05-07,1.606,1.338,0.996,1.756
-2023-05-08,2023-05-14,1.606,1.338,0.996,1.756
-2023-05-15,2023-05-21,1.569,1.298,0.957,1.719
-2023-05-22,2023-05-28,1.592,1.318,0.975,1.742
-2023-05-29,2023-06-04,1.609,1.332,0.988,1.759
-2023-06-05,2023-06-11,1.633,1.337,0.992,1.783
-2023-06-12,2023-06-18,1.603,1.312,0.968,1.753
-2023-06-19,2023-06-25,1.641,1.353,1.005,1.791
-2023-06-26,2023-07-02,1.624,1.355,1.007,1.774
-2023-07-03,2023-07-09,1.611,1.372,1.023,1.761
-2023-07-10,2023-07-16,1.573,1.34,0.99,1.723
-2023-07-17,2023-07-23,1.6,1.368,1.019,1.750
-2023-07-24,2023-07-30,1.616,1.384,1.033,1.766
-2023-07-31,2023-08-06,1.638,1.388,1.037,1.788
-2023-08-07,2023-08-13,1.705,1.45,1.094,1.855
-2023-08-14,2023-08-20,1.719,1.511,1.15,1.869
-2023-08-21,2023-08-27,1.719,1.511,1.15,1.869
-2023-08-28,2023-09-03,1.719,1.511,1.15,1.869
-2023-09-04,2023-09-10,1.719,1.511,1.15,1.869
-2023-09-11,2023-09-17,1.719,1.507,1.146,1.869
-2023-09-18,2023-09-24,1.707,1.507,1.146,1.857
-2023-09-25,2023-10-01,1.705,1.507,1.189,1.855
-2023-10-09,2023-10-15,1.711,1.509,1.191,1.861
-2023-10-16,2023-10-22,1.636,1.451,1.133,1.786
-2023-10-30,2023-11-05,1.647,1.463,1.145,1.797
-2023-11-06,2023-11-12,1.642,1.447,1.129,1.792
-2023-11-13,2023-11-19,1.639,1.436,1.118,1.789
-2023-11-20,2023-11-26,1.619,1.401,1.083,1.769
-2023-11-27,2023-12-03,1.589,1.386,1.068,1.739
-2023-12-04,2023-12-10,1.571,1.383,1.065,1.721
-2023-12-11,2023-12-17,1.56,1.367,1.049,1.71
-2023-12-18,2023-12-24,1.54,1.342,1.023,1.69
-2023-12-25,2023-12-31,1.528,1.324,1.006,1.678
-2024-01-01,2024-01-07,1.539,1.34,1.022,1.689
-2024-01-08,2024-01-14,1.541,1.333,1.015,1.691
-2024-01-15,2024-01-21,1.542,1.321,1.003,1.692
-2024-01-22,2024-01-28,1.543,1.33,1.011,1.693
-2024-01-29,2024-02-04,1.561,1.348,1.028,1.711
-2024-02-05,2024-02-11,1.579,1.368,1.048,1.729
-2024-02-12,2024-02-18,1.587,1.386,1.066,1.737
-2024-02-19,2024-02-25,1.596,1.403,1.083,1.746
-2024-02-26,2024-03-03,1.618,1.417,1.097,1.768
-2024-03-04,2024-03-10,1.615,1.4,1.08,1.765
-2024-03-11,2024-03-17,1.621,1.392,1.072,1.771
-2024-03-18,2024-03-24,1.62,1.38,1.061,1.77
-2024-03-25,2024-03-31,1.628,1.377,1.058,1.778
-2024-04-01,2024-04-07,1.657,1.391,1.071,1.807
-2024-04-08,2024-04-14,1.677,1.381,1.062,1.827
-2024-04-15,2024-04-21,1.688,1.401,1.082,1.838
-2024-04-22,2024-04-28,1.688,1.391,1.072,1.838
-2024-04-29,2024-05-05,1.699,1.372,1.053,1.849
-2024-05-06,2024-05-12,1.688,1.358,1.039,1.838
-2024-05-13,2024-05-19,1.671,1.341,1.022,1.821
-2024-05-20,2024-05-26,1.641,1.336,1.017,1.791
-2024-05-27,2024-06-02,1.634,1.324,1.006,1.784
-2024-06-03,2024-06-09,1.63,1.323,1.005,1.78
-2024-06-10,2024-06-16,1.618,1.322,1.004,1.768
-2024-06-17,2024-06-23,1.593,1.299,0.982,1.743
-2024-06-24,2024-06-30,1.598,1.322,1.004,1.748
-2024-07-01,2024-07-07,1.612,1.35,1.032,1.762
-2024-07-08,2024-07-14,1.623,1.358,1.04,1.773
-2024-07-15,2024-07-21,1.635,1.367,1.048,1.785
-2024-07-22,2024-07-28,1.621,1.346,1.029,1.771
-2024-07-29,2024-08-04,1.612,1.331,1.015,1.762
-2024-08-05,2024-08-11,1.601,1.321,1.005,1.751
-2024-08-12,2024-08-18,1.601,1.314,0.997,1.751
-2024-08-19,2024-08-25,1.58,1.299,0.982,1.73
-2024-08-26,2024-09-01,1.582,1.304,0.987,1.732
-2024-09-02,2024-09-08,1.55,1.274,0.957,1.7
-2024-09-09,2024-09-15,1.539,1.274,0.957,1.689
-2024-09-16,2024-09-22,1.503,1.255,0.938,1.653
-2024-09-23,2024-09-29,1.495,1.246,0.929,1.645
-2024-09-30,2024-10-06,1.506,1.247,0.93,1.656
-2024-10-07,2024-10-13,1.503,1.253,0.936,1.653
-2024-10-14,2024-10-20,1.519,1.266,0.948,1.669
-2024-10-21,2024-10-27,1.542,1.287,0.969,1.692
-2024-10-28,2024-11-03,1.541,1.27,0.953,1.691
-2024-11-04,2024-11-10,1.547,1.272,0.955,1.697
-2024-11-11,2024-11-17,1.522,1.267,0.949,1.672
-2024-11-18,2024-11-24,1.531,1.289,0.969,1.681
-2024-11-25,2024-12-01,1.536,1.29,0.97,1.686
-2024-12-02,2024-12-08,1.556,1.309,0.988,1.706
-2024-12-09,2024-12-15,1.547,1.309,0.988,1.697
-2024-12-16,2024-12-22,1.543,1.301,0.98,1.693
-2024-12-23,2024-12-29,1.556,1.306,0.985,1.706
-2024-12-30,2025-01-05,1.561,1.319,0.996,1.711
-2025-01-06,2025-01-12,1.562,1.321,0.998,1.712
-2025-01-13,2025-01-19,1.589,1.343,1.018,1.739
-2025-01-20,2025-01-26,1.593,1.35,1.025,1.743
-2025-01-27,2025-02-02,1.614,1.388,1.063,1.764
-2025-02-03,2025-02-09,1.609,1.411,1.048,1.759
-2025-02-10,2025-02-16,1.604,1.411,1.029,1.754
-2025-02-17,2025-02-23,1.613,1.43,1.03,1.763
-2025-02-24,2025-03-02,1.614,1.443,1.041,1.764
-2025-03-03,2025-03-09,1.607,1.458,1.048,1.757
-2025-03-10,2025-03-16,1.589,1.458,1.029,1.739
-2025-03-17,2025-03-23,1.555,1.448,1.001,1.705
-2025-03-24,2025-03-30,1.546,1.426,0.981,1.696
-2025-03-31,2025-04-06,1.561,1.439,0.981,1.711
-2025-04-07,2025-04-13,1.598,1.456,0.997,1.748
-2025-04-14,2025-04-20,1.597,1.447,0.988,1.747
-2025-04-21,2025-04-27,1.546,1.4,0.941,1.696
-2025-04-28,2025-05-04,1.54,1.392,0.933,1.69
-2025-05-05,2025-05-11,1.553,1.404,0.944,1.703
-2025-05-12,2025-05-18,1.537,1.389,0.929,1.687
-2025-05-19,2025-05-25,1.536,1.381,0.921,1.686
-2025-05-26,2025-06-01,1.561,1.409,0.946,1.711
-2025-06-02,2025-06-08,1.555,1.401,0.939,1.705
-2025-06-09,2025-06-15,1.548,1.395,0.932,1.698
-2025-06-16,2025-06-22,1.551,1.399,0.936,1.701
-2025-06-23,2025-06-29,1.565,1.416,0.952,1.715
-2025-06-30,2025-07-06,1.583,1.47,1.006,1.733
-2025-07-07,2025-07-13,1.566,1.45,0.986,1.716
-2025-07-14,2025-07-20,1.551,1.447,0.982,1.701
-2025-07-21,2025-07-27,1.566,1.477,1.011,1.716
-2025-07-28,2025-08-03,1.565,1.473,1.007,1.715
-2025-08-04,2025-08-10,1.558,1.468,1.002,1.708
-2025-08-11,2025-08-17,1.581,1.463,0.997,1.731
-2025-08-18,2025-08-24,1.575,1.44,0.974,1.725
-2025-08-25,2025-08-31,1.571,1.424,0.958,1.721
-2025-09-01,2025-09-07,1.575,1.428,0.962,1.725
-2025-09-08,2025-09-14,1.576,1.431,0.965,1.726
-2025-09-15,2025-09-21,1.589,1.448,0.981,1.739
-2025-09-22,2025-09-28,1.588,1.445,0.977,1.738
-2025-09-29,2025-10-05,1.594,1.452,0.984,1.744
-2025-10-06,2025-10-12,1.587,1.455,0.987,1.737
-2025-10-13,2025-10-19,1.582,1.44,0.971,1.732
-2025-10-20,2025-10-26,1.58,1.432,0.963,1.73
-2025-10-27,2025-11-02,1.579,1.419,0.95,1.729
-2025-11-03,2025-11-09,1.57,1.434,0.964,1.72
-2025-11-10,2025-11-16,1.587,1.475,1.002,1.737
-2025-11-17,2025-11-23,1.59,1.495,1.02,1.74
-2025-11-24,2025-11-30,1.616,1.5,1.025,1.766
-2025-12-01,2025-12-07,1.608,1.523,1.046,1.758
-2025-12-08,2025-12-14,1.581,1.476,0.999,1.731
-2025-12-15,2025-12-21,1.573,1.455,0.978,1.723
-2025-12-22,2025-12-28,1.556,1.432,0.956,1.706
-2026-01-05,2026-01-11,1.537,1.411,0.935,1.687
-2026-01-12,2026-01-18,1.539,1.419,0.943,1.689
-2026-01-19,2026-01-25,1.537,1.417,0.941,1.687
-2026-01-26,2026-02-01,1.541,1.436,0.958,1.691
-2026-02-02,2026-02-08,1.543,1.453,0.974,1.693
-2026-02-09,2026-02-15,1.543,1.465,0.985,1.693
-2026-02-16,2026-02-22,1.552,1.466,0.985,1.702
-2026-02-23,2026-03-01,1.562,1.463,0.982,1.712
-2026-03-02,2026-03-08,1.567,1.483,1.001,1.717
-2026-03-09,2026-03-15,1.584,1.513,1.028,1.734
-2026-03-16,2026-03-22,1.656,1.7,1.216,1.806
-2026-03-23,2026-03-29,1.742,1.796,1.31,1.892
+start_date,end_date,gasolina_IO95,gasoleo_rodoviario,gasoleo_colorido_marcado,gasolina_IO98,pdf_url
+2008-09-01,2008-09-07,1.383,1.271,0.915,1.533,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-163-2008-08-28.pdf
+2008-09-15,2008-09-21,1.375,1.243,0.888,1.525,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-173-2008-09-11.pdf
+2008-09-29,2008-10-05,1.372,1.23,0.875,1.522,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-183-2008-09-25.pdf
+2008-10-13,2008-10-19,1.353,1.209,0.856,1.503,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-193-2008-10-09Supl.pdf
+2008-10-27,2008-11-02,1.323,1.187,0.835,1.473,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-203-2008-10-23Supl.pdf
+2008-11-03,2008-11-09,1.197,1.087,0.741,1.347,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-209-2008-10-31Supl.pdf
+2008-11-10,2008-11-16,1.18,1.07,0.724,1.33,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-214-2008-11-07Supl.pdf
+2008-11-17,2008-11-23,1.151,1.061,0.716,1.301,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-219-2008-11-14Supl.pdf
+2008-11-24,2008-11-30,1.127,1.038,0.694,1.277,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-224-2008-11-21Supl.pdf
+2008-12-01,2008-12-07,1.091,1.006,0.664,1.241,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-229-2008-11-28Supl.pdf
+2008-12-08,2008-12-14,1.08,0.987,0.646,1.23,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-233-2008-12-05Supl.pdf
+2008-12-15,2008-12-21,1.065,0.961,0.621,1.215,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-237-2008-12-12Supl.pdf
+2008-12-22,2008-12-28,1.04,0.919,0.581,1.19,https://joram.madeira.gov.pt/joram/2serie/Ano de 2008/IISerie-242-2008-12-19Supl3.pdf
+2009-01-12,2009-01-18,1.007,0.877,0.542,1.157,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-006-2009-01-09Supl.pdf
+2009-01-19,2009-01-25,1.046,0.917,0.579,1.196,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-011-2009-01-16Supl.pdf
+2009-01-26,2009-02-01,1.056,0.914,0.576,1.206,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-016-2009-01-23Supl.pdf
+2009-02-02,2009-02-08,1.056,0.903,0.566,1.206,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-021-2009-01-30Supl.pdf
+2009-02-09,2009-02-15,1.068,0.906,0.569,1.218,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-026-2009-02-06Supl.pdf
+2009-02-16,2009-02-22,1.08,0.91,0.573,1.23,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-031-2009-02-13Supl.pdf
+2009-02-23,2009-03-01,1.081,0.902,0.565,1.231,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-036-2009-02-20Supl2.pdf
+2009-03-02,2009-03-08,1.07,0.881,0.545,1.22,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-041-2009-02-27Supl.pdf
+2009-03-09,2009-03-15,1.073,0.877,0.541,1.223,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-046-2009-03-06Supl2.pdf
+2009-03-16,2009-03-22,1.075,0.871,0.535,1.225,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-050-2009-03-13Supl.pdf
+2009-03-23,2009-03-29,1.073,0.863,0.529,1.223,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-055-2009-03-20Supl.pdf
+2009-03-30,2009-04-05,1.077,0.87,0.535,1.227,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-060-2009-03-27Supl.pdf
+2009-04-06,2009-04-12,1.1,0.891,0.555,1.25,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-065-2009-04-03Supl.pdf
+2009-04-13,2009-04-19,1.107,0.896,0.559,1.257,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-068-2009-04-08Supl.pdf
+2009-04-27,2009-05-03,1.117,0.897,0.561,1.267,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-079-2009-04-24Supl.pdf
+2009-05-04,2009-05-10,1.12,0.897,0.56,1.27,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-083-2009-04-30Supl.pdf
+2009-05-11,2009-05-17,1.115,0.898,0.561,1.265,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-088-2009-05-08Supl.pdf
+2009-05-18,2009-05-24,1.145,0.904,0.567,1.295,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-093-2009-05-15Supl.pdf
+2009-05-25,2009-05-31,1.158,0.909,0.571,1.308,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-098-2009-05-22Supl.pdf
+2009-06-01,2009-06-07,1.177,0.904,0.567,1.327,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-103-2009-05-29Supl.pdf
+2009-06-08,2009-06-14,1.187,0.909,0.572,1.337,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-108-2009-06-05Supl2.pdf
+2009-06-15,2009-06-21,1.2,0.931,0.593,1.35,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-111-2009-06-12.pdf
+2009-06-22,2009-06-28,1.223,0.949,0.609,1.373,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-116-2009-06-19Supl.pdf
+2009-06-29,2009-07-05,1.23,0.96,0.62,1.38,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-121-2009-06-26Supl2.pdf
+2009-07-06,2009-07-12,1.212,0.952,0.613,1.362,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-125-2009-07-03.pdf
+2009-07-13,2009-07-19,1.201,0.942,0.603,1.351,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-130-2009-07-10sup.pdf
+2009-07-20,2009-07-26,1.18,0.918,0.581,1.33,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-135-2009-07-17Supl.pdf
+2009-07-27,2009-08-02,1.176,0.91,0.572,1.326,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-140-2009-07-24.pdf
+2009-08-03,2009-08-09,1.193,0.933,0.594,1.343,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-144-2009-07-30Supl.pdf
+2009-08-10,2009-08-16,1.211,0.947,0.607,1.361,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-150-2009-08-07Supl.pdf
+2009-08-17,2009-08-23,1.222,0.959,0.619,1.372,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-155-2009-08-14Supl.pdf
+2009-08-24,2009-08-30,1.229,0.966,0.626,1.379,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-159-2009-08-20Supl.pdf
+2009-08-31,2009-09-06,1.223,0.963,0.623,1.373,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-164-2009-08-28Supl.pdf
+2009-09-07,2009-09-13,1.212,0.957,0.617,1.362,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-168-2009-09-04Supl.pdf
+2009-09-14,2009-09-20,1.207,0.949,0.609,1.357,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-173-2009-09-11Supl.pdf
+2009-09-21,2009-09-27,1.197,0.936,0.597,1.347,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-178-2009-09-18Supl.pdf
+2009-09-28,2009-10-04,1.188,0.935,0.596,1.338,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-183-2009-09-25Supl.pdf
+2009-10-05,2009-10-11,1.169,0.923,0.585,1.319,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-188-2009-10-02Supl.pdf
+2009-10-12,2009-10-18,1.175,0.931,0.592,1.325,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-192-2009-10-09.pdf
+2009-10-19,2009-10-25,1.168,0.928,0.59,1.318,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-197-2009-10-16Supl.pdf
+2009-10-26,2009-11-01,1.187,0.95,0.61,1.337,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-202-2009-10-23Supl2.pdf
+2009-11-02,2009-11-08,1.202,0.962,0.622,1.352,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-207-2009-10-30Supl4.pdf
+2009-11-09,2009-11-15,1.216,0.97,0.63,1.366,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-212-2009-11-06Supl2.pdf
+2009-11-16,2009-11-22,1.215,0.97,0.629,1.365,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-217-2009-11-13.pdf
+2009-11-23,2009-11-29,1.21,0.962,0.622,1.36,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-222-2009-11-20Supl2.pdf
+2009-11-30,2009-12-06,1.213,0.982,0.623,1.363,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-226-2009-11-27Supl.pdf
+2009-12-07,2009-12-13,1.206,0.978,0.616,1.356,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-230-2009-12-04Supl.pdf
+2009-12-14,2009-12-20,1.21,0.983,0.621,1.36,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-234-2009-12-11Supl.pdf
+2009-12-21,2009-12-27,1.197,0.976,0.613,1.347,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-239-2009-12-18Supl3.pdf
+2009-12-28,2010-01-03,1.195,0.978,0.616,1.345,https://joram.madeira.gov.pt/joram/2serie/Ano de 2009/IISerie-242-2009-12-23Supl.pdf
+2010-01-11,2010-01-17,1.213,0.994,0.633,1.363,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-003-2010-01-08Supl.pdf
+2010-01-18,2010-01-24,1.245,1.019,0.657,1.395,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-008-2010-01-15Supl.pdf
+2010-01-25,2010-01-31,1.24,1.017,0.655,1.39,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-013-2010-01-22Supl2.pdf
+2010-02-01,2010-02-07,1.236,1.009,0.647,1.386,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-018-2010-01-29Supl.pdf
+2010-02-08,2010-02-14,1.233,1.005,0.643,1.383,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-023-2010-02-05.pdf
+2010-02-15,2010-02-21,1.236,1.01,0.646,1.386,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-028-2010-02-12.pdf
+2010-02-22,2010-02-28,1.226,0.999,0.635,1.376,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-033-2010-02-19Supl3.pdf
+2010-03-01,2010-03-07,1.233,1.011,0.647,1.383,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-036-2010-02-26.pdf
+2010-03-08,2010-03-14,1.246,1.028,0.664,1.396,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-041-2010-03-05.pdf
+2010-03-15,2010-03-21,1.262,1.034,0.671,1.412,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-046-2010-03-12.pdf
+2010-03-22,2010-03-28,1.289,1.053,0.69,1.439,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-051-2010-03-19Supl.pdf
+2010-03-29,2010-04-04,1.288,1.055,0.691,1.438,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-056-2010-03-26Supl.pdf
+2010-04-05,2010-04-11,1.305,1.067,0.703,1.455,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-059-2010-03-31Supl.pdf
+2010-04-19,2010-04-25,1.313,1.088,0.724,1.463,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-070-2010-04-16Supl.pdf
+2010-04-26,2010-05-02,1.315,1.09,0.726,1.465,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-075-2010-04-23Supl.pdf
+2010-05-03,2010-05-09,1.325,1.095,0.731,1.475,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-080-2010-04-30Supl.pdf
+2010-05-10,2010-05-16,1.331,1.109,0.745,1.481,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-085-2010-05-07Supl.pdf
+2010-05-17,2010-05-23,1.323,1.107,0.743,1.473,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-090-2010-05-14Supl2.pdf
+2010-05-24,2010-05-30,1.32,1.104,0.74,1.47,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-095-2010-05-21Supl.pdf
+2010-05-31,2010-06-06,1.295,1.082,0.718,1.445,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-100-2010-05-28Supl2.pdf
+2010-06-07,2010-06-13,1.3,1.084,0.718,1.45,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-104-2010-06-04Supl.pdf
+2010-06-14,2010-06-20,1.309,1.094,0.729,1.459,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-108-2010-06-11Supl.pdf
+2010-06-21,2010-06-27,1.311,1.099,0.734,1.461,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-113-2010-06-18Supl3.pdf
+2010-06-28,2010-07-04,1.313,1.106,0.741,1.463,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-118-2010-06-25Supl2.pdf
+2010-07-05,2010-07-11,1.325,1.116,0.748,1.475,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-121-2010-06-30Supl.pdf
+2010-07-12,2010-07-18,1.321,1.112,0.74,1.471,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-127-2010-07-09.pdf
+2010-07-19,2010-07-25,1.315,1.103,0.731,1.465,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-132-2010-07-16.pdf
+2010-07-26,2010-08-01,1.309,1.1,0.727,1.459,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-137-2010-07-23Supl.pdf
+2010-08-02,2010-08-08,1.312,1.098,0.725,1.462,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-142-2010-07-30Supl.pdf
+2010-08-09,2010-08-15,1.311,1.096,0.725,1.461,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-146-2010-08-05Supl.pdf
+2010-08-16,2010-08-22,1.316,1.109,0.738,1.466,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-152-2010-08-13Supl.pdf
+2010-08-23,2010-08-29,1.307,1.1,0.729,1.457,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-157-2010-08-20Supl.pdf
+2010-08-30,2010-09-05,1.308,1.1,0.729,1.458,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-162-2010-08-27Supl.pdf
+2010-09-06,2010-09-12,1.298,1.098,0.725,1.448,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-167-2010-09-03Supl.pdf
+2010-09-13,2010-09-19,1.296,1.096,0.723,1.446,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-172-2010-09-10Supl.pdf
+2010-09-20,2010-09-26,1.307,1.105,0.733,1.457,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-177-2010-09-17Supl.pdf
+2010-09-27,2010-10-03,1.304,1.109,0.737,1.454,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-180-2010-09-24.pdf
+2010-10-04,2010-10-10,1.285,1.099,0.727,1.435,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-185-2010-10-01Supl.pdf
+2010-10-11,2010-10-17,1.286,1.102,0.73,1.436,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-189-2010-10-08Supl.pdf
+2010-10-18,2010-10-24,1.299,1.112,0.74,1.449,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-194-2010-10-15Supl.pdf
+2010-10-25,2010-10-31,1.304,1.113,0.741,1.454,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-199-2010-10-22Supl.pdf
+2010-11-01,2010-11-07,1.308,1.117,0.745,1.458,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-204-2010-10-29Supl.pdf
+2010-11-15,2010-11-21,1.314,1.124,0.752,1.464,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-213-2010-11-12Supl.pdf
+2010-11-22,2010-11-28,1.323,1.135,0.763,1.473,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-218-2010-11-19supl.pdf
+2010-11-29,2010-12-05,1.319,1.131,0.759,1.469,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-223-2010-11-26Supl.pdf
+2010-12-06,2010-12-12,1.334,1.143,0.769,1.484,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-227-2010-12-03.pdf
+2010-12-13,2010-12-19,1.359,1.161,0.788,1.509,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-231-2010-12-10Supl.pdf
+2010-12-20,2010-12-26,1.37,1.176,0.804,1.52,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-236-2010-12-17Supl.pdf
+2010-12-27,2011-01-02,1.373,1.181,0.809,1.523,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-240-2010-12-23Supl.pdf
+2011-01-03,2011-01-09,1.385,1.192,0.809,1.535,https://joram.madeira.gov.pt/joram/2serie/Ano de 2010/IISerie-246-2010-12-31Supl2.pdf
+2011-01-10,2011-01-16,1.395,1.205,0.822,1.545,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-005-2011-01-07.pdf
+2011-01-17,2011-01-23,1.407,1.215,0.828,1.557,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-010-2011-01-14Supl.pdf
+2011-01-24,2011-01-30,1.419,1.235,0.849,1.569,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-015-2011-01-21Supl.pdf
+2011-01-31,2011-02-06,1.41,1.23,0.844,1.56,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-020-2011-01-28Supl2.pdf
+2011-02-07,2011-02-13,1.399,1.243,0.837,1.549,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-025-2011-02-04Supl.pdf
+2011-02-14,2011-02-20,1.404,1.26,0.854,1.554,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-029-2011-02-11Supl.pdf
+2011-02-21,2011-02-27,1.412,1.276,0.87,1.562,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-034-2011-02-18Supl.pdf
+2011-02-28,2011-03-06,1.414,1.273,0.867,1.564,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-039-2011-02-25Supl.pdf
+2011-03-07,2011-03-13,1.439,1.293,0.887,1.589,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-044-2011-03-04Supl.pdf
+2011-03-14,2011-03-20,1.454,1.312,0.906,1.604,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-049-2011-03-11Supl.pdf
+2011-03-21,2011-03-27,1.488,1.321,0.917,1.638,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-054-2011-03-18Supl.pdf
+2011-03-28,2011-04-03,1.471,1.319,0.915,1.621,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-059-2011-03-25Supl.pdf
+2011-04-04,2011-04-10,1.481,1.317,0.914,1.631,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-064-2011-04-01Supl.pdf
+2011-04-11,2011-04-17,1.497,1.314,0.917,1.647,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-069-2011-04-08Supl.pdf
+2011-04-18,2011-04-24,1.511,1.326,0.928,1.661,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-074-2011-04-15Supl.pdf
+2011-04-25,2011-05-01,1.521,1.329,0.931,1.671,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-077-2011-04-20Supl2.pdf
+2011-05-02,2011-05-08,1.521,1.326,0.931,1.671,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-082-2011-04-29Supl.pdf
+2011-05-09,2011-05-15,1.516,1.324,0.929,1.666,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-087-2011-05-06supl.pdf
+2011-05-16,2011-05-22,1.496,1.293,0.898,1.646,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-092-2011-05-13Supl.pdf
+2011-05-23,2011-05-29,1.491,1.28,0.885,1.641,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-097-2011-05-20Supl.pdf
+2011-05-30,2011-06-05,1.487,1.286,0.891,1.637,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-102-2011-05-27Supl.pdf
+2011-06-06,2011-06-12,1.476,1.276,0.882,1.626,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-107-2011-06-03Supl.pdf
+2011-06-13,2011-06-19,1.476,1.279,0.886,1.626,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-111-2011-06-09Supl.pdf
+2011-06-20,2011-06-26,1.469,1.288,0.894,1.619,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-116-2011-06-17Supl2.pdf
+2011-06-27,2011-07-03,1.473,1.294,0.901,1.623,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-120-2011-06-24.pdf
+2011-07-04,2011-07-10,1.444,1.268,0.872,1.594,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-124-2011-06-30.pdf
+2011-07-11,2011-07-17,1.437,1.258,0.861,1.587,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-129-2011-07-08.pdf
+2011-07-18,2011-07-24,1.46,1.279,0.883,1.61,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-134-2011-07-15Supl.pdf
+2011-07-25,2011-07-31,1.481,1.293,0.898,1.631,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-139-2011-07-22.pdf
+2011-08-01,2011-08-07,1.482,1.3,0.904,1.632,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-144-2011-07-29Supl.pdf
+2011-08-08,2011-08-14,1.487,1.302,0.907,1.637,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-148-2011-08-04Supl.pdf
+2011-08-15,2011-08-21,1.469,1.286,0.891,1.619,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-154-2011-08-12Supl.pdf
+2011-08-29,2011-09-04,1.449,1.265,0.87,1.599,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-163-2011-08-26Supl.pdf
+2011-09-05,2011-09-11,1.452,1.267,0.872,1.602,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-168-2011-09-02.pdf
+2011-09-12,2011-09-18,1.469,1.282,0.887,1.619,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-172-2011-09-09.pdf
+2011-09-19,2011-09-25,1.49,1.292,0.897,1.64,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-177-2011-09-16.pdf
+2011-09-26,2011-10-02,1.488,1.296,0.901,1.638,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-180-2011-09-23Supl.pdf
+2011-10-03,2011-10-09,1.471,1.296,0.897,1.621,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-185-2011-09-30Supl.pdf
+2011-10-10,2011-10-16,1.464,1.297,0.899,1.614,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-188-2011-10-07Supl.pdf
+2011-10-17,2011-10-23,1.46,1.295,0.896,1.61,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-193-2011-10-14Supl.pdf
+2011-10-24,2011-10-30,1.473,1.306,0.908,1.623,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-197-2011-10-21Supl.pdf
+2011-10-31,2011-11-06,1.467,1.317,0.919,1.617,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-201-2011-10-28.pdf
+2011-11-07,2011-11-13,1.465,1.318,0.921,1.615,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-205-2011-11-04Supl.pdf
+2011-11-14,2011-11-20,1.461,1.32,0.923,1.611,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-210-2011-11-11Supl.pdf
+2011-11-21,2011-11-27,1.455,1.328,0.932,1.605,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-215-2011-11-18Supl.pdf
+2011-11-28,2011-12-04,1.452,1.34,0.943,1.602,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-220-2011-11-25Supl.pdf
+2011-12-05,2011-12-11,1.441,1.325,0.927,1.591,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-224-2011-12-02Supl.pdf
+2011-12-12,2011-12-18,1.446,1.328,0.93,1.596,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-228-2011-12-09Supl.pdf
+2011-12-19,2011-12-25,1.446,1.321,0.924,1.596,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-233-2011-12-16Supl.pdf
+2011-12-26,2012-01-01,1.451,1.32,0.922,1.601,https://joram.madeira.gov.pt/joram/2serie/Ano de 2011/IISerie-238-2011-12-23Supl.pdf
+2012-01-16,2012-01-22,1.498,1.355,0.958,1.648,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-010-2012-01-13.pdf
+2012-01-23,2012-01-29,1.501,1.369,0.972,1.651,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-015-2012-01-20Supl.pdf
+2012-01-30,2012-02-05,1.504,1.359,0.962,1.654,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-020-2012-01-27.pdf
+2012-02-06,2012-02-12,1.504,1.35,0.95,1.654,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-025-2012-02-03Supl.pdf
+2012-02-13,2012-02-19,1.508,1.349,0.95,1.658,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-029-2012-02-10Supl.pdf
+2012-02-20,2012-02-26,1.523,1.368,0.969,1.673,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-032-2012-02-17Supl2.pdf
+2012-02-27,2012-03-04,1.545,1.384,0.985,1.695,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-035-2012-02-24Supl.pdf
+2012-03-05,2012-03-11,1.551,1.386,0.989,1.701,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-040-2012-03-02Supl.pdf
+2012-03-12,2012-03-18,1.563,1.386,0.989,1.713,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-045-2012-03-09Supl.pdf
+2012-03-26,2012-04-01,1.591,1.404,1.007,1.741,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-054-2012-03-23.pdf
+2012-04-02,2012-04-08,1.775,1.476,1.054,1.925,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-059-2012-03-30Supl.pdf
+2012-04-23,2012-04-29,1.811,1.474,1.052,1.961,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-069-2012-04-20Supl.pdf
+2012-04-30,2012-05-06,1.798,1.466,1.044,1.948,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-073-2012-04-27Supl.pdf
+2012-05-07,2012-05-13,1.779,1.454,1.031,1.929,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-077-2012-05-04Supl.pdf
+2012-05-14,2012-05-20,1.766,1.459,1.036,1.916,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-082-2012-05-11Supl.pdf
+2012-05-21,2012-05-27,1.738,1.435,1.013,1.888,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-087-2012-05-18Supl.pdf
+2012-05-28,2012-06-03,1.725,1.427,1.005,1.875,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-092-2012-05-25Supl.pdf
+2012-06-04,2012-06-10,1.728,1.421,0.999,1.878,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-097-2012-06-01.pdf
+2012-06-11,2012-06-17,1.719,1.408,0.987,1.869,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-101-2012-06-08Supl.pdf
+2012-06-18,2012-06-24,1.698,1.387,0.966,1.848,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-105-2012-06-15.pdf
+2012-06-25,2012-07-01,1.686,1.38,0.959,1.836,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-108-2012-06-22Supl.pdf
+2012-07-02,2012-07-08,1.665,1.357,0.94,1.815,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-113-2012-06-29Supl.pdf
+2012-07-09,2012-07-15,1.666,1.355,0.938,1.816,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-118-2012-07-06Supl.pdf
+2012-07-16,2012-07-22,1.703,1.389,0.971,1.853,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-122-2012-07-13Supl.pdf
+2012-07-23,2012-07-29,1.711,1.401,0.984,1.861,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-126-2012-07-20Supl.pdf
+2012-07-30,2012-08-05,1.732,1.43,1.011,1.882,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-131-2012-07-27Supl.pdf
+2012-08-06,2012-08-12,1.72,1.432,1.011,1.87,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-136-2012-08-03Supl.pdf
+2012-08-13,2012-08-19,1.737,1.434,1.012,1.887,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-140-2012-08-10Supl.pdf
+2012-08-20,2012-08-26,1.764,1.461,1.039,1.914,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-142-2012-08-17Supl.pdf
+2012-08-27,2012-09-02,1.804,1.482,1.059,1.954,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-146-2012-08-24Supl.pdf
+2012-09-03,2012-09-09,1.806,1.487,1.065,1.956,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-151-2012-08-31Supl.pdf
+2012-09-10,2012-09-16,1.803,1.479,1.057,1.953,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-155-2012-09-07.pdf
+2012-09-17,2012-09-23,1.816,1.486,1.064,1.966,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-159-2012-09-14Supl.pdf
+2012-09-24,2012-09-30,1.791,1.474,1.052,1.941,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-163-2012-09-21.pdf
+2012-10-01,2012-10-07,1.779,1.46,1.034,1.929,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-167-2012-09-28Supl.pdf
+2012-10-08,2012-10-14,1.765,1.458,1.033,1.915,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-170-2012-10-04Supl.pdf
+2012-10-15,2012-10-21,1.769,1.469,1.043,1.919,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-175-2012-10-12Supl.pdf
+2012-10-22,2012-10-28,1.763,1.468,1.043,1.913,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-180-2012-10-19.pdf
+2012-10-29,2012-11-04,1.737,1.464,1.039,1.887,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-185-2012-10-26Supl.pdf
+2012-11-05,2012-11-11,1.711,1.448,1.027,1.861,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-188-2012-11-02Supl.pdf
+2012-11-12,2012-11-18,1.699,1.44,1.02,1.849,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-193-2012-11-09.pdf
+2012-11-19,2012-11-25,1.693,1.433,1.013,1.843,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-198-2012-11-16.pdf
+2012-11-26,2012-12-02,1.699,1.43,1.01,1.849,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-203-2012-11-23.pdf
+2012-12-03,2012-12-09,1.705,1.432,1.012,1.855,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-208-2012-11-30Supl.pdf
+2012-12-10,2012-12-16,1.688,1.426,1.007,1.838,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-213-2012-12-07Supl.pdf
+2012-12-17,2012-12-23,1.676,1.411,0.993,1.826,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-218-2012-12-14Supl.pdf
+2012-12-24,2012-12-30,1.666,1.395,0.977,1.816,https://joram.madeira.gov.pt/joram/2serie/Ano de 2012/IISerie-223-2012-12-21.pdf
+2013-01-14,2013-01-20,1.68,1.408,0.99,1.83,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-008-2013-01-11.pdf
+2013-01-21,2013-01-27,1.687,1.411,0.993,1.837,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-013-2013-01-18.pdf
+2013-01-28,2013-02-03,1.678,1.404,0.986,1.828,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-018-2013-01-25.pdf
+2013-02-04,2013-02-10,1.687,1.408,0.99,1.837,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-023-2013-02-01Supl.pdf
+2013-02-11,2013-02-17,1.703,1.411,0.993,1.853,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-028-2013-02-08Supl.pdf
+2013-02-18,2013-02-24,1.716,1.421,1.003,1.866,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-033-2013-02-15.pdf
+2013-02-25,2013-03-03,1.731,1.43,1.013,1.881,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-038-2013-02-22Supl.pdf
+2013-03-04,2013-03-10,1.728,1.422,1.005,1.878,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-043-2013-03-01Supl.pdf
+2013-03-11,2013-03-17,1.723,1.415,0.999,1.873,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-048-2013-03-08.pdf
+2013-03-18,2013-03-24,1.719,1.412,0.996,1.869,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-053-2013-03-15Supl.pdf
+2013-03-25,2013-03-31,1.704,1.408,0.992,1.854,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-058-2013-03-22.pdf
+2013-04-01,2013-04-07,1.719,1.406,0.99,1.869,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-061-2013-03-27Supl.pdf
+2013-04-15,2013-04-21,1.722,1.403,0.992,1.872,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-072-2013-04-12.pdf
+2013-04-22,2013-04-28,1.702,1.38,0.968,1.852,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-077-2013-04-19.pdf
+2013-04-29,2013-05-05,1.68,1.354,0.943,1.83,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-081-2013-04-26.pdf
+2013-05-06,2013-05-12,1.678,1.35,0.94,1.828,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-085-2013-05-03Supl.pdf
+2013-05-13,2013-05-19,1.672,1.341,0.931,1.822,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-090-2013-05-10Supl.pdf
+2013-05-20,2013-05-26,1.672,1.353,0.943,1.822,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-094-2013-05-17.pdf
+2013-05-27,2013-06-02,1.686,1.367,0.957,1.836,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-099-2013-05-24Supl.pdf
+2013-06-03,2013-06-09,1.691,1.366,0.957,1.841,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-103-2013-05-31Supl.pdf
+2013-06-10,2013-06-16,1.69,1.363,0.955,1.84,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-108-2013-06-07.pdf
+2013-06-17,2013-06-23,1.687,1.358,0.949,1.837,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-112-2013-06-14Supl.pdf
+2013-06-24,2013-06-30,1.682,1.355,0.946,1.832,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-117-2013-06-21Supl.pdf
+2013-07-01,2013-07-07,1.684,1.361,0.953,1.834,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-122-2013-06-28Supl.pdf
+2013-07-08,2013-07-14,1.679,1.356,0.949,1.829,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-126-2013-07-05Supl.pdf
+2013-07-15,2013-07-21,1.685,1.365,0.958,1.835,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-130-2013-07-12.pdf
+2013-07-22,2013-07-28,1.706,1.38,0.972,1.856,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-135-2013-07-19Supl.pdf
+2013-07-29,2013-08-04,1.722,1.39,0.982,1.872,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-140-2013-07-26Supl.pdf
+2013-08-05,2013-08-11,1.71,1.378,0.972,1.86,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-145-2013-08-02Supl.pdf
+2013-08-12,2013-08-18,1.713,1.38,0.974,1.863,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-150-2013-08-09Supl.pdf
+2013-08-19,2013-08-25,1.705,1.376,0.971,1.855,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-154-2013-08-16.pdf
+2013-08-26,2013-09-01,1.711,1.379,0.974,1.861,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-158-2013-08-23Supl.pdf
+2013-09-02,2013-09-08,1.712,1.381,0.979,1.862,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-163-2013-08-30.pdf
+2013-09-09,2013-09-15,1.728,1.398,0.995,1.878,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-168-2013-09-06.pdf
+2013-09-16,2013-09-22,1.727,1.405,1.002,1.877,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-171-2013-09-13.pdf
+2013-09-23,2013-09-29,1.711,1.403,1.0,1.861,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-176-2013-09-20Supl.pdf
+2013-09-30,2013-10-06,1.692,1.387,0.985,1.842,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-179-2013-09-27.pdf
+2013-10-07,2013-10-13,1.675,1.381,0.975,1.825,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-183-2013-10-04Supl.pdf
+2013-10-14,2013-10-20,1.659,1.37,0.964,1.809,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-188-2013-10-11Supl.pdf
+2013-10-21,2013-10-27,1.657,1.371,0.965,1.807,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-193-2013-10-18.pdf
+2013-10-28,2013-11-03,1.656,1.371,0.965,1.806,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-198-2013-10-25.pdf
+2013-11-04,2013-11-10,1.644,1.357,0.962,1.794,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-203-2013-11-01.pdf
+2013-11-11,2013-11-17,1.637,1.351,0.946,1.787,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-208-2013-11-08Supl.pdf
+2013-11-18,2013-11-24,1.631,1.349,0.944,1.781,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-213-2013-11-15Supl.pdf
+2013-11-25,2013-12-01,1.644,1.354,0.949,1.794,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-217-2013-11-22Supl.pdf
+2013-12-02,2013-12-08,1.652,1.362,0.956,1.802,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-222-2013-11-29.pdf
+2013-12-09,2013-12-15,1.656,1.371,0.965,1.806,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-227-2013-12-06.pdf
+2013-12-16,2013-12-22,1.653,1.371,0.965,1.803,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-232-2013-12-13Supl.pdf
+2013-12-23,2013-12-29,1.644,1.362,0.956,1.794,https://joram.madeira.gov.pt/joram/2serie/Ano de 2013/IISerie-237-2013-12-20Supl.pdf
+2014-01-06,2014-01-12,1.644,1.361,0.956,1.794,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-002-2014-01-03Supl.pdf
+2014-01-13,2014-01-19,1.647,1.363,0.957,1.797,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-007-2014-01-10.pdf
+2014-01-20,2014-01-26,1.639,1.352,0.947,1.789,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-012-2014-01-17Supl.pdf
+2014-01-27,2014-02-02,1.633,1.347,0.941,1.783,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-017-2014-01-24.pdf
+2014-02-03,2014-02-09,1.635,1.346,0.943,1.785,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-022-2014-01-31Supl.pdf
+2014-02-17,2014-02-23,1.634,1.346,0.943,1.784,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-031-2014-02-14.pdf
+2014-02-24,2014-03-02,1.645,1.349,0.945,1.795,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-036-2014-02-21Supl.pdf
+2014-03-03,2014-03-09,1.647,1.351,0.949,1.797,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-041-2014-02-28Supl.pdf
+2014-03-10,2014-03-16,1.646,1.347,0.945,1.796,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-045-2014-03-07Supl.pdf
+2014-03-17,2014-03-23,1.638,1.341,0.939,1.788,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-050-2014-03-14.pdf
+2014-03-24,2014-03-30,1.631,1.329,0.928,1.781,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-055-2014-03-21Supl.pdf
+2014-03-31,2014-04-06,1.629,1.323,0.921,1.779,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-060-2014-03-28Supl.pdf
+2014-04-07,2014-04-13,1.643,1.332,0.928,1.793,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-065-2014-04-04Supl.pdf
+2014-04-14,2014-04-20,1.648,1.333,0.93,1.798,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-069-2014-04-11Supl.pdf
+2014-04-21,2014-04-27,1.656,1.334,0.931,1.806,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-072-2014-04-16.pdf
+2014-05-05,2014-05-11,1.672,1.343,0.94,1.822,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-079-2014-05-02Supl.pdf
+2014-05-12,2014-05-18,1.663,1.337,0.935,1.813,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-084-2014-05-09Supl.pdf
+2014-05-19,2014-05-25,1.663,1.333,0.931,1.813,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-089-2014-05-16.pdf
+2014-05-26,2014-06-01,1.66,1.335,0.933,1.81,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-094-2014-05-23.pdf
+2014-06-02,2014-06-08,1.665,1.342,0.941,1.815,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-099-2014-05-30Supl.pdf
+2014-06-09,2014-06-15,1.666,1.34,0.938,1.816,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-104-2014-06-06Supl.pdf
+2014-06-16,2014-06-22,1.672,1.332,0.93,1.822,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-108-2014-06-13Supl.pdf
+2014-06-23,2014-06-29,1.682,1.338,0.936,1.832,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-113-2014-06-20Supl.pdf
+2014-06-30,2014-07-06,1.692,1.347,0.946,1.842,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-118-2014-06-27Supl.pdf
+2014-07-07,2014-07-13,1.695,1.348,0.948,1.845,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-122-2014-07-04.pdf
+2014-07-14,2014-07-20,1.698,1.344,0.945,1.848,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-127-2014-07-11Supl.pdf
+2014-07-21,2014-07-27,1.695,1.339,0.94,1.845,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-131-2014-07-18Supl.pdf
+2014-07-28,2014-08-03,1.687,1.332,0.932,1.837,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-136-2014-07-25Supl.pdf
+2014-08-04,2014-08-10,1.683,1.331,0.932,1.833,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-141-2014-08-01.pdf
+2014-08-11,2014-08-17,1.672,1.329,0.931,1.822,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-146-2014-08-08.pdf
+2014-08-18,2014-08-24,1.668,1.333,0.935,1.818,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-150-2014-08-14Supl2.pdf
+2014-08-25,2014-08-31,1.663,1.328,0.93,1.813,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-154-2014-08-22Supl.pdf
+2014-09-01,2014-09-07,1.657,1.318,0.922,1.807,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-159-2014-08-29Supl.pdf
+2014-09-08,2014-09-14,1.664,1.327,0.931,1.814,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-164-2014-09-05.pdf
+2014-09-15,2014-09-21,1.664,1.324,0.927,1.814,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-168-2014-09-12Supl.pdf
+2014-09-22,2014-09-28,1.664,1.325,0.929,1.814,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-173-2014-09-19Supl.pdf
+2014-09-29,2014-10-05,1.661,1.32,0.924,1.811,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-178-2014-09-26Supl.pdf
+2014-10-06,2014-10-12,1.659,1.317,0.92,1.809,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-183-2014-10-03.pdf
+2014-10-13,2014-10-19,1.652,1.312,0.915,1.802,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-188-2014-10-10.pdf
+2014-10-20,2014-10-26,1.643,1.3,0.904,1.793,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-193-2014-10-17.pdf
+2014-10-27,2014-11-02,1.599,1.272,0.876,1.749,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-198-2014-10-24Supl.pdf
+2014-11-03,2014-11-09,1.595,1.274,0.876,1.745,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-203-2014-10-31Supl.pdf
+2014-11-10,2014-11-16,1.592,1.275,0.877,1.742,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-208-2014-11-07Supl.pdf
+2014-11-17,2014-11-23,1.585,1.274,0.876,1.735,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-213-2014-11-14.pdf
+2014-11-24,2014-11-30,1.574,1.268,0.87,1.724,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-218-2014-11-21Supl.pdf
+2014-12-01,2014-12-07,1.566,1.255,0.856,1.716,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-222-2014-11-28.pdf
+2014-12-08,2014-12-14,1.548,1.238,0.84,1.698,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-227-2014-12-05Supl.pdf
+2014-12-15,2014-12-21,1.516,1.214,0.816,1.666,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-231-2014-12-12.pdf
+2014-12-22,2014-12-28,1.478,1.186,0.788,1.628,https://joram.madeira.gov.pt/joram/2serie/Ano de 2014/IISerie-236-2014-12-19Supl.pdf
+2015-01-12,2015-01-18,1.478,1.185,0.788,1.628,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-001-2015-01-05.pdf
+2015-01-19,2015-01-25,1.4,1.115,0.72,1.55,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-010-2015-01-16Supl.pdf
+2015-01-26,2015-02-01,1.382,1.095,0.699,1.532,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-014-2015-01-23Supl.pdf
+2015-02-02,2015-02-08,1.384,1.097,0.701,1.534,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-019-2015-01-30Supl.pdf
+2015-02-09,2015-02-15,1.389,1.103,0.707,1.539,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-023-2015-02-06.pdf
+2015-02-16,2015-02-22,1.424,1.137,0.74,1.574,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-028-2015-02-13Supl.pdf
+2015-02-23,2015-03-01,1.446,1.161,0.764,1.596,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-031-2015-02-20Supl.pdf
+2015-03-02,2015-03-08,1.459,1.178,0.781,1.609,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-036-2015-02-27Supl.pdf
+2015-03-09,2015-03-15,1.476,1.19,0.793,1.626,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-041-2015-03-06Supl2.pdf
+2015-03-16,2015-03-22,1.496,1.197,0.799,1.646,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-046-2015-03-13Supl.pdf
+2015-03-23,2015-03-29,1.509,1.197,0.8,1.659,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-051-2015-03-20.pdf
+2015-03-30,2015-04-05,1.505,1.181,0.784,1.655,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-056-2015-03-27.pdf
+2015-04-06,2015-04-12,1.515,1.18,0.783,1.665,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-059-2015-04-01.pdf
+2015-04-20,2015-04-26,1.52,1.18,0.782,1.67,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-069-2015-04-17.pdf
+2015-05-04,2015-05-10,1.554,1.211,0.814,1.704,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-077-2015-04-30Supl3.pdf
+2015-05-11,2015-05-17,1.558,1.213,0.815,1.708,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-082-2015-05-08Supl.pdf
+2015-05-18,2015-05-24,1.565,1.221,0.823,1.715,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-087-2015-05-15Supl.pdf
+2015-05-25,2015-05-31,1.563,1.218,0.82,1.713,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-092-2015-05-22Supl.pdf
+2015-06-01,2015-06-07,1.57,1.222,0.824,1.72,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-097-2015-05-29Supl.pdf
+2015-06-08,2015-06-14,1.566,1.217,0.819,1.716,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-102-2015-06-05.pdf
+2015-06-15,2015-06-21,1.566,1.212,0.814,1.716,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-106-2015-06-12Supl.pdf
+2015-06-22,2015-06-28,1.576,1.207,0.809,1.726,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-110-2015-06-19Supl.pdf
+2015-06-29,2015-07-05,1.58,1.205,0.807,1.73,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-115-2015-06-26Supl2.pdf
+2015-07-06,2015-07-12,1.576,1.203,0.804,1.726,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-119-2015-07-03.pdf
+2015-07-13,2015-07-19,1.58,1.198,0.8,1.73,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-124-2015-07-10Supl2.pdf
+2015-07-20,2015-07-26,1.587,1.183,0.785,1.737,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-129-2015-07-17.pdf
+2015-07-27,2015-08-02,1.58,1.176,0.778,1.73,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-134-2015-07-24Supl2.pdf
+2015-08-03,2015-08-09,1.567,1.163,0.766,1.717,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-138-2015-07-31Supl2.pdf
+2015-08-10,2015-08-16,1.556,1.146,0.749,1.706,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-143-2015-08-07Supl2.pdf
+2015-08-17,2015-08-23,1.541,1.134,0.738,1.691,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-148-2015-08-14Supl.pdf
+2015-08-24,2015-08-30,1.521,1.121,0.725,1.671,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-152-2015-08-20Supl2.pdf
+2015-08-31,2015-09-06,1.495,1.113,0.711,1.645,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-156-2015-08-28Supl2.pdf
+2015-09-07,2015-09-13,1.462,1.096,0.69,1.612,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-160-2015-09-04.pdf
+2015-09-14,2015-09-20,1.466,1.111,0.704,1.616,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-165-2015-09-11Supl2.pdf
+2015-09-21,2015-09-27,1.464,1.117,0.71,1.614,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-170-2015-09-18.pdf
+2015-09-28,2015-10-04,1.456,1.11,0.703,1.606,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-175-2015-09-25Supl.pdf
+2015-10-05,2015-10-11,1.443,1.106,0.697,1.593,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-178-2015-10-02Supl2.pdf
+2015-10-12,2015-10-18,1.435,1.105,0.696,1.585,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-183-2015-10-09Supl.pdf
+2015-10-19,2015-10-25,1.441,1.113,0.704,1.591,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-188-2015-10-16Supl.pdf
+2015-10-26,2015-11-01,1.428,1.101,0.692,1.578,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-193-2015-10-23Supl.pdf
+2015-11-02,2015-11-08,1.419,1.095,0.685,1.569,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-198-2015-10-30Supl.pdf
+2015-11-09,2015-11-15,1.422,1.098,0.689,1.572,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-202-2015-11-06Supl2.pdf
+2015-11-16,2015-11-22,1.434,1.109,0.699,1.584,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-207-2015-11-13.pdf
+2015-11-23,2015-11-29,1.438,1.111,0.7,1.588,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-212-2015-11-20Supl.pdf
+2015-11-30,2015-12-06,1.429,1.102,0.692,1.579,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-215-2015-11-27.pdf
+2015-12-07,2015-12-13,1.43,1.098,0.691,1.58,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-219-2015-12-04.pdf
+2015-12-14,2015-12-20,1.422,1.083,0.677,1.572,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-223-2015-12-11Supl.pdf
+2015-12-21,2015-12-27,1.398,1.05,0.646,1.548,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-228-2015-12-18.pdf
+2016-01-04,2016-01-10,1.397,1.057,0.646,1.547,https://joram.madeira.gov.pt/joram/2serie/Ano de 2015/IISerie-234-2015-12-30.pdf
+2016-01-11,2016-01-17,1.373,1.011,0.604,1.523,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-003-2016-01-08Supl2.pdf
+2016-01-18,2016-01-24,1.367,1.005,0.598,1.517,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-008-2016-01-15Supl.pdf
+2016-01-25,2016-01-31,1.349,0.979,0.575,1.499,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-013-2016-01-22Supl.pdf
+2016-02-01,2016-02-07,1.348,0.967,0.559,1.498,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-017-2016-01-29Supl.pdf
+2016-02-08,2016-02-14,1.35,0.971,0.563,1.5,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-022-2016-02-05.pdf
+2016-02-15,2016-02-21,1.342,0.979,0.57,1.492,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-026-2016-02-12.pdf
+2016-02-22,2016-02-28,1.289,1.01,0.521,1.439,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-031-2016-02-19Supl2.pdf
+2016-02-29,2016-03-06,1.297,1.026,0.535,1.447,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-036-2016-02-26Supl.pdf
+2016-03-07,2016-03-13,1.296,1.043,0.539,1.446,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-041-2016-03-04.pdf
+2016-03-14,2016-03-20,1.303,1.055,0.551,1.453,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-046-2016-03-11Supl.pdf
+2016-03-21,2016-03-27,1.32,1.078,0.572,1.47,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-051-2016-03-18.pdf
+2016-03-28,2016-04-03,1.328,1.085,0.578,1.478,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-054-2016-03-23Supl2.pdf
+2016-04-04,2016-04-10,1.329,1.079,0.578,1.479,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-059-2016-04-01Supl.pdf
+2016-04-11,2016-04-17,1.355,1.075,0.575,1.505,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-064-2016-04-08.pdf
+2016-04-18,2016-04-24,1.356,1.063,0.564,1.506,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-069-2016-04-15Supl2.pdf
+2016-04-25,2016-05-01,1.373,1.081,0.58,1.523,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-074-2016-04-22Supl.pdf
+2016-05-02,2016-05-08,1.381,1.092,0.593,1.531,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-078-2016-04-29Supl.pdf
+2016-05-09,2016-05-15,1.391,1.109,0.608,1.541,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-083-2016-05-06Supl.pdf
+2016-05-16,2016-05-22,1.375,1.097,0.608,1.525,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-088-2016-05-13Supl3.pdf
+2016-05-23,2016-05-29,1.381,1.103,0.614,1.531,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-093-2016-05-20.pdf
+2016-05-30,2016-06-05,1.394,1.122,0.632,1.544,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-097-2016-05-27Supl.pdf
+2016-06-06,2016-06-12,1.411,1.14,0.654,1.561,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-100-2016-06-03Supl.pdf
+2016-06-13,2016-06-19,1.413,1.145,0.658,1.563,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-102-2016-06-09Supl.pdf
+2016-06-20,2016-06-26,1.407,1.142,0.656,1.557,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-105-2016-06-17Supl.pdf
+2016-06-27,2016-07-03,1.4,1.135,0.65,1.55,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-110-2016-06-24Supl.pdf
+2016-07-04,2016-07-10,1.403,1.132,0.647,1.553,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-114-2016-06-30Supl2.pdf
+2016-07-11,2016-07-17,1.398,1.132,0.647,1.548,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-119-2016-07-08.pdf
+2016-07-18,2016-07-24,1.379,1.12,0.637,1.529,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-123-2016-07-15.pdf
+2016-07-25,2016-07-31,1.376,1.117,0.633,1.526,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-128-2016-07-22Supl.pdf
+2016-08-01,2016-08-07,1.37,1.11,0.629,1.52,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-133-2016-07-29Supl.pdf
+2016-08-08,2016-08-14,1.358,1.093,0.613,1.508,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-138-2016-08-05.pdf
+2016-08-15,2016-08-21,1.35,1.081,0.602,1.5,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-140-2016-08-12.pdf
+2016-08-22,2016-08-28,1.35,1.087,0.607,1.5,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-144-2016-08-19.pdf
+2016-08-29,2016-09-04,1.364,1.106,0.625,1.514,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-149-2016-08-26Supl.pdf
+2016-09-05,2016-09-11,1.376,1.118,0.634,1.526,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-154-2016-09-02.pdf
+2016-09-12,2016-09-18,1.37,1.112,0.628,1.52,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-158-2016-09-09Supl.pdf
+2016-09-19,2016-09-25,1.382,1.117,0.633,1.532,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-162-2016-09-16.pdf
+2016-09-26,2016-10-02,1.378,1.111,0.627,1.528,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-166-2016-09-23Supl.pdf
+2016-10-03,2016-10-09,1.375,1.113,0.629,1.525,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-171-2016-09-30Supl.pdf
+2016-10-10,2016-10-16,1.38,1.119,0.635,1.53,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-175-2016-10-07Supl2.pdf
+2016-10-17,2016-10-23,1.391,1.135,0.65,1.541,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-180-2016-10-14Supl.pdf
+2016-10-24,2016-10-30,1.396,1.149,0.663,1.546,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-185-2016-10-21Supl.pdf
+2016-10-31,2016-11-06,1.401,1.155,0.668,1.551,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-190-2016-10-28Supl.pdf
+2016-11-07,2016-11-13,1.401,1.158,0.67,1.551,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-194-2016-11-04Supl6.pdf
+2016-11-14,2016-11-20,1.398,1.149,0.662,1.548,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-199-2016-11-11Supl.pdf
+2016-11-21,2016-11-27,1.39,1.139,0.653,1.54,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-204-2016-11-18Supl2.pdf
+2016-11-28,2016-12-04,1.384,1.137,0.651,1.534,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-209-2016-11-25Supl.pdf
+2016-12-05,2016-12-11,1.393,1.146,0.664,1.543,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-213-2016-12-02Supl.pdf
+2016-12-12,2016-12-18,1.408,1.159,0.676,1.558,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-217-2016-12-09Supl2.pdf
+2016-12-19,2016-12-25,1.421,1.175,0.691,1.571,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-222-2016-12-16Supl.pdf
+2016-12-26,2017-01-01,1.433,1.192,0.706,1.583,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-224-2016-12-22Supl.pdf
+2017-01-02,2017-01-08,1.436,1.199,0.706,1.586,https://joram.madeira.gov.pt/joram/2serie/Ano de 2016/IISerie-227-2016-12-29.pdf
+2017-01-09,2017-01-15,1.459,1.219,0.725,1.609,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-003-2017-01-06.pdf
+2017-01-16,2017-01-22,1.465,1.224,0.73,1.615,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-008-2017-01-13Supl.pdf
+2017-01-23,2017-01-29,1.462,1.216,0.722,1.612,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-013-2017-01-20Supl2.pdf
+2017-01-30,2017-02-05,1.464,1.214,0.72,1.614,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-018-2017-01-27.pdf
+2017-02-06,2017-02-12,1.465,1.217,0.723,1.615,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-023-2017-02-03Supl.pdf
+2017-02-13,2017-02-19,1.467,1.217,0.723,1.617,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-028-2017-02-10Supl.pdf
+2017-02-20,2017-02-26,1.472,1.219,0.725,1.622,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-032-2017-02-17Supl.pdf
+2017-02-27,2017-03-05,1.474,1.22,0.726,1.624,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-037-2017-02-24Supl.pdf
+2017-03-06,2017-03-12,1.474,1.224,0.727,1.624,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-040-2017-03-03.pdf
+2017-03-13,2017-03-19,1.466,1.222,0.725,1.616,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-045-2017-03-10.pdf
+2017-03-20,2017-03-26,1.456,1.214,0.718,1.606,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-049-2017-03-17Supl3.pdf
+2017-03-27,2017-04-02,1.439,1.197,0.702,1.589,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-054-2017-03-24Supl.pdf
+2017-04-03,2017-04-09,1.434,1.187,0.693,1.584,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-059-2017-03-31Supl.pdf
+2017-04-10,2017-04-16,1.445,1.189,0.695,1.595,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-064-2017-04-07Supl.pdf
+2017-04-17,2017-04-23,1.459,1.202,0.707,1.609,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-067-2017-04-12Supl.pdf
+2017-05-01,2017-05-07,1.472,1.213,0.717,1.622,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-075-2017-04-28Supl2.pdf
+2017-05-15,2017-05-21,1.443,1.182,0.689,1.593,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-083-2017-05-12Supl2.pdf
+2017-05-22,2017-05-28,1.438,1.172,0.679,1.588,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-087-2017-05-19Supl2.pdf
+2017-05-29,2017-06-04,1.438,1.174,0.682,1.588,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-091-2017-05-26.pdf
+2017-06-05,2017-06-11,1.434,1.169,0.683,1.584,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-096-2017-06-02Supl.pdf
+2017-06-12,2017-06-18,1.43,1.164,0.678,1.58,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-101-2017-06-09.pdf
+2017-06-19,2017-06-25,1.418,1.144,0.66,1.568,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-105-2017-06-16.pdf
+2017-06-26,2017-07-02,1.41,1.136,0.653,1.56,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-110-2017-06-23.pdf
+2017-07-03,2017-07-09,1.423,1.122,0.645,1.573,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-114-2017-06-30.pdf
+2017-07-10,2017-07-16,1.42,1.121,0.643,1.57,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-119-2017-07-07Supl2.pdf
+2017-07-17,2017-07-23,1.419,1.126,0.648,1.569,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-123-2017-07-14.pdf
+2017-07-24,2017-07-30,1.422,1.128,0.65,1.572,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-128-2017-07-21Supl.pdf
+2017-07-31,2017-08-06,1.422,1.13,0.652,1.572,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-133-2017-07-28.pdf
+2017-08-07,2017-08-13,1.422,1.133,0.653,1.572,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-137-2017-08-03Supl.pdf
+2017-08-14,2017-08-20,1.429,1.146,0.665,1.579,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-142-2017-08-11Supl.pdf
+2017-08-21,2017-08-27,1.432,1.148,0.667,1.582,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-144-2017-08-18Supl.pdf
+2017-08-28,2017-09-03,1.43,1.147,0.666,1.58,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-148-2017-08-25Supl.pdf
+2017-09-04,2017-09-10,1.434,1.147,0.666,1.584,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-153-2017-09-01.pdf
+2017-09-11,2017-09-17,1.453,1.154,0.673,1.603,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-157-2017-09-08.pdf
+2017-09-18,2017-09-24,1.466,1.169,0.687,1.616,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-162-2017-09-15.pdf
+2017-09-25,2017-10-01,1.464,1.175,0.692,1.614,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-166-2017-09-22.pdf
+2017-10-02,2017-10-08,1.462,1.18,0.699,1.612,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-170-2017-09-29Supl.pdf
+2017-10-09,2017-10-15,1.459,1.192,0.709,1.609,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-172-2017-10-06.pdf
+2017-10-16,2017-10-22,1.452,1.19,0.708,1.602,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-177-2017-10-13Supl.pdf
+2017-10-23,2017-10-29,1.448,1.185,0.703,1.598,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-181-2017-10-20Supl2.pdf
+2017-10-30,2017-11-05,1.446,1.187,0.705,1.596,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-186-2017-10-27Supl.pdf
+2017-11-13,2017-11-19,1.468,1.198,0.72,1.618,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-192-2017-11-10Supl.pdf
+2017-11-20,2017-11-26,1.468,1.2,0.722,1.618,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-197-2017-11-17Supl2.pdf
+2017-11-27,2017-12-03,1.47,1.208,0.729,1.62,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-202-2017-11-24Supl.pdf
+2017-12-04,2017-12-10,1.469,1.211,0.729,1.619,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-206-2017-11-30Supl.pdf
+2017-12-18,2017-12-24,1.46,1.207,0.725,1.61,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-214-2017-12-15Supl.pdf
+2018-01-01,2018-01-07,1.465,1.214,0.731,1.615,https://joram.madeira.gov.pt/joram/2serie/Ano de 2017/IISerie-219-2017-12-27Supl2.pdf
+2018-01-08,2018-01-14,1.472,1.224,0.741,1.622,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-004-2018-01-05Supl2.pdf
+2018-01-15,2018-01-21,1.476,1.237,0.753,1.626,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-008-2018-01-12Supl.pdf
+2018-01-22,2018-01-28,1.473,1.235,0.751,1.623,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-011-2018-01-19Supl.pdf
+2018-02-05,2018-02-11,1.482,1.242,0.754,1.632,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-020-2018-02-02.pdf
+2018-02-12,2018-02-18,1.481,1.24,0.753,1.631,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-023-2018-02-09Supl.pdf
+2018-02-19,2018-02-25,1.471,1.229,0.743,1.621,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-026-2018-02-16.pdf
+2018-03-05,2018-03-11,1.454,1.21,0.729,1.604,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-035-2018-03-02Supl.pdf
+2018-03-19,2018-03-25,1.442,1.203,0.723,1.592,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-044-2018-03-16Supl.pdf
+2018-03-26,2018-04-01,1.444,1.206,0.726,1.594,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-047-2018-03-23.pdf
+2018-04-09,2018-04-15,1.454,1.214,0.735,1.604,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-051-2018-04-03.pdf
+2018-04-16,2018-04-22,1.481,1.227,0.747,1.631,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-058-2018-04-13Supl2.pdf
+2018-04-23,2018-04-29,1.493,1.238,0.758,1.643,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-061-2018-04-20.pdf
+2018-04-30,2018-05-06,1.501,1.246,0.765,1.651,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-065-2018-04-27Supl.pdf
+2018-05-07,2018-05-13,1.513,1.254,0.777,1.663,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-068-2018-05-04Supl.pdf
+2018-05-14,2018-05-20,1.52,1.261,0.783,1.67,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-070-2018-05-11Supl.pdf
+2018-05-21,2018-05-27,1.538,1.279,0.799,1.688,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-072-2018-05-18Supl.pdf
+2018-05-28,2018-06-03,1.564,1.304,0.822,1.714,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-077-2018-05-25Supl.pdf
+2018-06-04,2018-06-10,1.571,1.313,0.835,1.721,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-080-2018-06-01.pdf
+2018-06-11,2018-06-17,1.573,1.316,0.837,1.723,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-084-2018-06-08.pdf
+2018-06-25,2018-07-01,1.564,1.305,0.827,1.714,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-086-2018-06-18Supl.pdf
+2018-07-02,2018-07-08,1.559,1.302,0.824,1.709,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-092-2018-06-27.pdf
+2018-07-09,2018-07-15,1.51,1.28,0.815,1.66,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-099-2018-07-06Supl.pdf
+2018-07-16,2018-07-22,1.511,1.282,0.817,1.661,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-102-2018-07-13Supl.pdf
+2018-07-23,2018-07-29,1.511,1.28,0.816,1.661,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-106-2018-07-20Supl.pdf
+2018-07-30,2018-08-05,1.505,1.272,0.808,1.655,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-111-2018-07-27.pdf
+2018-08-06,2018-08-12,1.515,1.274,0.811,1.665,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-115-2018-08-02Supl.pdf
+2018-08-13,2018-08-19,1.523,1.277,0.814,1.673,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-120-2018-08-10Supl.pdf
+2018-08-20,2018-08-26,1.523,1.279,0.816,1.673,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-124-2018-08-17Supl.pdf
+2018-08-27,2018-09-02,1.524,1.283,0.82,1.674,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-128-2018-08-24.pdf
+2018-09-03,2018-09-09,1.529,1.287,0.822,1.679,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-132-2018-08-31.pdf
+2018-09-10,2018-09-16,1.534,1.295,0.83,1.684,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-136-2018-09-07Supl.pdf
+2018-09-17,2018-09-23,1.544,1.311,0.845,1.694,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-141-2018-09-14Supl.pdf
+2018-09-24,2018-09-30,1.545,1.312,0.846,1.695,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-145-2018-09-21.pdf
+2018-10-01,2018-10-07,1.539,1.308,0.842,1.689,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-150-2018-09-28Supl2.pdf
+2018-10-08,2018-10-14,1.538,1.315,0.848,1.688,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-154-2018-10-04Supl.pdf
+2018-10-15,2018-10-21,1.555,1.346,0.876,1.705,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-159-2018-10-12Supl.pdf
+2018-10-22,2018-10-28,1.548,1.353,0.883,1.698,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-164-2018-10-19.pdf
+2018-10-29,2018-11-04,1.545,1.352,0.882,1.695,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-169-2018-10-26Supl.pdf
+2018-11-05,2018-11-11,1.548,1.353,0.888,1.698,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-172-2018-11-02Supl2.pdf
+2018-11-12,2018-11-18,1.548,1.36,0.893,1.698,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-176-2018-11-09Supl.pdf
+2018-11-19,2018-11-25,1.533,1.35,0.885,1.683,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-180-2018-11-16.pdf
+2018-11-26,2018-12-02,1.513,1.334,0.869,1.663,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-182-2018-11-23.pdf
+2018-12-03,2018-12-09,1.491,1.311,0.851,1.641,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-187-2018-11-30Supl.pdf
+2018-12-10,2018-12-16,1.466,1.287,0.828,1.616,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-191-2018-12-07Supl.pdf
+2018-12-17,2018-12-23,1.444,1.266,0.809,1.594,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-194-2018-12-14Supl.pdf
+2018-12-24,2018-12-30,1.428,1.25,0.795,1.578,https://joram.madeira.gov.pt/joram/2serie/Ano de 2018/IISerie-199-2018-12-21Supl.pdf
+2019-01-07,2019-01-13,1.429,1.257,0.795,1.579,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-003-2019-01-04Supl.pdf
+2019-01-14,2019-01-20,1.39,1.211,0.752,1.54,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-006-2019-01-11Supl.pdf
+2019-01-21,2019-01-27,1.394,1.219,0.76,1.544,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-011-2019-01-18.pdf
+2019-01-28,2019-02-03,1.395,1.231,0.77,1.545,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-015-2019-01-25Supl2.pdf
+2019-02-04,2019-02-10,1.395,1.249,0.775,1.545,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-019-2019-02-01.pdf
+2019-02-11,2019-02-17,1.395,1.251,0.776,1.545,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-023-2019-02-08Supl.pdf
+2019-02-18,2019-02-24,1.396,1.254,0.779,1.546,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-028-2019-02-15Supl.pdf
+2019-02-25,2019-03-03,1.409,1.266,0.79,1.559,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-033-2019-02-22Supl.pdf
+2019-03-04,2019-03-10,1.415,1.28,0.804,1.565,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-038-2019-03-01.pdf
+2019-03-11,2019-03-17,1.424,1.285,0.81,1.574,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-041-2019-03-08Supl.pdf
+2019-03-18,2019-03-24,1.43,1.289,0.813,1.58,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-046-2019-03-15.pdf
+2019-03-25,2019-03-31,1.433,1.289,0.813,1.583,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-050-2019-03-22.pdf
+2019-04-01,2019-04-07,1.449,1.284,0.812,1.599,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-055-2019-03-29Supl2.pdf
+2019-04-08,2019-04-14,1.467,1.28,0.809,1.617,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-058-2019-04-05Supl.pdf
+2019-04-15,2019-04-21,1.486,1.285,0.813,1.636,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-063-2019-04-12Supl.pdf
+2019-04-29,2019-05-05,1.508,1.296,0.824,1.658,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-068-2019-04-23.pdf
+2019-05-06,2019-05-12,1.536,1.311,0.84,1.686,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-074-2019-05-03Supl2.pdf
+2019-05-13,2019-05-19,1.546,1.315,0.844,1.696,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-078-2019-05-10Supl.pdf
+2019-05-20,2019-05-26,1.541,1.309,0.839,1.691,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-083-2019-05-17Supl.pdf
+2019-05-27,2019-06-02,1.55,1.313,0.842,1.7,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-088-2019-05-24Supl2.pdf
+2019-06-03,2019-06-09,1.552,1.304,0.841,1.702,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-093-2019-05-31Supl.pdf
+2019-06-10,2019-06-16,1.548,1.295,0.833,1.698,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-097-2019-06-07Supl.pdf
+2019-06-17,2019-06-23,1.516,1.264,0.805,1.666,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-101-2019-06-14Supl.pdf
+2019-06-24,2019-06-30,1.502,1.249,0.791,1.652,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-105-2019-06-21Supl.pdf
+2019-07-01,2019-07-07,1.497,1.246,0.789,1.647,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-109-2019-06-28Supl.pdf
+2019-07-08,2019-07-14,1.498,1.248,0.791,1.648,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-113-2019-07-05.pdf
+2019-07-15,2019-07-21,1.496,1.243,0.787,1.646,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-117-2019-07-12Supl2.pdf
+2019-07-22,2019-07-28,1.509,1.253,0.795,1.659,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-120-2019-07-19Supl.pdf
+2019-07-29,2019-08-04,1.498,1.251,0.794,1.648,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-125-2019-07-26Supl.pdf
+2019-08-05,2019-08-11,1.503,1.256,0.794,1.653,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-129-2019-08-01Supl.pdf
+2019-08-12,2019-08-18,1.503,1.257,0.795,1.653,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-133-2019-08-09Supl3.pdf
+2019-08-19,2019-08-25,1.484,1.24,0.779,1.634,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-137-2019-08-16Supl.pdf
+2019-08-26,2019-09-01,1.482,1.244,0.783,1.632,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-141-2019-08-23.pdf
+2019-09-02,2019-09-08,1.478,1.241,0.781,1.628,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-146-2019-08-30Supl.pdf
+2019-09-09,2019-09-15,1.473,1.24,0.78,1.623,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-151-2019-09-06Supl.pdf
+2019-09-16,2019-09-22,1.475,1.247,0.786,1.625,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-155-2019-09-13Supl.pdf
+2019-09-30,2019-10-06,1.492,1.276,0.813,1.642,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-164-2019-09-27Supl2.pdf
+2019-10-07,2019-10-13,1.487,1.275,0.812,1.637,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-168-2019-10-04Supl.pdf
+2019-10-14,2019-10-20,1.483,1.266,0.803,1.633,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-173-2019-10-11Supl.pdf
+2019-10-21,2019-10-27,1.478,1.265,0.802,1.628,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-178-2019-10-18Supl3.pdf
+2019-10-28,2019-11-03,1.474,1.264,0.801,1.624,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-182-2019-10-25Supl2.pdf
+2019-11-04,2019-11-10,1.474,1.259,0.799,1.624,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-185-2019-10-31.pdf
+2019-11-11,2019-11-17,1.477,1.26,0.799,1.627,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-189-2019-11-08Supl2.pdf
+2019-11-18,2019-11-24,1.483,1.261,0.801,1.633,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-194-2019-11-15Supl2.pdf
+2019-11-25,2019-12-01,1.482,1.262,0.801,1.632,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-199-2019-11-22Supl2.pdf
+2019-12-02,2019-12-08,1.483,1.269,0.8,1.633,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-204-2019-11-29Supl3.pdf
+2019-12-09,2019-12-15,1.484,1.272,0.803,1.634,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-209-2019-12-06Supl.pdf
+2019-12-16,2019-12-22,1.482,1.273,0.803,1.632,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-214-2019-12-13Supl2.pdf
+2019-12-23,2019-12-29,1.478,1.277,0.808,1.628,https://joram.madeira.gov.pt/joram/2serie/Ano de 2019/IISerie-219-2019-12-20Supl2.pdf
+2020-01-06,2020-01-12,1.476,1.285,0.808,1.626,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-002-2020-01-03Supl3.pdf
+2020-01-13,2020-01-19,1.502,1.321,0.841,1.652,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-007-2020-01-10Supl3.pdf
+2020-01-20,2020-01-26,1.5,1.319,0.839,1.65,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-012-2020-01-17Supl2.pdf
+2020-01-27,2020-02-02,1.497,1.308,0.829,1.647,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-017-2020-01-24Supl2.pdf
+2020-02-03,2020-02-09,1.49,1.295,0.819,1.64,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-022-2020-01-31.pdf
+2020-02-10,2020-02-16,1.478,1.272,0.798,1.628,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-027-2020-02-07.pdf
+2020-02-17,2020-02-23,1.471,1.256,0.783,1.621,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-032-2020-02-14.pdf
+2020-02-24,2020-03-01,1.473,1.252,0.78,1.623,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-037-2020-02-21Supl.pdf
+2020-03-02,2020-03-08,1.405,1.147,0.671,1.555,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-041-2020-02-28Supl2.pdf
+2020-03-09,2020-03-15,1.473,1.248,0.764,1.623,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-046-2020-03-06Supl4.pdf
+2020-03-16,2020-03-22,1.451,1.226,0.743,1.601,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-051-2020-03-13.pdf
+2020-03-23,2020-03-29,1.395,1.175,0.696,1.545,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-056-2020-03-20Supl.pdf
+2020-03-30,2020-04-05,1.35,1.141,0.665,1.5,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-062-2020-03-27Supl.pdf
+2020-04-06,2020-04-12,1.333,1.144,0.652,1.483,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-066-2020-04-03Supl.pdf
+2020-04-20,2020-04-26,1.318,1.132,0.642,1.468,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-074-2020-04-16Supl2.pdf
+2020-04-27,2020-05-03,1.299,1.112,0.623,1.449,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-080-2020-04-24Supl2.pdf
+2020-05-04,2020-05-10,1.269,1.093,0.599,1.419,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-084-2020-04-30Supl.pdf
+2020-05-11,2020-05-17,1.264,1.08,0.587,1.414,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-089-2020-05-08Supl.pdf
+2020-05-18,2020-05-24,1.272,1.076,0.583,1.422,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-094-2020-05-15Supl.pdf
+2020-05-25,2020-05-31,1.278,1.075,0.582,1.428,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-099-2020-05-22Supl.pdf
+2020-06-01,2020-06-07,1.286,1.089,0.594,1.436,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-104-2020-05-29Supl.pdf
+2020-06-08,2020-06-14,1.294,1.095,0.599,1.444,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-109-2020-06-05.pdf
+2020-06-15,2020-06-21,1.309,1.103,0.607,1.459,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-112-2020-06-12Supl.pdf
+2020-06-22,2020-06-28,1.323,1.115,0.617,1.473,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-117-2020-06-19Supl3.pdf
+2020-06-29,2020-07-05,1.342,1.124,0.626,1.492,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-122-2020-06-26Supl.pdf
+2020-07-06,2020-07-12,1.339,1.126,0.634,1.489,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-126-2020-07-03.pdf
+2020-07-13,2020-07-19,1.34,1.127,0.635,1.49,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-131-2020-07-10.pdf
+2020-07-20,2020-07-26,1.361,1.142,0.648,1.511,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-135-2020-07-17.pdf
+2020-07-27,2020-08-02,1.355,1.14,0.646,1.505,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-139-2020-07-24Supl.pdf
+2020-08-03,2020-08-09,1.372,1.137,0.652,1.522,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-143-2020-07-31.pdf
+2020-08-10,2020-08-16,1.362,1.131,0.646,1.512,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-147-2020-08-06Supl3.pdf
+2020-08-17,2020-08-23,1.363,1.131,0.646,1.513,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-151-2020-08-14.pdf
+2020-08-24,2020-08-30,1.368,1.13,0.645,1.518,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-155-2020-08-20Supl.pdf
+2020-08-31,2020-09-06,1.37,1.129,0.644,1.52,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-160-2020-08-28.pdf
+2020-09-07,2020-09-13,1.371,1.126,0.641,1.521,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-165-2020-09-04.pdf
+2020-09-14,2020-09-20,1.367,1.118,0.633,1.517,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-170-2020-09-11Supl3.pdf
+2020-09-21,2020-09-27,1.359,1.103,0.62,1.509,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-175-2020-09-18Supl4.pdf
+2020-09-28,2020-10-04,1.362,1.097,0.614,1.512,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-180-2020-09-25Supl2.pdf
+2020-10-05,2020-10-11,1.367,1.098,0.61,1.517,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-185-2020-10-02Supl3.pdf
+2020-10-12,2020-10-18,1.369,1.099,0.61,1.519,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-189-2020-10-09.pdf
+2020-10-19,2020-10-25,1.372,1.103,0.615,1.522,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-194-2020-10-16.pdf
+2020-10-26,2020-11-01,1.366,1.105,0.616,1.516,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-199-2020-10-23Supl.pdf
+2020-11-02,2020-11-08,1.359,1.107,0.612,1.509,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-204-2020-10-30Supl2.pdf
+2020-11-09,2020-11-15,1.341,1.1,0.605,1.491,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-209-2020-11-06Supl.pdf
+2020-11-16,2020-11-22,1.336,1.099,0.605,1.486,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-214-2020-11-13Supl.pdf
+2020-11-23,2020-11-29,1.351,1.116,0.62,1.501,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-219-2020-11-20Supl.pdf
+2020-11-30,2020-12-06,1.356,1.124,0.627,1.506,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-224-2020-11-27.pdf
+2020-12-07,2020-12-13,1.364,1.14,0.64,1.514,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-228-2020-12-04Supl2.pdf
+2020-12-14,2020-12-20,1.365,1.146,0.645,1.515,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-232-2020-12-11Supl.pdf
+2020-12-21,2020-12-27,1.365,1.154,0.653,1.515,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-237-2020-12-18.pdf
+2020-12-28,2021-01-03,1.38,1.166,0.664,1.53,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-241-2020-12-24.pdf
+2021-01-04,2021-01-10,1.369,1.166,0.664,1.519,https://joram.madeira.gov.pt/joram/2serie/Ano de 2020/IISerie-244-2020-12-30Supl.pdf
+2021-01-18,2021-01-24,1.411,1.203,0.699,1.561,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-010-2021-01-15Supl.pdf
+2021-01-25,2021-01-31,1.43,1.219,0.713,1.58,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-015-2021-01-22Supl.pdf
+2021-02-01,2021-02-07,1.434,1.224,0.717,1.584,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-019-2021-01-29Supl.pdf
+2021-02-08,2021-02-14,1.436,1.226,0.719,1.586,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-023-2021-02-05Supl.pdf
+2021-02-15,2021-02-21,1.452,1.241,0.732,1.602,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-027-2021-02-12Supl.pdf
+2021-02-22,2021-02-28,1.462,1.262,0.752,1.612,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-031-2021-02-19Supl2.pdf
+2021-03-01,2021-03-07,1.485,1.284,0.765,1.635,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-035-2021-02-26Supl.pdf
+2021-03-08,2021-03-14,1.503,1.296,0.776,1.653,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-039-2021-03-05.pdf
+2021-03-15,2021-03-21,1.52,1.305,0.785,1.67,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-043-2021-03-12Supl.pdf
+2021-03-22,2021-03-28,1.54,1.316,0.794,1.69,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-047-2021-03-19Supl.pdf
+2021-03-29,2021-04-04,1.538,1.315,0.794,1.688,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-052-2021-03-26Supl.pdf
+2021-04-05,2021-04-11,1.539,1.309,0.788,1.689,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-056-2021-04-01.pdf
+2021-04-19,2021-04-25,1.542,1.306,0.784,1.692,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-064-2021-04-16Supl.pdf
+2021-04-26,2021-05-02,1.549,1.308,0.786,1.699,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-069-2021-04-23Supl2.pdf
+2021-05-03,2021-05-09,1.555,1.312,0.788,1.705,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-074-2021-04-30.pdf
+2021-05-10,2021-05-16,1.558,1.315,0.791,1.708,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-078-2021-05-07Supl3.pdf
+2021-05-17,2021-05-23,1.566,1.324,0.8,1.716,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-083-2021-05-14Supl.pdf
+2021-05-24,2021-05-30,1.573,1.332,0.806,1.723,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-088-2021-05-21Supl2.pdf
+2021-05-31,2021-06-06,1.57,1.334,0.808,1.72,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-093-2021-05-28Supl2.pdf
+2021-06-07,2021-06-13,1.578,1.349,0.809,1.728,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-097-2021-06-04.pdf
+2021-06-14,2021-06-20,1.583,1.359,0.817,1.733,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-101-2021-06-11.pdf
+2021-06-21,2021-06-27,1.59,1.367,0.825,1.74,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-106-2021-06-18Supl4.pdf
+2021-06-28,2021-07-04,1.599,1.378,0.834,1.749,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-111-2021-06-25Supl.pdf
+2021-07-05,2021-07-11,1.618,1.396,0.845,1.768,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-115-2021-07-02Supl.pdf
+2021-07-12,2021-07-18,1.629,1.402,0.851,1.779,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-120-2021-07-09Supl2.pdf
+2021-07-19,2021-07-25,1.638,1.408,0.856,1.788,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-125-2021-07-16Supl.pdf
+2021-07-26,2021-08-01,1.645,1.412,0.86,1.795,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-129-2021-07-23Supl2.pdf
+2021-08-02,2021-08-08,1.646,1.426,0.858,1.796,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-134-2021-07-30Supl2.pdf
+2021-08-09,2021-08-15,1.654,1.43,0.861,1.804,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-138-2021-08-05Supl2.pdf
+2021-08-16,2021-08-22,1.655,1.429,0.86,1.805,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-143-2021-08-13Supl.pdf
+2021-08-23,2021-08-29,1.654,1.426,0.857,1.804,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-148-2021-08-20Supl.pdf
+2021-08-30,2021-09-05,1.643,1.418,0.85,1.793,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-153-2021-08-27Supl.pdf
+2021-09-06,2021-09-12,1.652,1.426,0.855,1.802,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-158-2021-09-03Supl.pdf
+2021-09-13,2021-09-19,1.658,1.431,0.859,1.808,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-163-2021-09-10Supl2.pdf
+2021-09-20,2021-09-26,1.664,1.438,0.866,1.814,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-168-2021-09-17Supl2.pdf
+2021-10-04,2021-10-10,1.675,1.457,0.889,1.825,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-178-2021-10-01Supl.pdf
+2021-10-11,2021-10-17,1.698,1.486,0.915,1.848,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-182-2021-10-08Supl3.pdf
+2021-10-18,2021-10-24,1.732,1.525,0.951,1.882,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-187-2021-10-15Supl2.pdf
+2021-10-25,2021-10-31,1.692,1.505,0.931,1.842,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-192-2021-10-22Supl3.pdf
+2021-11-01,2021-11-07,1.707,1.516,0.938,1.857,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-197-2021-10-29.pdf
+2021-11-08,2021-11-14,1.715,1.522,0.943,1.865,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-201-2021-11-05Supl2.pdf
+2021-11-15,2021-11-21,1.726,1.523,0.944,1.876,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-206-2021-11-12Supl2.pdf
+2021-11-22,2021-11-28,1.731,1.525,0.946,1.881,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-211-2021-11-19Supl.pdf
+2021-11-29,2021-12-05,1.723,1.519,0.941,1.873,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-216-2021-11-26.pdf
+2021-12-06,2021-12-12,1.713,1.505,0.936,1.863,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-220-2021-12-03.pdf
+2021-12-13,2021-12-19,1.677,1.485,0.917,1.827,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-224-2021-12-10.pdf
+2021-12-20,2021-12-26,1.677,1.478,0.911,1.827,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-229-2021-12-17Supl3.pdf
+2021-12-27,2022-01-02,1.673,1.476,0.909,1.823,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-234-2021-12-24.pdf
+2022-01-03,2022-01-09,1.68,1.487,0.909,1.83,https://joram.madeira.gov.pt/joram/2serie/Ano de 2021/IISerie-238-2021-12-30Supl2.pdf
+2022-01-10,2022-01-16,1.709,1.506,0.927,1.859,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-003-2022-01-07Supl.pdf
+2022-01-17,2022-01-23,1.716,1.524,0.944,1.866,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-008-2022-01-14Supl3.pdf
+2022-01-24,2022-01-30,1.729,1.549,0.966,1.879,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-013-2022-01-21Supl4.pdf
+2022-01-31,2022-02-06,1.684,1.491,0.962,1.834,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-018-2022-01-28Supl4.pdf
+2022-02-07,2022-02-13,1.706,1.521,0.99,1.856,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-023-2022-02-04Supl4.pdf
+2022-02-14,2022-02-20,1.731,1.527,0.995,1.881,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-028-2022-02-11Supl2.pdf
+2022-02-21,2022-02-27,1.749,1.548,1.014,1.899,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-033-2022-02-18Supl3.pdf
+2022-02-28,2022-03-06,1.761,1.556,1.021,1.911,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-038-2022-02-25Supl.pdf
+2022-03-07,2022-03-13,1.779,1.574,1.039,1.929,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-042-2022-03-04Supl.pdf
+2022-03-14,2022-03-20,1.849,1.686,1.163,1.999,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-047-2022-03-11Supl.pdf
+2022-03-21,2022-03-27,1.956,1.854,1.327,2.106,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-052-2022-03-18Supl.pdf
+2022-03-28,2022-04-03,1.855,1.723,1.206,2.005,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-057-2022-03-25.pdf
+2022-04-04,2022-04-10,1.937,1.885,1.355,2.087,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-062-2022-04-01Supl.pdf
+2022-04-11,2022-04-17,1.899,1.818,1.294,2.049,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-067-2022-04-08Supl.pdf
+2022-04-18,2022-04-24,1.858,1.755,1.236,2.008,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-071-2022-04-14%20.pdf
+2022-05-02,2022-05-08,1.885,1.817,1.293,2.035,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-080-2022-04-29Supl.pdf
+2022-05-09,2022-05-15,1.784,1.719,1.344,1.934,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-085-2022-05-06Supl2.pdf
+2022-05-16,2022-05-22,1.834,1.731,1.357,1.984,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-090-2022-05-13Supl.pdf
+2022-05-23,2022-05-29,1.864,1.696,1.318,2.014,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-095-2022-05-20Supl.pdf
+2022-05-30,2022-06-05,1.928,1.67,1.289,2.078,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-100-2022-05-27Supl2.pdf
+2022-06-06,2022-06-12,1.964,1.69,1.311,2.114,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-105-2022-06-03Supl2.pdf
+2022-06-13,2022-06-19,2.063,1.777,1.408,2.213,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-110-2022-06-10.pdf
+2022-06-20,2022-06-26,2.062,1.883,1.528,2.212,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-114-2022-06-17Supl.pdf
+2022-06-27,2022-07-03,2.032,1.932,1.582,2.182,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-119-2022-06-24Supl.pdf
+2022-07-04,2022-07-10,2.008,1.918,1.569,2.158,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-123-2022-06-30Supl2.pdf
+2022-07-11,2022-07-17,1.994,1.858,1.503,2.144,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-128-2022-07-08Supl2.pdf
+2022-07-18,2022-07-24,1.941,1.802,1.439,2.091,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-133-2022-07-15Supl2.pdf
+2022-07-25,2022-07-31,1.889,1.789,1.425,2.039,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-138-2022-07-22Supl.pdf
+2022-08-01,2022-08-07,1.841,1.748,1.379,1.991,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-142-2022-07-29Supl.pdf
+2022-08-08,2022-08-14,1.835,1.721,1.354,1.985,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-146-2022-08-04Supl2.pdf
+2022-08-15,2022-08-21,1.751,1.638,1.278,1.901,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-151-2022-08-12Supl.pdf
+2022-08-22,2022-08-28,1.734,1.621,1.262,1.884,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-155-2022-08-19Supl.pdf
+2022-08-29,2022-09-04,1.724,1.663,1.301,1.874,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-160-2022-08-26Supl.pdf
+2022-09-05,2022-09-11,1.728,1.756,1.386,1.878,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-165-2022-09-02Supl3.pdf
+2022-09-12,2022-09-18,1.666,1.72,1.353,1.816,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-170-2022-09-09Supl.pdf
+2022-09-19,2022-09-25,1.65,1.714,1.348,1.8,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-175-2022-09-16Supl.pdf
+2022-09-26,2022-10-02,1.642,1.652,1.291,1.792,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-180-2022-09-23Supl.pdf
+2022-10-03,2022-10-09,1.635,1.629,1.27,1.785,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-185-2022-09-30Supl3.pdf
+2022-10-10,2022-10-16,1.643,1.643,1.283,1.793,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-189-2022-10-07Supl3.pdf
+2022-10-17,2022-10-23,1.766,1.746,1.377,1.916,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-194-2022-10-14Supl.pdf
+2022-10-24,2022-10-30,1.815,1.826,1.467,1.965,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-198-2022-10-21Supl.pdf
+2022-10-31,2022-11-06,1.765,1.825,1.466,1.915,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-203-2022-10-28Supl.pdf
+2022-11-07,2022-11-13,1.747,1.813,1.455,1.897,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-207-2022-11-04Supl3.pdf
+2022-11-14,2022-11-20,1.767,1.789,1.433,1.917,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-211-2022-11-11Supl.pdf
+2022-11-21,2022-11-27,1.729,1.708,1.358,1.879,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-216-2022-11-18Supl.pdf
+2022-11-28,2022-12-04,1.648,1.613,1.271,1.798,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-221-2022-11-25Supl.pdf
+2022-12-05,2022-12-11,1.593,1.556,1.219,1.743,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-225-2022-12-02Supl.pdf
+2022-12-12,2022-12-18,1.568,1.507,1.174,1.718,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-229-2022-12-09Supl2.pdf
+2022-12-19,2022-12-25,1.51,1.428,1.101,1.66,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-234-2022-12-16Supl.pdf
+2022-12-26,2023-01-01,1.499,1.472,1.142,1.649,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-238-2022-12-22Supl2.pdf
+2023-01-02,2023-01-08,1.517,1.471,1.141,1.667,https://joram.madeira.gov.pt/joram/2serie/Ano de 2022/IISerie-242-2022-12-29Supl3.pdf
+2023-01-09,2023-01-15,1.572,1.482,1.151,1.722,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-005-2023-01-06Supl2.pdf
+2023-01-16,2023-01-22,1.564,1.454,1.119,1.714,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-010-2023-01-13Supl3.pdf
+2023-01-23,2023-01-29,1.575,1.466,1.13,1.725,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-015-2023-01-20Supl.pdf
+2023-01-30,2023-02-05,1.608,1.488,1.151,1.758,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-020-2023-01-27Supl.pdf
+2023-02-06,2023-02-12,1.642,1.504,1.166,1.792,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-025-2023-02-03Supl.pdf
+2023-02-13,2023-02-19,1.62,1.447,1.102,1.77,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-030-2023-02-10.pdf
+2023-02-20,2023-02-26,1.599,1.401,1.059,1.749,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-035-2023-02-17.pdf
+2023-02-27,2023-03-05,1.605,1.407,1.065,1.755,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-039-2023-02-24.pdf
+2023-03-06,2023-03-12,1.604,1.393,1.052,1.754,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-044-2023-03-03.pdf
+2023-03-13,2023-03-19,1.61,1.419,1.076,1.76,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-049-2023-03-10Supl2.pdf
+2023-03-20,2023-03-26,1.615,1.405,1.063,1.765,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-053-2023-03-17Supl.pdf
+2023-03-27,2023-04-02,1.59,1.375,1.03,1.74,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-058-2023-03-24Supl.pdf
+2023-04-03,2023-04-09,1.6,1.367,1.022,1.75,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-063-2023-03-31Supl.pdf
+2023-04-10,2023-04-16,1.625,1.354,1.011,1.775,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-067-2023-04-06.pdf
+2023-04-17,2023-04-23,1.639,1.358,1.014,1.789,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-072-2023-04-14Supl.pdf
+2023-04-24,2023-04-30,1.646,1.338,0.996,1.796,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-077-2023-04-21Supl.pdf
+2023-05-01,2023-05-07,1.606,1.338,0.996,1.756,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-081-2023-04-28Supl2.pdf
+2023-05-08,2023-05-14,1.606,1.338,0.996,1.756,
+2023-05-15,2023-05-21,1.569,1.298,0.957,1.719,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-090-2023-05-12Supl.pdf
+2023-05-22,2023-05-28,1.592,1.318,0.975,1.742,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-094-2023-05-19Supl.pdf
+2023-05-29,2023-06-04,1.609,1.332,0.988,1.759,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-099-2023-05-26Supl3.pdf
+2023-06-05,2023-06-11,1.633,1.337,0.992,1.783,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-104-2023-06-02Supl3.pdf
+2023-06-12,2023-06-18,1.603,1.312,0.968,1.753,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-108-2023-06-09Supl.pdf
+2023-06-19,2023-06-25,1.641,1.353,1.005,1.791,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-113-2023-06-16Supl.pdf
+2023-06-26,2023-07-02,1.624,1.355,1.007,1.774,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-118-2023-06-23Supl.pdf
+2023-07-03,2023-07-09,1.611,1.372,1.023,1.761,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-122-2023-06-30Supl.pdf
+2023-07-10,2023-07-16,1.573,1.34,0.99,1.723,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-127-2023-07-07Supl.pdf
+2023-07-17,2023-07-23,1.6,1.368,1.019,1.75,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-131-2023-07-14Supl.pdf
+2023-07-24,2023-07-30,1.616,1.384,1.033,1.766,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-136-2023-07-21Supl.pdf
+2023-07-31,2023-08-06,1.638,1.388,1.037,1.788,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-141-2023-07-28Supl.pdf
+2023-08-07,2023-08-13,1.705,1.45,1.094,1.855,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-145-2023-08-03.pdf
+2023-08-14,2023-08-20,1.719,1.511,1.15,1.869,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-150-2023-08-11Supl.pdf
+2023-08-21,2023-08-27,1.719,1.511,1.15,1.869,
+2023-08-28,2023-09-03,1.719,1.511,1.15,1.869,
+2023-09-04,2023-09-10,1.719,1.511,1.15,1.869,
+2023-09-11,2023-09-17,1.719,1.507,1.146,1.869,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-168-2023-09-08Supl.pdf
+2023-09-18,2023-09-24,1.707,1.507,1.146,1.857,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-173-2023-09-15.pdf
+2023-09-25,2023-10-01,1.705,1.507,1.189,1.855,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-178-2023-09-22Supl.pdf
+2023-10-02,2023-10-08,1.711,1.507,1.189,1.861,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-183-2023-09-29.pdf
+2023-10-09,2023-10-15,1.711,1.509,1.191,1.861,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-187-2023-10-06Supl.pdf
+2023-10-16,2023-10-22,1.667,1.478,1.16,1.817,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-192-2023-10-13Supl2.pdf
+2023-10-23,2023-10-29,1.636,1.451,1.133,1.786,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-197-2023-10-20Supl3.pdf
+2023-10-30,2023-11-05,1.647,1.463,1.145,1.797,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-202-2023-10-27Supl3.pdf
+2023-11-06,2023-11-12,1.642,1.447,1.129,1.792,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-206-2023-11-03Supl.pdf
+2023-11-13,2023-11-19,1.639,1.436,1.118,1.789,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-211-2023-11-10Supl2.pdf
+2023-11-20,2023-11-26,1.619,1.401,1.083,1.769,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-215-2023-11-17.pdf
+2023-11-27,2023-12-03,1.589,1.386,1.068,1.739,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-220-2023-11-24Supl2.pdf
+2023-12-04,2023-12-10,1.571,1.383,1.065,1.721,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-224-2023-11-30Supl.pdf
+2023-12-11,2023-12-17,1.56,1.367,1.049,1.71,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-228-2023-12-07Supl2.pdf
+2023-12-18,2023-12-24,1.54,1.342,1.023,1.69,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-232-2023-12-15Supl.pdf
+2023-12-25,2023-12-31,1.528,1.324,1.006,1.678,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-237-2023-12-22Supl2.pdf
+2024-01-01,2024-01-07,1.539,1.34,1.022,1.689,https://joram.madeira.gov.pt/joram/2serie/Ano de 2023/IISerie-240-2023-12-29Supl3.pdf
+2024-01-08,2024-01-14,1.541,1.333,1.015,1.691,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-003-2024-01-05.pdf
+2024-01-15,2024-01-21,1.542,1.321,1.003,1.692,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-008-2024-01-12.pdf
+2024-01-22,2024-01-28,1.543,1.33,1.011,1.693,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-013-2024-01-19Supl.pdf
+2024-01-29,2024-02-04,1.561,1.348,1.028,1.711,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-018-2024-01-26Supl.pdf
+2024-02-05,2024-02-11,1.579,1.368,1.048,1.729,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-023-2024-02-02.pdf
+2024-02-12,2024-02-18,1.587,1.386,1.066,1.737,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-028-2024-02-09Supl.pdf
+2024-02-19,2024-02-25,1.596,1.403,1.083,1.746,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-031-2024-02-16.pdf
+2024-02-26,2024-03-03,1.618,1.417,1.097,1.768,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-036-2024-02-23Supl.pdf
+2024-03-04,2024-03-10,1.615,1.4,1.08,1.765,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-041-2024-03-01Supl.pdf
+2024-03-11,2024-03-17,1.621,1.392,1.072,1.771,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-046-2024-03-08Supl.pdf
+2024-03-18,2024-03-24,1.62,1.38,1.061,1.77,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-050-2024-03-15Supl2.pdf
+2024-03-25,2024-03-31,1.628,1.377,1.058,1.778,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-054-2024-03-22.pdf
+2024-04-01,2024-04-07,1.657,1.391,1.071,1.807,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-057-2024-03-27.pdf
+2024-04-08,2024-04-14,1.677,1.381,1.062,1.827,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-062-2024-04-05Supl.pdf
+2024-04-15,2024-04-21,1.688,1.401,1.082,1.838,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-067-2024-04-12.pdf
+2024-04-22,2024-04-28,1.688,1.391,1.072,1.838,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-072-2024-04-19Supl.pdf
+2024-04-29,2024-05-05,1.699,1.372,1.053,1.849,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-076-2024-04-26Supl2.pdf
+2024-05-06,2024-05-12,1.688,1.358,1.039,1.838,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-080-2024-05-03Supl.pdf
+2024-05-13,2024-05-19,1.671,1.341,1.022,1.821,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-085-2024-05-10.pdf
+2024-05-20,2024-05-26,1.641,1.336,1.017,1.791,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-089-2024-05-17Supl.pdf
+2024-05-27,2024-06-02,1.634,1.324,1.006,1.784,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-093-2024-05-24Supl.pdf
+2024-06-03,2024-06-09,1.63,1.323,1.005,1.78,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-096-2024-05-31Supl.pdf
+2024-06-10,2024-06-16,1.618,1.322,1.004,1.768,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-101-2024-06-07Supl.pdf
+2024-06-17,2024-06-23,1.593,1.299,0.982,1.743,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-105-2024-06-14.pdf
+2024-06-24,2024-06-30,1.598,1.322,1.004,1.748,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-109-2024-06-21Supl2.pdf
+2024-07-01,2024-07-07,1.612,1.35,1.032,1.762,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-114-2024-06-28.pdf
+2024-07-08,2024-07-14,1.623,1.358,1.04,1.773,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-118-2024-07-05Supl3.pdf
+2024-07-15,2024-07-21,1.635,1.367,1.048,1.785,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-123-2024-07-12Supl4.pdf
+2024-07-22,2024-07-28,1.621,1.346,1.029,1.771,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-128-2024-07-19Supl.pdf
+2024-07-29,2024-08-04,1.612,1.331,1.015,1.762,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-133-2024-07-26Supl3.pdf
+2024-08-05,2024-08-11,1.601,1.321,1.005,1.751,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-138-2024-08-02.pdf
+2024-08-12,2024-08-18,1.601,1.314,0.997,1.751,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-143-2024-08-09Supl4.pdf
+2024-08-19,2024-08-25,1.58,1.299,0.982,1.73,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-147-2024-08-16Supl.pdf
+2024-08-26,2024-09-01,1.582,1.304,0.987,1.732,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-151-2024-08-23.pdf
+2024-09-02,2024-09-08,1.55,1.274,0.957,1.7,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-156-2024-08-30Supl2.pdf
+2024-09-09,2024-09-15,1.539,1.274,0.957,1.689,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-161-2024-09-06Supl.pdf
+2024-09-16,2024-09-22,1.503,1.255,0.938,1.653,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-166-2024-09-13Supl2.pdf
+2024-09-23,2024-09-29,1.495,1.246,0.929,1.645,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-171-2024-09-20Supl2.pdf
+2024-09-30,2024-10-06,1.506,1.247,0.93,1.656,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-176-2024-09-27Supl.pdf
+2024-10-07,2024-10-13,1.503,1.253,0.936,1.653,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-181-2024-10-04.pdf
+2024-10-14,2024-10-20,1.519,1.266,0.948,1.669,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-186-2024-10-11.pdf
+2024-10-21,2024-10-27,1.542,1.287,0.969,1.692,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-191-2024-10-18Supl.pdf
+2024-10-28,2024-11-03,1.541,1.27,0.953,1.691,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-196-2024-10-25Supl.pdf
+2024-11-04,2024-11-10,1.547,1.272,0.955,1.697,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-200-2024-10-31Supl3.pdf
+2024-11-11,2024-11-17,1.522,1.267,0.949,1.672,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-205-2024-11-08Supl3.pdf
+2024-11-18,2024-11-24,1.531,1.289,0.969,1.681,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-209-2024-11-15Supl2.pdf
+2024-11-25,2024-12-01,1.536,1.29,0.97,1.686,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-213-2024-11-22Supl.pdf
+2024-12-02,2024-12-08,1.556,1.309,0.988,1.706,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-218-2024-11-29Supl.pdf
+2024-12-09,2024-12-15,1.547,1.309,0.988,1.697,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-223-2024-12-06Supl.pdf
+2024-12-16,2024-12-22,1.543,1.301,0.98,1.693,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-227-2024-12-13Supl2.pdf
+2024-12-23,2024-12-29,1.556,1.306,0.985,1.706,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-232-2024-12-20Supl.pdf
+2024-12-30,2025-01-05,1.561,1.319,0.996,1.711,https://joram.madeira.gov.pt/joram/2serie/Ano de 2024/IISerie-233-2024-12-27Supl2.pdf
+2025-01-06,2025-01-12,1.562,1.321,0.998,1.712,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-002-2025-01-03.pdf
+2025-01-13,2025-01-19,1.589,1.343,1.018,1.739,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-007-2025-01-10Supl.pdf
+2025-01-20,2025-01-26,1.593,1.35,1.025,1.743,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-012-2025-01-17.pdf
+2025-01-27,2025-02-02,1.614,1.388,1.063,1.764,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-017-2025-01-24Supl.pdf
+2025-02-03,2025-02-09,1.609,1.411,1.048,1.759,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-022-2025-01-31Supl.pdf
+2025-02-10,2025-02-16,1.604,1.411,1.029,1.754,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-027-2025-02-07.pdf
+2025-02-17,2025-02-23,1.613,1.43,1.03,1.763,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-032-2025-02-14.pdf
+2025-02-24,2025-03-02,1.614,1.443,1.041,1.764,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-037-2025-02-21Supl.pdf
+2025-03-03,2025-03-09,1.607,1.458,1.048,1.757,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-041-2025-02-28Supl.pdf
+2025-03-10,2025-03-16,1.589,1.458,1.029,1.739,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-045-2025-03-07.pdf
+2025-03-17,2025-03-23,1.555,1.448,1.001,1.705,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-050-2025-03-14Supl.pdf
+2025-03-24,2025-03-30,1.546,1.426,0.981,1.696,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-055-2025-03-21Supl2.pdf
+2025-03-31,2025-04-06,1.561,1.439,0.981,1.711,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-059-2025-03-28Supl2.pdf
+2025-04-07,2025-04-13,1.598,1.456,0.997,1.748,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-063-2025-04-04Supl.pdf
+2025-04-14,2025-04-20,1.597,1.447,0.988,1.747,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-067-2025-04-11Supl2.pdf
+2025-04-21,2025-04-27,1.546,1.4,0.941,1.696,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-070-2025-04-16.pdf
+2025-04-28,2025-05-04,1.54,1.392,0.933,1.69,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-074-2025-04-24Supl2.pdf
+2025-05-05,2025-05-11,1.553,1.404,0.944,1.703,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-078-2025-05-02.pdf
+2025-05-12,2025-05-18,1.537,1.389,0.929,1.687,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-083-2025-05-09Supl.pdf
+2025-05-19,2025-05-25,1.536,1.381,0.921,1.686,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-088-2025-05-16.pdf
+2025-05-26,2025-06-01,1.561,1.409,0.946,1.711,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-093-2025-05-23Supl.pdf
+2025-06-02,2025-06-08,1.555,1.401,0.939,1.705,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-097-2025-05-30Supl.pdf
+2025-06-09,2025-06-15,1.548,1.395,0.932,1.698,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-102-2025-06-06.pdf
+2025-06-16,2025-06-22,1.551,1.399,0.936,1.701,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-106-2025-06-13Supl.pdf
+2025-06-23,2025-06-29,1.565,1.416,0.952,1.715,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-109-2025-06-20Supl2.pdf
+2025-06-30,2025-07-06,1.583,1.47,1.006,1.733,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-114-2025-06-27Supl.pdf
+2025-07-07,2025-07-13,1.566,1.45,0.986,1.716,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-118-2025-07-04Supl.pdf
+2025-07-14,2025-07-20,1.551,1.447,0.982,1.701,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-123-2025-07-11Supl.pdf
+2025-07-21,2025-07-27,1.566,1.477,1.011,1.716,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-128-2025-07-18Supl.pdf
+2025-07-28,2025-08-03,1.565,1.473,1.007,1.715,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-133-2025-07-25Supl2.pdf
+2025-08-04,2025-08-10,1.558,1.468,1.002,1.708,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-137-2025-07-31.pdf
+2025-08-11,2025-08-17,1.581,1.463,0.997,1.731,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-142-2025-08-08Supl.pdf
+2025-08-18,2025-08-24,1.575,1.44,0.974,1.725,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-146-2025-08-14Supl.pdf
+2025-08-25,2025-08-31,1.571,1.424,0.958,1.721,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-150-2025-08-22Supl2.pdf
+2025-09-01,2025-09-07,1.575,1.428,0.962,1.725,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-155-2025-08-29.pdf
+2025-09-08,2025-09-14,1.576,1.431,0.965,1.726,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-160-2025-09-05Supl.pdf
+2025-09-15,2025-09-21,1.589,1.448,0.981,1.739,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-165-2025-09-12Supl2.pdf
+2025-09-22,2025-09-28,1.588,1.445,0.977,1.738,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-170-2025-09-19Supl2.pdf
+2025-09-29,2025-10-05,1.594,1.452,0.984,1.744,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-175-2025-09-26.pdf
+2025-10-06,2025-10-12,1.587,1.455,0.987,1.737,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-179-2025-10-03Supl.pdf
+2025-10-13,2025-10-19,1.582,1.44,0.971,1.732,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-184-2025-10-10Supl.pdf
+2025-10-20,2025-10-26,1.58,1.432,0.963,1.73,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-189-2025-10-17Supl4.pdf
+2025-10-27,2025-11-02,1.579,1.419,0.95,1.729,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-194-2025-10-24Supl.pdf
+2025-11-03,2025-11-09,1.57,1.434,0.964,1.72,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-199-2025-10-31.pdf
+2025-11-10,2025-11-16,1.587,1.475,1.002,1.737,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-203-2025-11-07.pdf
+2025-11-17,2025-11-23,1.59,1.495,1.02,1.74,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-208-2025-11-14Supl.pdf
+2025-11-24,2025-11-30,1.616,1.5,1.025,1.766,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-213-2025-11-21Supl2.pdf
+2025-12-01,2025-12-07,1.608,1.523,1.046,1.758,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-217-2025-11-28.pdf
+2025-12-08,2025-12-14,1.581,1.476,0.999,1.731,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-221-2025-12-05Supl.pdf
+2025-12-15,2025-12-21,1.573,1.455,0.978,1.723,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-225-2025-12-12.pdf
+2025-12-22,2025-12-28,1.556,1.432,0.956,1.706,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-230-2025-12-19Supl.pdf
+2025-12-29,2026-01-04,1.534,1.41,0.935,1.684,https://joram.madeira.gov.pt/joram/2serie/Ano de 2025/IISerie-232-2025-12-23Supl2.pdf
+2026-01-05,2026-01-11,1.537,1.411,0.935,1.687,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-001-2026-01-02.pdf
+2026-01-12,2026-01-18,1.539,1.419,0.943,1.689,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-006-2026-01-09Supl.pdf
+2026-01-19,2026-01-25,1.537,1.417,0.941,1.687,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-011-2026-01-16Supl2.pdf
+2026-01-26,2026-02-01,1.541,1.436,0.958,1.691,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-016-2026-01-23.pdf
+2026-02-02,2026-02-08,1.543,1.453,0.974,1.693,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-020-2026-01-30Supl.pdf
+2026-02-09,2026-02-15,1.543,1.465,0.985,1.693,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-025-2026-02-06Supl.pdf
+2026-02-16,2026-02-22,1.552,1.466,0.985,1.702,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-030-2026-02-13Supl.pdf
+2026-02-23,2026-03-01,1.562,1.463,0.982,1.712,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-034-2026-02-20.pdf
+2026-03-02,2026-03-08,1.567,1.483,1.001,1.717,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-038-2026-02-27Supl.pdf
+2026-03-09,2026-03-15,1.584,1.513,1.028,1.734,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-042-2026-03-06Supl.pdf
+2026-03-16,2026-03-22,1.656,1.7,1.216,1.806,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-047-2026-03-13Supl.pdf
+2026-03-23,2026-03-29,1.742,1.796,1.31,1.892,https://joram.madeira.gov.pt/joram/2serie/Ano de 2026/IISerie-051-2026-03-20Supl.pdf
