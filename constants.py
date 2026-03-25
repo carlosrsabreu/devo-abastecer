@@ -1,6 +1,7 @@
 # Values
 END_DATE_KEY = "End date"
 GAS_KEY = "Gas"
+PDF_URL_KEY = "PDF URL"
 START_DATE_KEY = "Start date"
 CURRENT_WEEK = "current"
 PREVIOUS_WEEK = "previous"
@@ -22,7 +23,7 @@ GASOLINE_95_TW = "Gasolina 95  "
 GASOLINE_98_TW = "Gasolina 98  "
 
 # PDF_GAS_PRICE_REGEX = r'(?<=€ )([\d,]+)(?= por litro)'
-PDF_GAS_PRICE_REGEX = r"(Gasolina\s*super\s*sem\s*chumbo\s*IO\s*95|Gasóleo\s*rodoviário|Gasóleo\s*colorido\s*e\s*marcado)(?:[\.€\w ]+)(\d{1},\d{3})"
+PDF_GAS_PRICE_REGEX = r"(G\s*a\s*s\s*o\s*l\s*i\s*n\s*[as]\s*s\s*u\s*p\s*e\s*r(?:\s*s\s*e\s*m\s*c\s*h\s*u\s*m\s*b\s*o\s*I\s*O\s*9\s*5)?|G\s*a\s*s\s*[oó]\s*l\s*e\s*o\s*R\s*o\s*d\s*o\s*v\s*i\s*[aá]\s*r\s*i\s*o|G\s*a\s*s\s*[oó]\s*l\s*e\s*o\s*c\s*o\s*l\s*o\s*r\s*i\s*d\s*o\s*e\s*m\s*a\s*r\s*c\s*a\s*d\s*o)[\s\.…€]*(\d{1}\s*,\s*[\d\s]{3,5})"
 
 
 # History plot
