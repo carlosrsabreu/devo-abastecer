@@ -45,10 +45,17 @@ def replace_gas_keys_names(gas_prices):
     # Define a mapping of keys to their corresponding regular expression patterns
     key_patterns = {
         GASOLINE_95: re.compile(
-            r"Gasolina\s*super\s*sem\s*chumbo\s*IO\s*95", re.IGNORECASE
+            r"G\s*a\s*s\s*o\s*l\s*i\s*n\s*[as]\s*s\s*u\s*p\s*e\s*r(?:\s*s\s*e\s*m\s*c\s*h\s*u\s*m\s*b\s*o\s*I\s*O\s*9\s*5)?",
+            re.IGNORECASE,
         ),
-        DIESEL: re.compile(r"Gasóleo\s*rodoviário", re.IGNORECASE),
-        COLORED_DIESEL: re.compile(r"Gasóleo\s*colorido\s*e\s*marcado", re.IGNORECASE),
+        DIESEL: re.compile(
+            r"G\s*a\s*s\s*[oó]\s*l\s*e\s*o\s*R\s*o\s*d\s*o\s*v\s*i\s*[aá]\s*r\s*i\s*o",
+            re.IGNORECASE,
+        ),
+        COLORED_DIESEL: re.compile(
+            r"G\s*a\s*s\s*[oó]\s*l\s*e\s*o\s*(?:c\s*o\s*l\s*o\s*r\s*i\s*d\s*o\s*e\s*m\s*a\s*r\s*c\s*a\s*d\s*o|c\s*o\s*l\s*o\s*r\s*i\s*d\s*o\s*e\s*m\s*a\s*r\s*c\s*a\s*d\s*o)",
+            re.IGNORECASE,
+        ),
     }
 
     new_gas_prices = {}
