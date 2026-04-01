@@ -4,7 +4,7 @@ PyPDF2~=3.0.1
 matplotlib~=3.10.8
 pandas~=3.0.1
 scipy~=1.15.2
-numpy~=2.2.3
+numpy~=2.4.4
 beautifulsoup4~=4.14.3
 atproto
 pytest~=9.0.2
