@@ -9630,5 +9630,16 @@
    "Gasolina IO98": 1.917
   },
   "PDF URL": "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202026/IISerie-073-2026-04-24.pdf"
+ },
+ "2026-05-04": {
+  "Start date": "2026-05-04",
+  "End date": "2026-05-10",
+  "Gas": {
+   "Gasolina IO95": 1.79,
+   "Gasóleo Rodoviário": 1.808,
+   "Gasóleo Colorido e Marcado": 1.375,
+   "Gasolina IO98": 1.94
+  },
+  "PDF URL": "https://joram.madeira.gov.pt/joram/2serie/Ano%20de%202026/IISerie-077-2026-04-30Supl2.pdf"
  }
 }
