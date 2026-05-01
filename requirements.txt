@@ -7,5 +7,5 @@ scipy~=1.17.1
 numpy~=2.4.4
 beautifulsoup4~=4.14.3
 atproto
-pytest~=9.0.2
+pytest~=9.0.3
 pytest-mock~=3.15.1
