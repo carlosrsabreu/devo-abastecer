@@ -91,14 +91,16 @@ def test_main_skips_when_already_up_to_date(monkeypatch, tmp_path):
             COLORED_DIESEL: "1,144",
         },
         "creation_date": datetime.datetime(2024, 5, 17),  # week of 05-20..05-26
-        "pdf_url": "http://same.pdf",
+        "pdf_url": "http://old.pdf",
     }
 
     main()
 
     for name in ("make_tweet", "make_bsky_post", "make_facebook_post", "add_history"):
         assert not mocks[name].called
-    assert json.loads(info_path.read_text())[CURRENT_WEEK][START_DATE_KEY] == "2024-05-20"
+    assert (
+        json.loads(info_path.read_text())[CURRENT_WEEK][START_DATE_KEY] == "2024-05-20"
+    )
 
 
 def test_main_returns_when_no_pdf_info(monkeypatch, tmp_path):
@@ -108,6 +110,27 @@ def test_main_returns_when_no_pdf_info(monkeypatch, tmp_path):
     assert main() is None
     for name in ("make_tweet", "make_bsky_post", "make_facebook_post", "add_history"):
         assert not mocks[name].called
+
+
+def test_main_reposts_same_week_correction(monkeypatch, tmp_path):
+    info_path, mocks = _patch_env(monkeypatch, tmp_path)
+    mocks["retrieve_newest_pdf_gas_info"].return_value = {
+        "gas_info": {
+            GASOLINE_95: "1,751",
+            DIESEL: "1,521",
+            COLORED_DIESEL: "1,144",
+        },
+        "creation_date": datetime.datetime(2024, 5, 17),  # same week as saved
+        "pdf_url": "http://corrected.pdf",
+    }
+
+    main()
+
+    for name in ("make_tweet", "make_bsky_post", "make_facebook_post", "add_history"):
+        assert mocks[name].called
+    new_data = json.loads(info_path.read_text())
+    assert new_data[CURRENT_WEEK][START_DATE_KEY] == "2024-05-20"
+    assert new_data[CURRENT_WEEK][PDF_URL_KEY] == "http://corrected.pdf"
 
 
 def test_main_returns_when_info_file_missing(tmp_path, monkeypatch):

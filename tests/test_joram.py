@@ -147,9 +147,34 @@ def test_retrieve_newest_pdf_gas_info_skips_empty_pdfs_and_reuses_bytes(
 
 
 @patch("joram.get_sorted_pdf_links")
+@patch("joram.pdf_creation_date")
+@patch("joram.extract_gas_prices")
+@patch("joram.fetch_pdf_bytes")
+def test_retrieve_newest_pdf_gas_info_defaults_creation_date_to_today(
+    mock_fetch, mock_extract, mock_creation, mock_links
+):
+    mock_links.return_value = [{"href": ".../2024-05-27.pdf"}]
+    mock_fetch.return_value = b"bytes"
+    mock_extract.return_value = [
+        ("Gasolina super sem chumbo IO 95", "1,751"),
+        ("Gasóleo rodoviário", "1,521"),
+        ("Gasóleo colorido e marcado", "1,144"),
+    ]
+    mock_creation.return_value = None  # PDF has no embedded creation metadata
+
+    result = retrieve_newest_pdf_gas_info()
+
+    now = datetime.datetime.now()
+    assert (now - result["creation_date"]).total_seconds() < 60
+    assert result["gas_info"][GASOLINE_95] == "1,751"
+
+
+@patch("joram.get_sorted_pdf_links")
 @patch("joram.fetch_pdf_bytes")
 @patch("joram.extract_gas_prices")
-def test_retrieve_newest_pdf_gas_info_none_when_no_prices(mock_extract, mock_fetch, mock_links):
+def test_retrieve_newest_pdf_gas_info_none_when_no_prices(
+    mock_extract, mock_fetch, mock_links
+):
     mock_links.return_value = [{"href": ".../2024-05-27.pdf"}]
     mock_fetch.return_value = b"bytes"
     mock_extract.return_value = []
@@ -159,7 +184,9 @@ def test_retrieve_newest_pdf_gas_info_none_when_no_prices(mock_extract, mock_fet
 @patch("joram.get_sorted_pdf_links")
 @patch("joram.fetch_pdf_bytes", side_effect=requests.exceptions.ConnectionError)
 @patch("joram.extract_gas_prices")
-def test_retrieve_newest_pdf_gas_info_fetch_error_moves_on(mock_extract, mock_fetch, mock_links):
+def test_retrieve_newest_pdf_gas_info_fetch_error_moves_on(
+    mock_extract, mock_fetch, mock_links
+):
     mock_links.return_value = [
         {"href": ".../2024-05-20.pdf"},
         {"href": ".../2024-05-27.pdf"},

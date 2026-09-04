@@ -64,6 +64,8 @@ def test_add_history_does_not_duplicate_csv_entry(tmp_path, monkeypatch):
 
 
 def test_add_history_creates_missing_csv(tmp_path, monkeypatch):
+    from constants import CSV_HEADER
+
     json_file = tmp_path / "history.json"
     json_file.write_text("{}")
     csv_file = tmp_path / "history.csv"
@@ -72,5 +74,22 @@ def test_add_history_creates_missing_csv(tmp_path, monkeypatch):
 
     add_history(sample_week())
 
-    # Append-only, matching the existing implementation: no header is written
-    assert csv_file.read_text() == "2024-05-27,2024-06-02,1.751,1.521,1.144,1.901,http://pdf\n"
+    # A missing CSV is created with the header so the row is never misread
+    assert csv_file.read_text() == (
+        CSV_HEADER + "2024-05-27,2024-06-02,1.751,1.521,1.144,1.901,http://pdf\n"
+    )
+
+
+def test_add_history_updates_existing_row_on_correction(tmp_path, monkeypatch):
+    json_file, csv_file = _files(tmp_path, monkeypatch)
+
+    add_history(sample_week())
+
+    corrected = sample_week()
+    corrected[CURRENT_WEEK][GAS_KEY][GASOLINE_95] = 1.771
+    add_history(corrected)
+
+    rows = csv_file.read_text().splitlines()
+    assert rows.count("2024-05-27,2024-06-02,1.771,1.521,1.144,1.901,http://pdf") == 1
+    history = json.loads(json_file.read_text())
+    assert history["2024-05-27"][GAS_KEY][GASOLINE_95] == 1.771

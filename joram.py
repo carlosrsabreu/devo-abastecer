@@ -165,10 +165,12 @@ def retrieve_newest_pdf_gas_info():
         if gas_prices:
             creation_date = pdf_creation_date(pdf_bytes)
             if not creation_date:
-                # Usually the creation date is present, but proceed anyway
+                # Creation date is usually present, but fall back to today so the
+                # weekly run does not get stuck on a PDF without metadata.
                 logging.warning(
-                    f"Found prices but could not retrieve creation date for {newest_pdf_joram}"
+                    f"Could not retrieve creation date for {newest_pdf_joram}; using today."
                 )
+                creation_date = current_date
             break
 
     if not gas_prices:

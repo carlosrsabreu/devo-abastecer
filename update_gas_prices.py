@@ -49,9 +49,6 @@ def main():
         logging.error("Incomplete PDF information retrieved.")
         return
 
-    logging.debug(f"gas_info = {gas_info}")
-    logging.debug(f"creation_date = {creation_date}")
-
     # Retrieve week by creation date of the PDF
     try:
         start_date, end_date = retrieve_week_by_date(
@@ -61,9 +58,12 @@ def main():
         logging.error(f"Error calculating dates: {e}")
         return
 
-    # Check if we already have this date
+    # Check if we already have this date, or a corrected PDF for the same week
+    current_url_saved = current_data[CURRENT_WEEK].get(PDF_URL_KEY, "")
     update = (
-        start_date != current_start_date_saved or end_date != current_end_date_saved
+        start_date != current_start_date_saved
+        or end_date != current_end_date_saved
+        or pdf_url != current_url_saved
     )
 
     # If we don't have the date, update
@@ -100,9 +100,14 @@ def main():
             logging.warning("Gasoline 95 not found, cannot calculate Gasoline 98.")
 
         # Make posts
-        make_tweet(dict_prices)
-        make_bsky_post(dict_prices)
-        make_facebook_post(dict_prices)
+        results = {
+            "Twitter": make_tweet(dict_prices),
+            "Bluesky": make_bsky_post(dict_prices),
+            "Facebook": make_facebook_post(dict_prices),
+        }
+        failed = [platform for platform, ok in results.items() if not ok]
+        if failed:
+            logging.warning(f"Could not post to: {', '.join(failed)}")
 
         # Add history
         try:

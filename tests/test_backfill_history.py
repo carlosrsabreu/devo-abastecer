@@ -19,7 +19,12 @@ from constants import (
 COMPLETE = {
     START_DATE_KEY: "2024-05-27",
     END_DATE_KEY: "2024-06-02",
-    GAS_KEY: {GASOLINE_95: 1.751, DIESEL: 1.521, COLORED_DIESEL: 1.144, GASOLINE_98: 1.901},
+    GAS_KEY: {
+        GASOLINE_95: 1.751,
+        DIESEL: 1.521,
+        COLORED_DIESEL: 1.144,
+        GASOLINE_98: 1.901,
+    },
     PDF_URL_KEY: "http://pdf",
 }
 
@@ -73,7 +78,9 @@ def test_process_pdf_adds_entry(monkeypatch):
 
 def test_process_pdf_skips_complete_entry(monkeypatch):
     _patch_state(monkeypatch)
-    monkeypatch.setattr(backfill_history, "all_history", {"2024-05-27": deepcopy(COMPLETE)})
+    monkeypatch.setattr(
+        backfill_history, "all_history", {"2024-05-27": deepcopy(COMPLETE)}
+    )
     reader = Mock()
     monkeypatch.setattr("joram.read_pdf_prices", reader)
 

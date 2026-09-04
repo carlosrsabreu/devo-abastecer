@@ -1,13 +1,15 @@
 import json
 import logging
+import os
 from constants import (
     CURRENT_GAS_HISTORY_JSON_FILE,
+    CURRENT_GAS_HISTORY_CSV_FILE,
     CURRENT_WEEK,
     START_DATE_KEY,
-    CURRENT_GAS_HISTORY_CSV_FILE,
     END_DATE_KEY,
     GAS_KEY,
     PDF_URL_KEY,
+    CSV_HEADER,
 )
 from functions import csv_row
 
@@ -38,30 +40,31 @@ def add_history(dict_prices):
 
     # Add to CSV history
     try:
-        # Check if the start_date already exists in the CSV to avoid duplicates
-        date_exists = False
-        try:
-            with open(CURRENT_GAS_HISTORY_CSV_FILE, "r") as f:
-                for line in f:
-                    if line.startswith(start_date):
-                        date_exists = True
-                        break
-        except FileNotFoundError:
-            # If CSV doesn't exist, we will create it (though we assume it exists with a header)
-            pass
+        row = csv_row(
+            start_date,
+            end_date,
+            gas_data,
+            dict_prices[CURRENT_WEEK].get(PDF_URL_KEY, ""),
+        )
+        prefix = f"{start_date},"
 
-        if not date_exists:
-            with open(CURRENT_GAS_HISTORY_CSV_FILE, "a") as f:
-                f.write(
-                    csv_row(
-                        start_date,
-                        end_date,
-                        gas_data,
-                        dict_prices[CURRENT_WEEK].get(PDF_URL_KEY, ""),
-                    )
-                )
-            logging.info(f"Added entry for {start_date} to CSV history.")
+        if os.path.exists(CURRENT_GAS_HISTORY_CSV_FILE):
+            with open(CURRENT_GAS_HISTORY_CSV_FILE, "r") as f:
+                lines = f.readlines()
+            if any(line.startswith(prefix) for line in lines):
+                # A same-week correction supersedes the existing row
+                lines = [row if line.startswith(prefix) else line for line in lines]
+                with open(CURRENT_GAS_HISTORY_CSV_FILE, "w") as f:
+                    f.writelines(lines)
+                logging.info(f"Updated entry for {start_date} in CSV history.")
+                return
         else:
-            logging.info(f"Entry for {start_date} already exists in CSV history.")
+            # First time the CSV is created, add the header
+            with open(CURRENT_GAS_HISTORY_CSV_FILE, "a") as f:
+                f.write(CSV_HEADER)
+
+        with open(CURRENT_GAS_HISTORY_CSV_FILE, "a") as f:
+            f.write(row)
+        logging.info(f"Added entry for {start_date} to CSV history.")
     except Exception as e:
         logging.error(f"Error updating CSV history: {e}")
