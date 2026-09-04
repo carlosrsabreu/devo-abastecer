@@ -17,18 +17,83 @@ logging.getLogger("PyPDF2").setLevel(logging.ERROR)
 warnings.filterwarnings("ignore", module="PyPDF2")
 
 
-# Generator function to extract line by line text from PDF
-def get_pdf_content_lines(pdf_raw_data):
+def fetch_pdf_bytes(pdf_url):
+    # Properly encode URL to handle spaces and special characters.
+    # We unquote first to avoid double encoding if the URL is already encoded.
+    parts = urllib.parse.urlparse(pdf_url)
+    unquoted_path = urllib.parse.unquote(parts.path)
+    pdf_url = urllib.parse.urlunparse(
+        parts._replace(path=urllib.parse.quote(unquoted_path))
+    )
+    response = requests.get(pdf_url, timeout=15)
+    response.raise_for_status()
+    return response.content
+
+
+def pdf_text(pdf_bytes):
+    all_text = ""
+    with BytesIO(pdf_bytes) as f:
+        pdf_reader = PdfReader(f)
+        for page in pdf_reader.pages:
+            text = page.extract_text()
+            if text:
+                all_text += text + "\n"
+    return all_text
+
+
+def pdf_creation_date(pdf_bytes):
     try:
-        with BytesIO(pdf_raw_data) as f:
-            pdf_reader = PdfReader(f)
-            for page in pdf_reader.pages:
-                text = page.extract_text()
-                if text:
-                    for line in text.splitlines():
-                        yield line
+        with BytesIO(pdf_bytes) as f:
+            return PdfReader(f).metadata.creation_date
     except Exception as e:
-        logging.error(f"Error reading PDF content: {e}")
+        logging.error(f"Error retrieving PDF creation date: {e}")
+        return None
+
+
+def extract_gas_prices(pdf_bytes):
+    all_text = pdf_text(pdf_bytes)
+
+    # Normalize text to handle split lines (especially for Gasoline 95 in 2008)
+    normalized_text = all_text.replace("\n", " ")
+    # But we still want to try line by line for most cases as it's safer
+    lines = all_text.splitlines()
+
+    def price_of(match):
+        name, price = match.groups()
+        price = price.replace(" ", "")
+        if "," in price and len(price.split(",")[1]) == 3:
+            return name, price
+        return None
+
+    matches = []
+    for line in lines:
+        if len(matches) == 3:
+            break
+        match = re.search(PDF_GAS_PRICE_REGEX, line, re.IGNORECASE)
+        if match:
+            found = price_of(match)
+            if found:
+                matches.append(found)
+
+    # If we didn't find 3 prices, try the normalized text (without line breaks).
+    # Duplicates are possible; callers deduplicate with dict().
+    if len(matches) < 3:
+        all_matches = re.finditer(PDF_GAS_PRICE_REGEX, normalized_text, re.IGNORECASE)
+        for match in all_matches:
+            found = price_of(match)
+            if found:
+                matches.append(found)
+
+    return matches
+
+
+def read_pdf_prices(pdf_url):
+    """Fetch a PDF and return a list of (name, price) tuples."""
+    try:
+        return extract_gas_prices(fetch_pdf_bytes(pdf_url))
+    except Exception as e:
+        logging.error(f"Error reading prices from PDF {pdf_url}: {e}")
+        return []
 
 
 def get_sorted_pdf_links(joram_url):
@@ -65,74 +130,6 @@ def get_sorted_pdf_links(joram_url):
         return []
 
 
-# Function to extract the gas prices from the PDFs
-def read_pdf_prices(pdf_url):
-    try:
-        discovered_prices = 0
-        # Properly encode URL to handle spaces and special characters
-        # We unquote first to avoid double encoding if the URL is already encoded
-        parts = urllib.parse.urlparse(pdf_url)
-        unquoted_path = urllib.parse.unquote(parts.path)
-        pdf_url = urllib.parse.urlunparse(
-            parts._replace(path=urllib.parse.quote(unquoted_path))
-        )
-        response = requests.get(pdf_url, timeout=15)
-        response.raise_for_status()
-
-        all_text = ""
-        with BytesIO(response.content) as f:
-            pdf_reader = PdfReader(f)
-            for page in pdf_reader.pages:
-                text = page.extract_text()
-                if text:
-                    all_text += text + "\n"
-
-        # Normalize text to handle split lines (especially for Gasoline 95 in 2008)
-        normalized_text = all_text.replace("\n", " ")
-        # But we still want to try line by line for most cases as it's safer
-        lines = all_text.splitlines()
-
-        for line in lines:
-            if discovered_prices == 3:
-                break
-            match = re.search(PDF_GAS_PRICE_REGEX, line, re.IGNORECASE)
-            if match:
-                name, price = match.groups()
-                price = price.replace(" ", "")
-                if "," in price and len(price.split(",")[1]) == 3:
-                    discovered_prices += 1
-                    yield name, price
-
-        # If we didn't find 3 prices, try the normalized text (without line breaks)
-        if discovered_prices < 3:
-            # We need to be careful not to re-yield already found prices
-            # But since this is a generator and we've already yielded, we can just look for everything again
-            # and let the caller handle it (or use dict() to deduplicate)
-            all_matches = re.finditer(
-                PDF_GAS_PRICE_REGEX, normalized_text, re.IGNORECASE
-            )
-            for match in all_matches:
-                name, price = match.groups()
-                price = price.replace(" ", "")
-                if "," in price and len(price.split(",")[1]) == 3:
-                    yield name, price
-    except Exception as e:
-        logging.error(f"Error reading prices from PDF {pdf_url}: {e}")
-
-
-# Retrieve pdf creation date
-def retrieve_pdf_creation_date(pdf_url):
-    try:
-        response = requests.get(pdf_url, timeout=15)
-        response.raise_for_status()
-        with BytesIO(response.content) as f:
-            pdf_reader = PdfReader(f)
-            return pdf_reader.metadata.creation_date
-    except Exception as e:
-        logging.error(f"Error retrieving PDF creation date from {pdf_url}: {e}")
-        return None
-
-
 # Retrieve gas prices
 def retrieve_newest_pdf_gas_info():
     # Get the current date
@@ -148,7 +145,7 @@ def retrieve_newest_pdf_gas_info():
     newest_pdf_joram = None
     creation_date = None
 
-    while len(sorted_pdf_links) > 0:
+    while sorted_pdf_links:
         newest_pdf_link = sorted_pdf_links.pop()
         newest_pdf_filename = newest_pdf_link["href"].split("/")[-1]
         newest_pdf_joram = JORAM_PDF_LINK.format(
@@ -156,19 +153,23 @@ def retrieve_newest_pdf_gas_info():
         )
 
         logging.info(f"Checking PDF: {newest_pdf_joram}")
-        gas_prices = dict(read_pdf_prices(newest_pdf_joram))
+        try:
+            # Fetch once and reuse the same bytes for prices and creation date
+            pdf_bytes = fetch_pdf_bytes(newest_pdf_joram)
+        except Exception as e:
+            logging.error(f"Error reading PDF {newest_pdf_joram}: {e}")
+            continue
+
+        gas_prices = dict(extract_gas_prices(pdf_bytes))
 
         if gas_prices:
-            creation_date = retrieve_pdf_creation_date(newest_pdf_joram)
-            if creation_date:
-                break
-            else:
-                # If we found prices but couldn't get creation date, we might still want to proceed
-                # or try another PDF. Usually creation date should be there.
+            creation_date = pdf_creation_date(pdf_bytes)
+            if not creation_date:
+                # Usually the creation date is present, but proceed anyway
                 logging.warning(
                     f"Found prices but could not retrieve creation date for {newest_pdf_joram}"
                 )
-                break
+            break
 
     if not gas_prices:
         logging.info("No gas prices found in recent PDFs.")

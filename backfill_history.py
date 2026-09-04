@@ -150,11 +150,9 @@ def backfill():
             with open(CURRENT_GAS_HISTORY_JSON_FILE, "w") as f:
                 json.dump(sorted_history, f, indent=2, ensure_ascii=False)
 
-    # Final update of both JSON and CSV
+    # Final update of the CSV (JSON was saved after each year)
     with history_lock:
         sorted_history = dict(sorted(all_history.items()))
-        with open(CURRENT_GAS_HISTORY_JSON_FILE, "w") as f:
-            json.dump(sorted_history, f, indent=2, ensure_ascii=False)
 
         with open(CURRENT_GAS_HISTORY_CSV_FILE, "w") as f:
             f.write(CSV_HEADER)
