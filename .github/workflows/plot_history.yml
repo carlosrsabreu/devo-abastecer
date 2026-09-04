@@ -24,19 +24,6 @@ jobs:
           cache: "pip"
           cache-dependency-path: requirements.txt
 
-      - name: "📦 Install APT Dependencies"
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: locales-all
-
-      - name: 🔠 Add all Locales
-        shell: bash
-        run: |
-          sudo locale-gen pt_PT.UTF-8
-          sudo locale-gen pt_PT
-          sudo update-locale
-          export LC_ALL=C
-
       - name: 📦 Install Python Requirements
         shell: bash
         run: pip install -r requirements.txt

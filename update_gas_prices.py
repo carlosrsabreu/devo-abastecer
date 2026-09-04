@@ -18,7 +18,7 @@ from post_bsky import make_bsky_post
 from post_tweet import make_tweet
 from post_facebook import make_facebook_post
 from joram import retrieve_newest_pdf_gas_info
-from functions import retrieve_week_by_date, return_next_week_by_date
+from functions import retrieve_week_by_date, return_next_week_by_date, parse_price
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -83,7 +83,7 @@ def main():
         # Parse the data
         for key, value in gas_info.items():
             try:
-                price = float(value.replace(",", "."))
+                price = parse_price(value)
                 dict_prices[CURRENT_WEEK][GAS_KEY][key] = price
             except (ValueError, AttributeError) as e:
                 logging.error(f"Error parsing price for {key}: {value}. Error: {e}")
@@ -112,9 +112,8 @@ def main():
 
         # Writing JSON file
         try:
-            content = json.dumps(dict_prices, indent=1, ensure_ascii=False)
             with open(CURRENT_GAS_INFO_FILE, "w") as f:
-                f.write(content)
+                json.dump(dict_prices, f, indent=1, ensure_ascii=False)
             logging.info(f"Updated {CURRENT_GAS_INFO_FILE} successfully.")
         except Exception as e:
             logging.error(f"Error writing to {CURRENT_GAS_INFO_FILE}: {e}")

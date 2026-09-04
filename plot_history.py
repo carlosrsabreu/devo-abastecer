@@ -1,10 +1,7 @@
-import locale
 import logging
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import pandas as pd
-import numpy as np
-from scipy.interpolate import make_interp_spline
 
 from constants import (
     CURRENT_GAS_HISTORY_CSV_FILE,
@@ -19,15 +16,6 @@ from constants import (
     HISTORY_PLOT_Y_LABEL,
     HISTORY_PLOT_X_LABEL,
 )
-
-# Set locale for Portuguese date formatting
-try:
-    locale.setlocale(locale.LC_ALL, "pt_PT.UTF-8")
-except locale.Error:
-    try:
-        locale.setlocale(locale.LC_ALL, "pt_PT")
-    except locale.Error:
-        logging.warning("Portuguese locale not available. Using default.")
 
 
 def generate_plot_history(plot_path):
@@ -68,23 +56,15 @@ def generate_plot_history(plot_path):
         COLUMN_GASOLEO_RODOVIARIO,
     ]
 
-    # Convert dates to numbers for interpolation
-    x = history.index.map(pd.Timestamp.to_julian_date).values
-    x_smooth = np.linspace(x.min(), x.max(), 500)
-
     # Plot each line with specific styling
     for col in columns_to_plot:
         if col in history.columns:
             y = history[col].values
 
-            # Spline interpolation for smooth lines
-            spl = make_interp_spline(x, y, k=3)
-            y_smooth = spl(x_smooth)
-
-            # Plot the smooth line
+            # Plot the line
             ax.plot(
-                pd.to_datetime(x_smooth, origin="julian", unit="D"),
-                y_smooth,
+                history.index,
+                y,
                 label=labels[col],
                 color=colors[col],
                 linewidth=2,
@@ -92,14 +72,14 @@ def generate_plot_history(plot_path):
                 zorder=3,
             )
 
-            # Add markers at original data points (refined and small to keep the look clean)
+            # Add markers at the original data points
             ax.scatter(
                 history.index,
                 y,
                 color=colors[col],
                 edgecolor="#161B22",
                 linewidth=0.5,
-                s=12,  # Refined size
+                s=12,
                 zorder=4,
                 alpha=0.6,
             )

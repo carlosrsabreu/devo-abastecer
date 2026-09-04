@@ -26,45 +26,6 @@ def create_client_twitter():
     )
 
 
-def create_api(client):
-    if not client:
-        return None
-
-    auth = tweepy.OAuthHandler(
-        client.consumer_key,
-        client.consumer_secret,
-    )
-    auth.set_access_token(
-        client.access_token,
-        client.access_token_secret,
-    )
-    return tweepy.API(auth)
-
-
-def post_image(tweet_message, image_path):
-    """
-    Post a tweet with an image.
-    """
-    client = create_client_twitter()
-    if not client:
-        return None
-
-    api = create_api(client)
-    if not api:
-        return None
-
-    try:
-        # Upload image
-        image = api.media_upload(image_path)
-        # Post tweet
-        response = api.update_status(status=tweet_message, media_ids=[image.media_id])
-        logging.info("Twitter image post created successfully.")
-        return response
-    except Exception as e:
-        logging.error(f"Failed to post image to Twitter: {e}")
-        return None
-
-
 def make_tweet(dict_prices):
     """
     Format and post a text tweet.
