@@ -50,6 +50,9 @@ def process_pdf(year, pdf_filename, pdf_date):
     start_date, end_date = retrieve_week_by_date(return_next_week_by_date(pdf_date))
 
     with history_lock:
+        # Do not download the PDF again if a complete entry exists.
+        # shortcut: a re-run does not fetch a later PDF for the same week.
+        # Upgrade path: compare the PDF URL before you skip.
         if start_date in all_history and entry_complete(all_history[start_date]):
             return
 
@@ -77,15 +80,28 @@ def process_pdf(year, pdf_filename, pdf_date):
             )
 
         if gas_data:
+            new_entry = {
+                START_DATE_KEY: start_date,
+                END_DATE_KEY: end_date,
+                GAS_KEY: gas_data,
+                PDF_URL_KEY: pdf_url,
+            }
             with history_lock:
-                # Add or update entry
-                is_new = start_date not in all_history
-                all_history[start_date] = {
-                    START_DATE_KEY: start_date,
-                    END_DATE_KEY: end_date,
-                    GAS_KEY: gas_data,
-                    PDF_URL_KEY: pdf_url,
-                }
+                existing = all_history.get(start_date)
+                if existing:
+                    # A partial entry must not replace a complete entry.
+                    if entry_complete(existing) and not entry_complete(new_entry):
+                        logging.info(
+                            f"  Kept the complete entry for {start_date} from "
+                            f"{existing.get(PDF_URL_KEY)}"
+                        )
+                        return
+                    # The current entry is newer or equal. Keep it.
+                    if existing.get(PDF_URL_KEY, "") >= pdf_url:
+                        return
+
+                is_new = existing is None
+                all_history[start_date] = new_entry
                 if is_new:
                     new_entries_count += 1
                     logging.info(f"  Added entry for {start_date} from {pdf_filename}")

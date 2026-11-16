@@ -14,6 +14,13 @@
 
 This project automates the end-to-end lifecycle of fuel price monitoring in Madeira. The system is designed for reliability, using GitHub Actions as a serverless orchestrator to handle extraction, archival, and multi-channel publication.
 
+### Data integrity
+
+- The JSON and the CSV history receive the same data. A correction for the same week replaces the existing row in both files.
+- The bot posts again only when the PDF is new, or when JORAM publishes a corrected PDF for the same week.
+- If no price parses, the run stops before the posts and before the history write.
+- The backfill keeps a complete entry. A newer PDF for the same week replaces it.
+
 ### Workflow
 
 ```mermaid
@@ -21,6 +28,7 @@ sequenceDiagram
     autonumber
     participant 🤖 GitHub Action
     participant 🐍 Orchestrator (update_gas_prices.py)
+    participant 🏛️ Backfill (backfill_history.py)
     participant 📄 JORAM (PDF Archive)
     participant 🗄️ Database (CSV/JSON)
     participant 📢 Social Media (X/BSky/FB)
@@ -29,15 +37,23 @@ sequenceDiagram
     Note over 🤖 GitHub Action: 📅 Weekly update trigger
     🤖 GitHub Action ->> 🐍 Orchestrator (update_gas_prices.py): 🚀 Start update process
     🐍 Orchestrator (update_gas_prices.py) ->> 📄 JORAM (PDF Archive): 🔍 Extract latest fuel prices
-    📄 JORAM (PDF Archive) -->> 🐍 Orchestrator (update_gas_prices.py): 🏷️ New price data
+    📄 JORAM (PDF Archive) -->> 🐍 Orchestrator (update_gas_prices.py): 🏷️ New or corrected price data
 
-    alt 🆕 New Prices Found
-        🐍 Orchestrator (update_gas_prices.py) ->> 🗄️ Database (CSV/JSON): 🏛️ Archive record (add_history.py)
+    alt 🆕 New or corrected PDF
         🐍 Orchestrator (update_gas_prices.py) ->> 📢 Social Media (X/BSky/FB): 📬 Post to platforms
+        🐍 Orchestrator (update_gas_prices.py) ->> 🗄️ Database (CSV/JSON): 🏛️ Archive or replace the week (add_history.py)
         🐍 Orchestrator (update_gas_prices.py) ->> 🤖 GitHub Action: 💾 Commit updated history files
-    else 💤 Data already exists
+    else 💤 Same PDF already saved
         🐍 Orchestrator (update_gas_prices.py) -->> 🤖 GitHub Action: 🔚 End workflow
     end
+
+    Note over 🤖 GitHub Action: 🏛️ Manual backfill trigger
+    🤖 GitHub Action ->> 🏛️ Backfill (backfill_history.py): 🚀 Start backfill process
+    🏛️ Backfill (backfill_history.py) ->> 📄 JORAM (PDF Archive): 📚 Fetch PDF links for each year
+    📄 JORAM (PDF Archive) -->> 🏛️ Backfill (backfill_history.py): 🏷️ PDF list
+    🏛️ Backfill (backfill_history.py) ->> 🏛️ Backfill (backfill_history.py): 🧮 Parse prices and keep complete entries
+    🏛️ Backfill (backfill_history.py) ->> 🗄️ Database (CSV/JSON): 💾 Rewrite JSON and CSV history
+    🏛️ Backfill (backfill_history.py) ->> 🤖 GitHub Action: 📎 Commit updated history
 
     Note over 🤖 GitHub Action: 📈 Monthly visualization trigger
     🤖 GitHub Action ->> 📈 Visualization (plot_history.py): 🎨 Generate trend chart

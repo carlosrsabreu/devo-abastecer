@@ -22,8 +22,7 @@ def generate_plot_history(plot_path):
     # Load history data
     history = pd.read_csv(CURRENT_GAS_HISTORY_CSV_FILE)
     history[COLUMN_START_DATE] = pd.to_datetime(history[COLUMN_START_DATE])
-    history.set_index(COLUMN_START_DATE, inplace=True)
-    history.sort_index(inplace=True)
+    history = history.set_index(COLUMN_START_DATE).sort_index()
 
     # Filter out any non-numeric or missing data for interpolation
     history = history.dropna(

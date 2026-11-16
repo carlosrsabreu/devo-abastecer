@@ -88,3 +88,63 @@ def test_process_pdf_skips_complete_entry(monkeypatch):
 
     reader.assert_not_called()
     assert backfill_history.new_entries_count == 0
+
+
+FULL_PRICES = [
+    ("Gasolina super sem chumbo IO 95", "1,751"),
+    ("Gasóleo rodoviário", "1,521"),
+    ("Gasóleo colorido e marcado", "1,144"),
+]
+
+
+def _write_complete_while_reading(prices):
+    """Simulate a second thread that saves a complete entry during the fetch."""
+
+    def reader(url):
+        backfill_history.all_history["2024-05-27"] = deepcopy(COMPLETE)
+        return iter(prices)
+
+    return reader
+
+
+def test_process_pdf_keeps_complete_entry_when_partial_wins_race(monkeypatch):
+    _patch_state(monkeypatch)
+    monkeypatch.setattr(
+        "joram.read_pdf_prices",
+        _write_complete_while_reading([("Gasóleo rodoviário", "1,521")]),
+    )
+
+    process_pdf(2024, "IISerie-1-2024-05-25.pdf", datetime.datetime(2024, 5, 25))
+
+    assert backfill_history.all_history["2024-05-27"] == COMPLETE
+
+
+def test_process_pdf_newer_pdf_replaces_complete_entry(monkeypatch):
+    _patch_state(monkeypatch)
+    monkeypatch.setattr(
+        "joram.read_pdf_prices", _write_complete_while_reading(FULL_PRICES)
+    )
+
+    process_pdf(2024, "IISerie-1-2024-05-25.pdf", datetime.datetime(2024, 5, 25))
+
+    entry = backfill_history.all_history["2024-05-27"]
+    assert entry[PDF_URL_KEY].endswith("IISerie-1-2024-05-25.pdf")
+    assert entry[GAS_KEY][GASOLINE_95] == 1.751
+
+
+def test_process_pdf_older_pdf_does_not_replace_entry(monkeypatch):
+    _patch_state(monkeypatch)
+
+    def reader(url):
+        newer = deepcopy(COMPLETE)
+        newer[PDF_URL_KEY] = "https://joram.madeira.gov.pt/x/IISerie-1-2024-05-26.pdf"
+        backfill_history.all_history["2024-05-27"] = newer
+        return iter(FULL_PRICES)
+
+    monkeypatch.setattr("joram.read_pdf_prices", reader)
+
+    process_pdf(2024, "IISerie-1-2024-05-25.pdf", datetime.datetime(2024, 5, 25))
+
+    assert backfill_history.all_history["2024-05-27"][PDF_URL_KEY].endswith(
+        "IISerie-1-2024-05-26.pdf"
+    )
