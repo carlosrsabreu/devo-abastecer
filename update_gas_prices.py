@@ -69,9 +69,14 @@ def main():
     # If we don't have the date, update
     if update:
         logging.info(f"New update found for week {start_date} to {end_date}")
+        # A correction uses the same week. Compare it with the week before it.
+        previous_week = current_data[CURRENT_WEEK]
+        if start_date == current_start_date_saved:
+            previous_week = current_data.get(PREVIOUS_WEEK, current_data[CURRENT_WEEK])
+
         # Prepare the dictionary
         dict_prices = {
-            PREVIOUS_WEEK: current_data[CURRENT_WEEK],
+            PREVIOUS_WEEK: previous_week,
             CURRENT_WEEK: {
                 START_DATE_KEY: start_date,
                 END_DATE_KEY: end_date,
@@ -98,6 +103,12 @@ def main():
             )
         else:
             logging.warning("Gasoline 95 not found, cannot calculate Gasoline 98.")
+
+        if not dict_prices[CURRENT_WEEK][GAS_KEY]:
+            logging.error(
+                "No usable prices found. Skip the post and the history write."
+            )
+            return
 
         # Make posts
         results = {

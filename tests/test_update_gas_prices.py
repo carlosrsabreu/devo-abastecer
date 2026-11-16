@@ -32,7 +32,18 @@ def _initial_info(path, start="2024-05-20", end="2024-05-26"):
                         GASOLINE_98: 1.95,
                     },
                     PDF_URL_KEY: "http://old.pdf",
-                }
+                },
+                PREVIOUS_WEEK: {
+                    START_DATE_KEY: "2024-05-13",
+                    END_DATE_KEY: "2024-05-19",
+                    GAS_KEY: {
+                        GASOLINE_95: 1.79,
+                        DIESEL: 1.49,
+                        COLORED_DIESEL: 1.09,
+                        GASOLINE_98: 1.94,
+                    },
+                    PDF_URL_KEY: "http://older.pdf",
+                },
             }
         )
     )
@@ -131,6 +142,24 @@ def test_main_reposts_same_week_correction(monkeypatch, tmp_path):
     new_data = json.loads(info_path.read_text())
     assert new_data[CURRENT_WEEK][START_DATE_KEY] == "2024-05-20"
     assert new_data[CURRENT_WEEK][PDF_URL_KEY] == "http://corrected.pdf"
+    # The baseline stays the week before, not the old version of this week.
+    assert new_data[PREVIOUS_WEEK][START_DATE_KEY] == "2024-05-13"
+
+
+def test_main_skips_post_when_no_price_parses(monkeypatch, tmp_path):
+    info_path, mocks = _patch_env(monkeypatch, tmp_path)
+    before = info_path.read_text()
+    mocks["retrieve_newest_pdf_gas_info"].return_value = {
+        "gas_info": {GASOLINE_95: "not a price"},
+        "creation_date": datetime.datetime(2024, 5, 24),
+        "pdf_url": "http://new.pdf",
+    }
+
+    main()
+
+    for name in ("make_tweet", "make_bsky_post", "make_facebook_post", "add_history"):
+        assert not mocks[name].called
+    assert info_path.read_text() == before
 
 
 def test_main_returns_when_info_file_missing(tmp_path, monkeypatch):

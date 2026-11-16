@@ -6,15 +6,15 @@ import warnings
 from io import BytesIO
 import requests
 from bs4 import BeautifulSoup
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 from constants import PDF_GAS_PRICE_REGEX, JORAM_LINK, JORAM_PDF_LINK
 from functions import replace_gas_keys_names
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 # Suppress verbose PDF library warnings
-logging.getLogger("PyPDF2").setLevel(logging.ERROR)
-warnings.filterwarnings("ignore", module="PyPDF2")
+logging.getLogger("pypdf").setLevel(logging.ERROR)
+warnings.filterwarnings("ignore", module="pypdf")
 
 
 def fetch_pdf_bytes(pdf_url):
